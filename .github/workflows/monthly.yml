@@ -1,1 +1,31 @@
+name: Monthly SD Family digest
+
+on:
+  schedule:
+    - cron: "0 15 1 * *"   # 1st of each month, 15:00 UTC (8 AM Pacific in summer)
+  workflow_dispatch:        # lets you run it manually from the Actions tab
+
+permissions:
+  contents: write           # save the digest back to the repo
+  models: read              # free AI summaries via GitHub Models
+
+jobs:
+  digest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install requests beautifulsoup4
+      - run: python sdfm_agent.py
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Save digest
+        run: |
+          git config user.name "digest-bot"
+          git config user.email "digest-bot@users.noreply.github.com"
+          git add digests
+          git commit -m "Add monthly digest" || echo "Nothing to commit"
+          git push
 
