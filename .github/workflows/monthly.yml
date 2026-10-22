@@ -1,13 +1,8 @@
 name: Monthly SD Family digest
 
-on:
-  schedule:
-    - cron: "0 15 1 * *"   # 1st of each month, 15:00 UTC (8 AM Pacific in summer)
-  workflow_dispatch:        # lets you run it manually from the Actions tab
+on: { schedule: [{ cron: "0 15 1 * *" }], workflow_dispatch: {} }
 
-permissions:
-  contents: write           # save the digest back to the repo
-  models: read              # free AI summaries via GitHub Models
+permissions: { contents: write, models: read }
 
 jobs:
   digest:
@@ -28,4 +23,3 @@ jobs:
           git add digests
           git commit -m "Add monthly digest" || echo "Nothing to commit"
           git push
-
