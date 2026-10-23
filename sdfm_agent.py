@@ -22,6 +22,7 @@ import os
 import pathlib
 import re
 import sys
+from urllib.parse import quote_plus, urljoin
 
 import requests
 from bs4 import BeautifulSoup
@@ -51,14 +52,47 @@ def find_issue_url(year, month):
     return None
 
 
+# Verified section pages on the site, used when an article has no link of its own.
+SECTION_LINKS = [
+    (("calendar",), f"{BASE}/things-to-do/events-calendar"),
+    (("pumpkin", "fall fun", "seasonal"), f"{BASE}/things-to-do/seasonal-happenings"),
+    (("craft",), f"{BASE}/for-the-kids/crafts-for-kids"),
+    (("homework", "friend", "buddies", "besties"), f"{BASE}/parenting/big-kid"),
+    (("afterschool",), f"{BASE}/resources/afterschool-activities"),
+]
+
+
+def best_link(title, blurb):
+    """Pick the best link for an article that has no direct link."""
+    text = f"{title} {blurb}".lower()
+    for keywords, url in SECTION_LINKS:
+        if any(k in text for k in keywords):
+            return url, "section"
+    q = quote_plus(f'site:sandiegofamily.com {title}')
+    return f"https://www.google.com/search?q={q}", "search"
+
+
 def get_articles(issue_url):
-    """Grab the bullet list under 'Articles in the <Month> Issue'."""
+    """Return a list of dicts: page, title, blurb, url, kind, from the 'Articles in the ... Issue' list."""
     soup = get_soup(issue_url)
     heading = soup.find(lambda t: t.name in ("h2", "h3", "h4") and "Articles in the" in t.get_text())
-    if not heading:
-        return []
-    ul = heading.find_next("ul")
-    return [li.get_text(" ", strip=True) for li in ul.find_all("li")] if ul else []
+    ul = heading.find_next("ul") if heading else None
+    items = []
+    for li in (ul.find_all("li") if ul else []):
+        strong = li.find(["strong", "b"])
+        head = strong.get_text(" ", strip=True) if strong else li.get_text(" ", strip=True)
+        full = li.get_text(" ", strip=True)
+        blurb = full.replace(head, "", 1).strip(" \u2013-:") if strong else ""
+        m = re.match(r"Page\s*(\d+)\s*:\s*(.*)", head)
+        page = m.group(1) if m else ""
+        title = (m.group(2) if m else head).strip(" \u2013-:")
+        a = li.find("a", href=True)
+        if a:
+            url, kind = urljoin(BASE, a["href"]), "direct"
+        else:
+            url, kind = best_link(title, blurb)
+        items.append({"page": page, "title": title, "blurb": blurb, "url": url, "kind": kind})
+    return items
 
 
 def get_free_events(year, month):
@@ -102,6 +136,36 @@ def summarize(prompt, fallback):
         return fallback
 
 
+def format_articles(articles, issue_url):
+    """Markdown list with a link per article plus an optional one-line AI 'why read it'."""
+    if not articles:
+        return "_No article list found._"
+    numbered = "\n".join(f"{i}. {x['title']} - {x['blurb']}" for i, x in enumerate(articles, 1))
+    reply = summarize(
+        "You curate a parenting magazine for San Diego parents. For EACH numbered article, "
+        "write ONE friendly sentence (max 20 words) on why a parent might want to read it. "
+        "Reply with the same numbers, one per line, nothing else. Do not invent facts.\n\n"
+        + numbered,
+        "",
+    )
+    why = {}
+    for line in reply.splitlines():
+        m = re.match(r"^\s*(\d+)[.)]\s*(.+)$", line)
+        if m:
+            why[int(m.group(1))] = m.group(2).strip()
+    labels = {"direct": "", "section": " (related section)", "search": " (search)"}
+    out = []
+    for i, x in enumerate(articles, 1):
+        page = f" (p. {x['page']}, [read in magazine]({issue_url}))" if x["page"] and issue_url else ""
+        line = f"- **[{x['title']}]({x['url']})**{labels[x['kind']]}{page}"
+        if x["blurb"]:
+            line += f" - {x['blurb']}"
+        if why.get(i):
+            line += f"\n  - Why read: {why[i]}"
+        out.append(line)
+    return "\n".join(out)
+
+
 def main():
     today = dt.date.today()
     year = int(sys.argv[1]) if len(sys.argv) > 1 else today.year
@@ -112,13 +176,7 @@ def main():
     articles = get_articles(issue_url) if issue_url else []
     events = get_free_events(year, month)
 
-    article_md = summarize(
-        "You are a helpful parenting-magazine curator. For each article below, write one "
-        "friendly sentence on why a San Diego parent might want to read it, and tag it "
-        "(Parenting / Activities / Crafts / Community). Keep the page numbers.\n\n"
-        + "\n".join(articles),
-        "\n".join(f"- {a}" for a in articles) or "_No article list found._",
-    ) if articles else "_No article list found._"
+    article_md = format_articles(articles, issue_url)
 
     event_md = summarize(
         f"From these San Diego event listings, pick the best FREE family events for {label}. "
