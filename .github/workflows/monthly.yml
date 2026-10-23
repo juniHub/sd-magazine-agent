@@ -1,8 +1,8 @@
 name: Monthly SD Family digest
 
-on: { schedule: [{ cron: "0 15 1 * *" }], workflow_dispatch: {} }
+on: { schedule: [{ cron: "0 15 1 * *" }, { cron: "0 15 15 * *" }], workflow_dispatch: {} }
 
-permissions: { contents: write, models: read }
+permissions: { contents: write, models: read, issues: write }
 
 jobs:
   digest:
@@ -23,3 +23,13 @@ jobs:
           git add digests
           git commit -m "Add monthly digest" || echo "Nothing to commit"
           git push
+      - name: Email me via GitHub Issue
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          TITLE="SD Family digest $(date +'%B %Y')"
+          FILE="digests/$(date +%Y-%m).md"
+          if grep -q "not found yet" "$FILE"; then echo "Issue not posted yet; skipping"; exit 0; fi
+          EXISTING=$(gh issue list --state all --search "\"$TITLE\" in:title" --json number --jq '.[0].number')
+          if [ -n "$EXISTING" ]; then echo "Issue already exists; skipping"; exit 0; fi
+          gh issue create --title "$TITLE" --body-file "$FILE" --assignee "${{ github.repository_owner }}"
