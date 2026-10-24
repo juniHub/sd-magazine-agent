@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>San Diego Family Monthly Guide</title>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--teal:#1a8c8c;--yellow:#f5c842;--coral:#f07060;--mint:#e8f8f8;--navy:#1a3550;--bg:#fdf8f0;--gray:#6b7280;--border:#e5e7eb}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Nunito',sans-serif;background:var(--bg);color:var(--navy)}
+a{color:var(--teal);font-weight:700}
+.header{background:linear-gradient(135deg,var(--teal),var(--navy));position:sticky;top:0;z-index:100;box-shadow:0 2px 12px rgba(0,0,0,.15)}
+.top{display:flex;align-items:center;justify-content:space-between;padding:12px 20px}
+.san{font-family:'Fredoka One',cursive;font-size:13px;color:var(--yellow);letter-spacing:3px}
+.fam{font-family:'Fredoka One',cursive;font-size:32px;color:#fff;line-height:1}
+select{font-family:inherit;font-weight:800;font-size:13px;padding:6px 10px;border-radius:20px;border:0;background:var(--yellow);color:var(--navy)}
+nav{display:flex;overflow-x:auto;gap:4px;padding:0 16px 10px}
+.nb{background:rgba(255,255,255,.1);border:1.5px solid rgba(255,255,255,.2);color:#fff;font:700 13px 'Nunito',sans-serif;padding:6px 14px;border-radius:20px;cursor:pointer;white-space:nowrap}
+.nb.active{background:var(--yellow);color:var(--navy);border-color:var(--yellow)}
+.page{display:none}.page.active{display:block}
+.hero{background:linear-gradient(160deg,#fff9e6,var(--mint));padding:24px 20px;text-align:center;border-bottom:3px solid var(--yellow)}
+.hero h1{font-family:'Fredoka One',cursive;font-size:28px;color:var(--teal)}
+.hero p{color:var(--gray);font-size:13px;font-weight:600;margin-top:4px}
+.st{font-family:'Fredoka One',cursive;font-size:22px;padding:20px 20px 10px}
+.box{background:#fff;border-radius:14px;padding:12px 14px;margin:0 16px 10px;box-shadow:0 2px 6px rgba(0,0,0,.07)}
+.box h3{font-size:14px;font-weight:800}.box p{font-size:12px;color:var(--gray);line-height:1.45;margin-top:3px}
+.meta{font-size:10px;font-weight:800;text-transform:uppercase;color:var(--teal);letter-spacing:.5px}
+.why{color:var(--navy)!important;font-weight:600}
+.banner{margin:16px;background:var(--mint);border-left:4px solid var(--teal);border-radius:12px;padding:12px;font-size:13px;font-weight:700}
+.cal-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:2px;padding:0 12px 4px}
+.dl{text-align:center;font-size:10px;font-weight:800;color:var(--gray);padding:4px 0}
+.cd{aspect-ratio:1;display:flex;align-items:center;justify-content:center;border-radius:10px;cursor:pointer;position:relative;font-size:13px;font-weight:700}
+.cd.has{color:var(--teal)}.cd.sel{background:var(--teal);color:#fff}.cd.today{background:var(--yellow);color:var(--navy)}
+.dot{width:4px;height:4px;border-radius:50%;background:var(--coral);position:absolute;bottom:3px}
+.ev{display:flex;gap:12px}.ic{width:40px;height:40px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0;background:#fef3c7}
+.ic.free{background:#d1fae5}.ic.show{background:#ede9fe}.ic.outdoor{background:#dbeafe}
+.fb{background:#d1fae5;color:#059669;font-size:9px;font-weight:800;padding:2px 6px;border-radius:6px;margin-left:6px}
+.lk{display:inline-block;font-size:11px;background:var(--mint);padding:3px 8px;border-radius:8px;text-decoration:none;margin-top:6px;word-break:break-all}
+.chips{display:flex;gap:8px;padding:16px;overflow-x:auto}
+.chip{background:#fff;border:2px solid var(--border);color:var(--gray);font:700 12px 'Nunito',sans-serif;padding:5px 12px;border-radius:16px;cursor:pointer;white-space:nowrap}
+.chip.active{background:var(--teal);color:#fff;border-color:var(--teal)}
+.empty{text-align:center;color:var(--gray);padding:30px 16px;font-size:14px}
+.pad{padding-bottom:80px}
+</style>
+</head>
+<body>
+<div class="header">
+  <div class="top">
+    <div><div class="san">SAN DIEGO</div><div class="fam">family</div></div>
+    <select id="month" aria-label="Choose issue"></select>
+  </div>
+  <nav>
+    <button class="nb active" data-p="home">🏠 Home</button>
+    <button class="nb" data-p="calendar">📅 Calendar</button>
+    <button class="nb" data-p="camps" id="campsBtn">🏕️ Camps</button>
+  </nav>
+</div>
+<div id="page-home" class="page active pad"></div>
+<div id="page-calendar" class="page pad"></div>
+<div id="page-camps" class="page pad"></div>
+
+<script>
+const $ = id => document.getElementById(id);
+const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const href = u => !u ? '' : (/^(https?:|mailto:)/.test(u) || /^[\w\-./#]+\.html/.test(u)) ? u : 'https://' + u;
+let D = null, filter = 'all';
+
+function show(p) {
+  document.querySelectorAll('.page').forEach(x => x.classList.toggle('active', x.id === 'page-' + p));
+  document.querySelectorAll('.nb').forEach(b => b.classList.toggle('active', b.dataset.p === p));
+  scrollTo(0, 0);
+}
+document.querySelectorAll('.nb').forEach(b => b.onclick = () => show(b.dataset.p));
+
+async function load(m) {
+  try { D = await (await fetch(`issues/${m}.json`)).json(); }
+  catch (e) { $('page-home').innerHTML = '<div class="empty">Could not load this issue.</div>'; return; }
+  D.events = D.events || {}; D.camps = D.camps || []; D.articles = D.articles || [];
+  $('campsBtn').style.display = D.camps.length ? '' : 'none';
+  filter = 'all';
+  renderHome(); renderCalendar(); renderCamps(); show('home');
+}
+
+function renderHome() {
+  const free = [];
+  Object.keys(D.events).map(Number).sort((a, b) => a - b).forEach(d => D.events[d].forEach(e => e.free && free.push([d, e])));
+  const [y, m] = D.month.split('-').map(Number);
+  const mon = new Date(y, m - 1, 1).toLocaleString('en-US', { month: 'short' });
+  let h = `<div class="hero"><h1>${esc(D.label)}</h1><p>${esc(D.subtitle || 'Your guide to family fun in San Diego')}</p></div>`;
+  if (D.issue_url) h += `<div class="banner">📖 <a href="${esc(D.issue_url)}" target="_blank" rel="noopener">Read the full magazine issue</a></div>`;
+  if (D.legacy) h += `<div class="banner">🎨 <a href="${esc(D.legacy)}">Open the full illustrated ${esc(D.label)} guide</a></div>`;
+  h += '<div class="st">📰 Worth Reading</div>';
+  h += D.articles.map(a => `<div class="box"><div class="meta">${a.page ? 'Page ' + esc(a.page) : 'Article'}${a.kind && a.kind !== 'direct' ? ' · best-match link' : ''}</div>
+    <h3><a href="${esc(href(a.url))}" target="_blank" rel="noopener" style="text-decoration:none">${esc(a.title)}</a></h3>
+    ${a.blurb ? `<p>${esc(a.blurb)}</p>` : ''}${a.why ? `<p class="why">💡 ${esc(a.why)}</p>` : ''}</div>`).join('') || '<div class="empty">No articles found for this issue yet.</div>';
+  h += '<div class="st">🆓 Free This Month</div>';
+  h += free.map(([d, e]) => `<div class="box" style="cursor:pointer" onclick="pick(${d});show('calendar')"><div class="meta">${mon} ${d} · ${esc(e.time || '')}</div><h3>${esc(e.icon || '')} ${esc(e.name)}</h3><p>📍 ${esc(e.loc || '')}</p></div>`).join('') || '<div class="empty">No free events listed yet.</div>';
+  $('page-home').innerHTML = h;
+}
+
+function renderCalendar() {
+  const [y, m] = D.month.split('-').map(Number);
+  const first = new Date(y, m - 1, 1).getDay(), days = new Date(y, m, 0).getDate();
+  const now = new Date(), isNow = now.getFullYear() === y && now.getMonth() === m - 1;
+  let g = ['SUN','MON','TUE','WED','THU','FRI','SAT'].map(d => `<div class="dl">${d}</div>`).join('') + '<div></div>'.repeat(first);
+  for (let d = 1; d <= days; d++) {
+    const has = (D.events[d] || []).length;
+    g += `<div class="cd ${has ? 'has' : ''} ${isNow && now.getDate() === d ? 'today' : ''}" data-d="${d}" onclick="pick(${d})">${d}${has ? '<div class="dot"></div>' : ''}</div>`;
+  }
+  $('page-calendar').innerHTML = `<div style="padding:16px 20px 8px"><div style="font-family:'Fredoka One',cursive;font-size:28px;color:var(--teal)">${esc(D.label)}</div></div><div class="cal-grid">${g}</div><div id="panel" style="padding-top:12px"></div>`;
+  const firstDay = Object.keys(D.events).map(Number).sort((a, b) => a - b)[0];
+  if (firstDay) pick(firstDay, false); else $('panel').innerHTML = '<div class="empty">No events listed for this month yet.</div>';
+}
+
+function pick(d, scroll = true) {
+  document.querySelectorAll('.cd').forEach(c => c.classList.toggle('sel', +c.dataset.d === d));
+  const list = D.events[d] || [];
+  $('panel').innerHTML = `<div class="st" style="padding-top:0;font-size:18px">📆 ${esc(D.label.split(' ')[0])} ${d}</div>` +
+    (list.map(e => `<div class="box ev"><div class="ic ${esc(e.type)}">${esc(e.icon || '📅')}</div><div><h3>${esc(e.name)}${e.free ? '<span class="fb">FREE</span>' : ''}</h3>
+      <p>🕐 ${esc(e.time || '')} &nbsp; 📍 ${esc(e.loc || '')}</p><p>${esc(e.desc || '')}</p>
+      ${e.url ? `<a class="lk" href="${esc(href(e.url))}" target="_blank" rel="noopener">🔗 ${esc(e.url.replace(/^https?:\/\//, ''))}</a>` : ''}</div></div>`).join('') || '<div class="empty">No specific events listed for this day.</div>');
+  if (scroll) $('panel').scrollIntoView({ behavior: 'smooth' });
+}
+
+function renderCamps() {
+  const types = ['all', ...new Set(D.camps.map(c => c.type))];
+  const list = D.camps.filter(c => filter === 'all' || c.type === filter);
+  $('page-camps').innerHTML = `<div class="chips">${types.map(t => `<button class="chip ${t === filter ? 'active' : ''}" onclick="filter='${t}';renderCamps()">${t === 'all' ? 'All camps' : t}</button>`).join('')}</div>` +
+    list.map(c => `<div class="box"><div class="meta">${esc(c.type)}</div><h3>${esc(c.name)}</h3><p>👧 ${esc(c.ages)} &nbsp; 📅 ${esc(c.dates)} &nbsp; 📍 ${esc(c.loc)}</p><p>${esc(c.desc)}</p>
+    ${c.url ? `<a class="lk" href="${esc(href(c.url))}" target="_blank" rel="noopener">🔗 ${esc(c.url)}</a>` : ''}</div>`).join('');
+}
+
+(async function () {
+  let months = [];
+  try { months = await (await fetch('issues/index.json')).json(); } catch (e) {}
+  months.sort().reverse();
+  if (!months.length) { $('page-home').innerHTML = '<div class="empty">No issues published yet.</div>'; return; }
+  $('month').innerHTML = months.map(m => {
+    const [y, mo] = m.split('-').map(Number);
+    return `<option value="${m}">${new Date(y, mo - 1, 1).toLocaleString('en-US', { month: 'long', year: 'numeric' })}</option>`;
+  }).join('');
+  $('month').onchange = e => load(e.target.value);
+  load(months[0]);
+})();
+</script>
+</body>
+</html>

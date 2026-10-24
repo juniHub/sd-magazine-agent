@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>San Diego Family - June 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --teal: #1a8c8c; --yellow: #f5c842; --coral: #f07060;
+    --mint: #e8f8f8; --navy: #1a3550; --soft-bg: #fdf8f0;
+    --gray: #6b7280; --border: #e5e7eb;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Nunito', sans-serif; background: var(--soft-bg); color: var(--navy); }
+
+  .header { background: linear-gradient(135deg, var(--teal) 0%, var(--navy) 100%); position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 12px rgba(0,0,0,0.15); }
+  .header-top { display: flex; align-items: center; justify-content: space-between; padding: 12px 20px; }
+  .logo-san { font-family: 'Fredoka One', cursive; font-size: 13px; color: var(--yellow); letter-spacing: 3px; }
+  .logo-family { font-family: 'Fredoka One', cursive; font-size: 32px; color: white; line-height: 1; }
+  .logo-issue { font-size: 11px; color: rgba(255,255,255,0.6); font-weight: 600; margin-top: 2px; }
+  .header-badge { background: var(--yellow); color: var(--navy); font-family: 'Fredoka One', cursive; font-size: 12px; padding: 6px 12px; border-radius: 20px; text-align: center; line-height: 1.3; }
+  nav { display: flex; overflow-x: auto; gap: 4px; padding: 0 16px 10px; scrollbar-width: none; }
+  nav::-webkit-scrollbar { display: none; }
+  .nav-btn { background: rgba(255,255,255,0.1); border: 1.5px solid rgba(255,255,255,0.2); color: white; font-family: 'Nunito', sans-serif; font-size: 13px; font-weight: 700; padding: 6px 14px; border-radius: 20px; cursor: pointer; white-space: nowrap; transition: all 0.2s; }
+  .nav-btn:hover, .nav-btn.active { background: var(--yellow); color: var(--navy); border-color: var(--yellow); }
+
+  .page { display: none; animation: fadeIn 0.3s ease; overflow-y: auto; max-height: calc(100vh - 110px); }
+  .page.active { display: block; }
+  @keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+
+  /* HOME */
+  .hero { background: linear-gradient(160deg, #fff9e6, #e8f8f8); padding: 24px 20px; text-align: center; border-bottom: 3px solid var(--yellow); }
+  .hero h1 { font-family: 'Fredoka One', cursive; font-size: 28px; color: var(--teal); margin-bottom: 6px; }
+  .hero p { color: var(--gray); font-size: 14px; font-weight: 600; }
+  .hero-tags { display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; margin-top: 12px; }
+  .tag { background: var(--teal); color: white; font-size: 11px; font-weight: 700; padding: 4px 10px; border-radius: 12px; }
+  .tag.yellow { background: var(--yellow); color: var(--navy); }
+  .tag.coral { background: var(--coral); }
+  .section-title { font-family: 'Fredoka One', cursive; font-size: 22px; color: var(--navy); padding: 20px 20px 12px; display: flex; align-items: center; gap: 8px; }
+  .cards-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; padding: 0 16px 20px; }
+  .card { background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.08); cursor: pointer; transition: transform 0.2s, box-shadow 0.2s; }
+  .card:hover { transform: translateY(-3px); box-shadow: 0 6px 16px rgba(0,0,0,0.12); }
+  .card.featured { grid-column: 1 / -1; display: flex; }
+  .card-img { width: 100%; height: 100px; display: flex; align-items: center; justify-content: center; font-size: 36px; }
+  .card.featured .card-img { width: 100px; height: auto; flex-shrink: 0; }
+  .card-body { padding: 10px 12px 12px; }
+  .card.featured .card-body { flex: 1; padding: 14px; }
+  .card-label { font-size: 10px; font-weight: 800; letter-spacing: 1px; text-transform: uppercase; color: var(--teal); margin-bottom: 4px; }
+  .card h3 { font-size: 13px; font-weight: 800; color: var(--navy); line-height: 1.3; margin-bottom: 4px; }
+  .card.featured h3 { font-size: 16px; }
+  .card p { font-size: 11px; color: var(--gray); line-height: 1.4; }
+  .promo-banner { margin: 16px 16px 0; background: linear-gradient(135deg, #10b981, #059669); border-radius: 16px; padding: 16px; color: white; display: flex; gap: 12px; align-items: center; }
+  .promo-banner h3 { font-size: 14px; font-weight: 800; margin-bottom: 3px; }
+  .promo-banner p { font-size: 11px; opacity: 0.9; line-height: 1.4; }
+
+  /* CALENDAR */
+  .cal-header { padding: 16px 20px 8px; }
+  .cal-month { font-family: 'Fredoka One', cursive; font-size: 28px; color: var(--teal); }
+  .cal-subtitle { font-size: 12px; color: var(--gray); font-weight: 600; margin-top: 2px; }
+  .cal-grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 2px; padding: 0 12px; margin-bottom: 4px; }
+  .cal-day-label { text-align: center; font-size: 10px; font-weight: 800; color: var(--gray); padding: 4px 0; }
+  .cal-day { aspect-ratio: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; border-radius: 10px; cursor: pointer; transition: all 0.2s; position: relative; font-size: 13px; font-weight: 700; color: var(--navy); }
+  .cal-day:hover { background: var(--mint); }
+  .cal-day.has-events { color: var(--teal); }
+  .cal-day.selected { background: var(--teal); color: white !important; }
+  .cal-day.today { background: var(--yellow); color: var(--navy) !important; }
+  .cal-day.empty { cursor: default; }
+  .event-dot { width: 4px; height: 4px; border-radius: 50%; background: var(--coral); position: absolute; bottom: 3px; }
+  .cal-day.selected .event-dot { background: white; }
+  .events-panel { padding: 12px 16px 80px; }
+  .events-panel-title { font-family: 'Fredoka One', cursive; font-size: 18px; color: var(--navy); margin-bottom: 12px; }
+  .event-item { background: white; border-radius: 14px; padding: 12px 14px; margin-bottom: 10px; box-shadow: 0 2px 6px rgba(0,0,0,0.06); display: flex; gap: 12px; align-items: flex-start; }
+  .event-icon { width: 40px; height: 40px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 20px; flex-shrink: 0; }
+  .event-icon.free { background: #d1fae5; }
+  .event-icon.paid { background: #fef3c7; }
+  .event-icon.show { background: #ede9fe; }
+  .event-icon.outdoor { background: #dbeafe; }
+  .event-content { flex: 1; min-width: 0; }
+  .event-name { font-size: 14px; font-weight: 800; color: var(--navy); margin-bottom: 3px; }
+  .event-time-loc { font-size: 11px; color: var(--gray); font-weight: 600; margin-bottom: 4px; display: flex; gap: 8px; flex-wrap: wrap; }
+  .event-desc { font-size: 12px; color: #6b7280; line-height: 1.4; margin-bottom: 6px; }
+  .event-link { display: inline-flex; align-items: center; gap: 4px; font-size: 11px; font-weight: 700; color: var(--teal); text-decoration: none; background: var(--mint); padding: 3px 8px; border-radius: 8px; transition: background 0.2s; word-break: break-all; }
+  .event-link:hover { background: #c5eeee; }
+  .free-badge { display: inline-block; background: #d1fae5; color: #059669; font-size: 9px; font-weight: 800; padding: 2px 6px; border-radius: 6px; margin-left: 6px; text-transform: uppercase; }
+  .no-events { text-align: center; color: var(--gray); font-size: 14px; padding: 30px 0; }
+
+  /* CAMPS */
+  .filter-row { display: flex; gap: 8px; padding: 16px; overflow-x: auto; scrollbar-width: none; }
+  .filter-row::-webkit-scrollbar { display: none; }
+  .filter-chip { background: white; border: 2px solid var(--border); color: var(--gray); font-family: 'Nunito', sans-serif; font-size: 12px; font-weight: 700; padding: 5px 12px; border-radius: 16px; cursor: pointer; white-space: nowrap; transition: all 0.2s; }
+  .filter-chip:hover, .filter-chip.active { background: var(--teal); color: white; border-color: var(--teal); }
+  .camps-list { padding: 0 16px 80px; display: flex; flex-direction: column; gap: 12px; }
+  .camp-card { background: white; border-radius: 16px; padding: 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); border-left: 5px solid var(--teal); transition: transform 0.2s; }
+  .camp-card:hover { transform: translateX(4px); }
+  .camp-card.overnight { border-left-color: var(--navy); }
+  .camp-card.arts { border-left-color: var(--coral); }
+  .camp-card.stem { border-left-color: #6366f1; }
+  .camp-card.academic { border-left-color: #10b981; }
+  .camp-card.animal { border-left-color: #f59e0b; }
+  .camp-card.sports { border-left-color: #ef4444; }
+  .camp-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px; }
+  .camp-name { font-size: 15px; font-weight: 800; color: var(--navy); }
+  .camp-type-badge { font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 10px; background: var(--mint); color: var(--teal); white-space: nowrap; flex-shrink: 0; margin-left: 8px; }
+  .camp-meta { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 8px; }
+  .camp-meta span { font-size: 11px; color: var(--gray); font-weight: 600; }
+  .camp-desc { font-size: 12px; color: var(--gray); line-height: 1.5; }
+  .camp-url { font-size: 11px; color: var(--teal); font-weight: 700; margin-top: 6px; display: block; text-decoration: none; }
+  .camp-url:hover { text-decoration: underline; }
+
+  /* ARTICLES */
+  .article-page { padding: 20px 16px 80px; }
+  .article-hero { background: linear-gradient(135deg, var(--teal), var(--navy)); border-radius: 20px; padding: 24px; color: white; margin-bottom: 20px; text-align: center; }
+  .article-hero h1 { font-family: 'Fredoka One', cursive; font-size: 32px; margin-bottom: 4px; }
+  .article-hero .sub { font-size: 14px; opacity: 0.85; font-weight: 600; }
+  .stat-box { background: rgba(255,255,255,0.15); border-radius: 12px; padding: 12px; margin-top: 14px; font-size: 13px; font-weight: 700; line-height: 1.4; }
+  .stat-number { font-family: 'Fredoka One', cursive; font-size: 28px; color: var(--yellow); }
+  .info-card { background: white; border-radius: 16px; padding: 16px; margin-bottom: 14px; box-shadow: 0 2px 8px rgba(0,0,0,0.07); }
+  .info-card h3 { font-size: 16px; font-weight: 800; color: var(--teal); margin-bottom: 10px; }
+  .info-card p, .info-card li { font-size: 13px; color: var(--gray); line-height: 1.6; }
+  .info-card ul { padding-left: 16px; }
+  .info-card li { margin-bottom: 4px; }
+  .quote-card { background: var(--mint); border-radius: 16px; padding: 18px; margin-bottom: 14px; border-left: 4px solid var(--teal); }
+  .quote-card p { font-size: 14px; font-style: italic; color: var(--navy); font-weight: 600; line-height: 1.5; }
+  .quote-card .attr { font-size: 12px; color: var(--gray); margin-top: 8px; font-style: normal; }
+  .ways-list { display: flex; flex-direction: column; gap: 10px; }
+  .way-item { display: flex; gap: 12px; align-items: flex-start; }
+  .way-emoji { font-size: 22px; flex-shrink: 0; }
+  .way-text h4 { font-size: 14px; font-weight: 800; color: var(--navy); }
+  .way-text p { font-size: 12px; color: var(--gray); margin-top: 2px; }
+
+  /* ADVENTURES */
+  .adventure-hero { background: linear-gradient(135deg, var(--yellow), var(--coral)); padding: 24px 20px; text-align: center; color: var(--navy); }
+  .adventure-hero h1 { font-family: 'Fredoka One', cursive; font-size: 26px; margin-bottom: 6px; }
+  .adventure-hero p { font-size: 13px; font-weight: 600; opacity: 0.8; max-width: 300px; margin: 0 auto; }
+  .adventure-section { padding: 16px 16px 80px; }
+  .adventure-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 20px; }
+  .adventure-item { background: white; border-radius: 14px; padding: 14px 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); text-align: center; }
+  .adventure-item .icon { font-size: 28px; margin-bottom: 6px; }
+  .adventure-item h4 { font-size: 12px; font-weight: 800; color: var(--navy); margin-bottom: 4px; }
+  .adventure-item p { font-size: 11px; color: var(--gray); line-height: 1.4; }
+  .big-12 { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+  .micro-item { background: white; border-radius: 12px; padding: 10px 12px; display: flex; align-items: center; gap: 8px; box-shadow: 0 1px 4px rgba(0,0,0,0.06); font-size: 12px; font-weight: 700; color: var(--navy); }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="header-top">
+    <div>
+      <div class="logo-san">SAN DIEGO</div>
+      <div class="logo-family">family</div>
+      <div class="logo-issue">JUNE 2026 · FREE</div>
+    </div>
+    <div class="header-badge">44 YEARS<br>Since 1982</div>
+  </div>
+  <nav>
+    <button class="nav-btn active" onclick="showPage('home')">🏠 Home</button>
+    <button class="nav-btn" onclick="showPage('calendar')">📅 Calendar</button>
+    <button class="nav-btn" onclick="showPage('camps')">🏕️ Camps</button>
+    <button class="nav-btn" onclick="showPage('adventures')">🚀 Adventures</button>
+    <button class="nav-btn" onclick="showPage('dads')">👨‍👧 Modern Dads</button>
+  </nav>
+</div>
+
+<!-- HOME -->
+<div id="page-home" class="page active">
+  <div class="hero">
+    <h1>Summer 2026 is Here! ☀️</h1>
+    <p>Your guide to family fun in San Diego</p>
+    <div class="hero-tags">
+      <span class="tag">🏕️ Camps</span>
+      <span class="tag yellow">📅 Events</span>
+      <span class="tag coral">🎭 Shows</span>
+      <span class="tag">🚴 Adventures</span>
+    </div>
+  </div>
+  <div class="promo-banner">
+    <div style="font-size:30px">🥗</div>
+    <div>
+      <h3>Free Summer Meals for Kids!</h3>
+      <p>Free lunch for youth up to 18 at select libraries, rec centers & parks. Weekdays June 9–Aug 1.</p>
+    </div>
+  </div>
+  <div class="section-title">📰 This Month's Articles</div>
+  <div class="cards-grid">
+    <div class="card featured" onclick="showPage('dads')">
+      <div class="card-img" style="background:linear-gradient(135deg,#e8f8f8,#1a8c8c22)">👨‍👧‍👦</div>
+      <div class="card-body">
+        <div class="card-label">Cover Story</div>
+        <h3>Modern Dads: Redefining Fatherhood</h3>
+        <p>How today's dads spend 3× more time with kids than in the 1960s.</p>
+      </div>
+    </div>
+    <div class="card" onclick="showPage('camps')">
+      <div class="card-img" style="background:linear-gradient(135deg,#dbeafe,#6366f120)">🏕️</div>
+      <div class="card-body">
+        <div class="card-label">Summer Camps</div>
+        <h3>School's Out — Camp's In!</h3>
+        <p>Overnight, STEM, arts, animal, sports & more.</p>
+      </div>
+    </div>
+    <div class="card" onclick="showPage('adventures')">
+      <div class="card-img" style="background:linear-gradient(135deg,#fef3c7,#f59e0b20)">🌟</div>
+      <div class="card-body">
+        <div class="card-label">Family Fun</div>
+        <h3>Summer Micro-Adventures</h3>
+        <p>Easy, low-cost ways to make magical memories.</p>
+      </div>
+    </div>
+    <div class="card featured" onclick="showPage('calendar')">
+      <div class="card-img" style="background:linear-gradient(135deg,#ede9fe,#a78bfa20)">🎭</div>
+      <div class="card-body">
+        <div class="card-label">June Calendar</div>
+        <h3>SpongeBob Musical & Tons More!</h3>
+        <p>Cygnet Theatre, SD County Fair, free concerts, and much more this June.</p>
+      </div>
+    </div>
+  </div>
+  <div class="section-title">🎵 Free Summer Concerts</div>
+  <div style="padding:0 16px 24px">
+    <div style="background:white;border-radius:16px;padding:16px;box-shadow:0 2px 8px rgba(0,0,0,0.07)">
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <div style="display:flex;gap:10px;align-items:center;padding-bottom:10px;border-bottom:1px solid #f3f4f6"><span style="font-size:22px">🎸</span><div><div style="font-weight:800;font-size:13px">Coronado Summer Concerts</div><div style="font-size:11px;color:var(--gray)">Sundays through Sept 6 · 6:30pm · Spreckels Park</div></div></div>
+        <div style="display:flex;gap:10px;align-items:center;padding-bottom:10px;border-bottom:1px solid #f3f4f6"><span style="font-size:22px">🎺</span><div><div style="font-weight:800;font-size:13px">Twilight in the Park</div><div style="font-size:11px;color:var(--gray)">Tue/Wed/Thu Jun 16–Aug 27 · 6:30pm · Spreckels Organ Pavilion</div></div></div>
+        <div style="display:flex;gap:10px;align-items:center;padding-bottom:10px;border-bottom:1px solid #f3f4f6"><span style="font-size:22px">🎶</span><div><div style="font-weight:800;font-size:13px">Music on Main (El Cajon)</div><div style="font-size:11px;color:var(--gray)">Fridays through August · 6–8pm · Downtown El Cajon</div></div></div>
+        <div style="display:flex;gap:10px;align-items:center"><span style="font-size:22px">🎵</span><div><div style="font-weight:800;font-size:13px">Santee Summer Concerts</div><div style="font-size:11px;color:var(--gray)">Thursdays through Aug 13 · 6:30–8pm · Town Center Park</div></div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CALENDAR -->
+<div id="page-calendar" class="page">
+  <div class="cal-header">
+    <div class="cal-month">☀️ June 2026</div>
+    <div class="cal-subtitle">National Camping Month · Great Outdoors Month · Zoo & Aquarium Month</div>
+  </div>
+  <div class="cal-grid">
+    <div class="cal-day-label">SUN</div><div class="cal-day-label">MON</div><div class="cal-day-label">TUE</div><div class="cal-day-label">WED</div><div class="cal-day-label">THU</div><div class="cal-day-label">FRI</div><div class="cal-day-label">SAT</div>
+    <div class="cal-day empty"></div>
+    <div class="cal-day has-events today" onclick="selectDay(1,this)">1<div class="event-dot"></div></div>
+    <div class="cal-day has-events" onclick="selectDay(2,this)">2<div class="event-dot"></div></div>
+    <div class="cal-day has-events" onclick="selectDay(3,this)">3<div class="event-dot"></div></div>
+    <div class="cal-day has-events" onclick="selectDay(4,this)">4<div class="event-dot"></div></div>
+    <div class="cal-day has-events" onclick="selectDay(5,this)">5<div class="event-dot"></div></div>
+    <div class="cal-day has-events" onclick="selectDay(6,this)">6<div class="event-dot"></div></div>
+    <div class="cal-day has-events" onclick="selectDay(7,this)">7<div class="event-dot"></div></div>
+    <div class="cal-day" onclick="selectDay(8,this)">8</div>
+    <div class="cal-day" onclick="selectDay(9,this)">9</div>
+    <div class="cal-day has-events" onclick="selectDay(10,this)">10<div class="event-dot"></div></div>
+    <div class="cal-day has-events" onclick="selectDay(11,this)">11<div class="event-dot"></div></div>
+    <div class="cal-day has-events" onclick="selectDay(12,this)">12<div class="event-dot"></div></div>
+    <div class="cal-day has-events" onclick="selectDay(13,this)">13<div class="event-dot"></div></div>
+    <div class="cal-day has-events" onclick="selectDay(14,this)">14<div class="event-dot"></div></div>
+    <div class="cal-day" onclick="selectDay(15,this)">15</div>
+    <div class="cal-day has-events" onclick="selectDay(16,this)">16<div class="event-dot"></div></div>
+    <div class="cal-day has-events" onclick="selectDay(17,this)">17<div class="event-dot"></div></div>
+    <div class="cal-day has-events" onclick="selectDay(18,this)">18<div class="event-dot"></div></div>
+    <div class="cal-day has-events" onclick="selectDay(19,this)">19<div class="event-dot"></div></div>
+    <div class="cal-day has-events" onclick="selectDay(20,this)">20<div class="event-dot"></div></div>
+    <div class="cal-day has-events" onclick="selectDay(21,this)">21<div class="event-dot"></div></div>
+    <div class="cal-day" onclick="selectDay(22,this)">22</div>
+    <div class="cal-day" onclick="selectDay(23,this)">23</div>
+    <div class="cal-day" onclick="selectDay(24,this)">24</div>
+    <div class="cal-day" onclick="selectDay(25,this)">25</div>
+    <div class="cal-day has-events" onclick="selectDay(26,this)">26<div class="event-dot"></div></div>
+    <div class="cal-day has-events" onclick="selectDay(27,this)">27<div class="event-dot"></div></div>
+    <div class="cal-day has-events" onclick="selectDay(28,this)">28<div class="event-dot"></div></div>
+    <div class="cal-day empty"></div><div class="cal-day empty"></div><div class="cal-day empty"></div><div class="cal-day empty"></div><div class="cal-day empty"></div><div class="cal-day empty"></div><div class="cal-day empty"></div>
+  </div>
+  <div class="events-panel" id="events-panel">
+    <div class="events-panel-title">📆 Select a Day</div>
+    <div style="text-align:center;color:var(--gray);font-size:13px;padding:20px 0">Tap a date to see what's happening!</div>
+  </div>
+</div>
+
+<!-- CAMPS -->
+<div id="page-camps" class="page">
+  <div style="background:linear-gradient(135deg,#1a3550,#1a8c8c);padding:20px;color:white;text-align:center">
+    <div style="font-family:'Fredoka One',cursive;font-size:26px;margin-bottom:4px">🏕️ Summer Camps 2026</div>
+    <div style="font-size:13px;opacity:0.85;font-weight:600">Find the perfect camp for your kids</div>
+  </div>
+  <div class="filter-row">
+    <button class="filter-chip active" onclick="filterCamps('all',this)">All Camps</button>
+    <button class="filter-chip" onclick="filterCamps('overnight',this)">🌙 Overnight</button>
+    <button class="filter-chip" onclick="filterCamps('stem',this)">🔬 STEM</button>
+    <button class="filter-chip" onclick="filterCamps('arts',this)">🎨 Arts</button>
+    <button class="filter-chip" onclick="filterCamps('animal',this)">🐬 Animals</button>
+    <button class="filter-chip" onclick="filterCamps('sports',this)">⚽ Sports</button>
+    <button class="filter-chip" onclick="filterCamps('academic',this)">📚 Academic</button>
+  </div>
+  <div class="camps-list" id="camps-list"></div>
+</div>
+
+<!-- ADVENTURES -->
+<div id="page-adventures" class="page">
+  <div class="adventure-hero">
+    <h1>🚀 Summer Micro-Adventures</h1>
+    <p>Easy ways to create magical family memories without big budgets or time off work</p>
+  </div>
+  <div class="adventure-section">
+    <div class="info-card" style="margin-bottom:14px">
+      <h3>💡 The Big Idea</h3>
+      <p>Summer doesn't have to be big to be meaningful — it just has to be <strong>intentional</strong>. Kids don't measure summer by price tags. They remember popsicles that melt too fast, late-night backyard play, and the feeling that this time is special.</p>
+    </div>
+    <div style="font-family:'Fredoka One',cursive;font-size:18px;margin-bottom:12px;color:var(--navy)">📅 Weekday Adventures</div>
+    <div class="adventure-grid">
+      <div class="adventure-item"><div class="icon">🍦</div><h4>Sunset Popsicle Walks</h4><p>After dinner, walk the block while the sky changes color.</p></div>
+      <div class="adventure-item"><div class="icon">⛺</div><h4>Backyard Camp Night</h4><p>Tent, flashlight stories, marshmallows — no travel needed.</p></div>
+      <div class="adventure-item"><div class="icon">🌅</div><h4>Breakfast Picnic</h4><p>Blanket in the yard before work. 20 minutes shifts the day.</p></div>
+      <div class="adventure-item"><div class="icon">💦</div><h4>Sprinkler Hour</h4><p>Turns an ordinary Tuesday into something memorable.</p></div>
+      <div class="adventure-item"><div class="icon">🎨</div><h4>Driveway Art Show</h4><p>Kids make chalk murals, then open their gallery for family.</p></div>
+      <div class="adventure-item"><div class="icon">⏰</div><h4>"Yes Hour"</h4><p>Say yes to kids' ideas for 60 minutes. They feel empowered!</p></div>
+    </div>
+    <div style="font-family:'Fredoka One',cursive;font-size:18px;margin:16px 0 12px;color:var(--navy)">⭐ 12 Quick Ideas</div>
+    <div class="big-12">
+      <div class="micro-item"><span>🔦</span> Flashlight tag at dusk</div>
+      <div class="micro-item"><span>🌄</span> Watch the sunrise</div>
+      <div class="micro-item"><span>🍋</span> Homemade lemonade</div>
+      <div class="micro-item"><span>⭐</span> Stargazing on a blanket</div>
+      <div class="micro-item"><span>🍨</span> DIY ice cream sundaes</div>
+      <div class="micro-item"><span>💦</span> Water balloon toss</div>
+      <div class="micro-item"><span>🎮</span> Game night on the patio</div>
+      <div class="micro-item"><span>🍳</span> Cook a new recipe</div>
+      <div class="micro-item"><span>🎤</span> Family talent show</div>
+      <div class="micro-item"><span>📖</span> Outdoor story time</div>
+      <div class="micro-item"><span>🛤️</span> Sidewalk obstacle course</div>
+      <div class="micro-item"><span>💃</span> Evening dance party</div>
+    </div>
+  </div>
+</div>
+
+<!-- MODERN DADS -->
+<div id="page-dads" class="page">
+  <div class="article-page">
+    <div class="article-hero">
+      <div style="font-size:40px;margin-bottom:8px">👨‍👧</div>
+      <h1>Modern Dads</h1>
+      <div class="sub">How they're redefining fatherhood</div>
+      <div class="stat-box"><div class="stat-number">3×</div><div>Today's dads spend nearly three times as many hours with their children as fathers did in the 1960s</div></div>
+    </div>
+    <div class="info-card"><h3>🌟 The Shift</h3><p>Today's dads are embracing vulnerability, hands-on caregiving, and deeper emotional connections — modeling a more engaged version of fatherhood for the next generation.</p></div>
+    <div class="quote-card"><p>"They're across everything — housework, kids, work, the lot. Compared to my dad's day, we've just had a slow, generation-by-generation change… being a dad just seems like an all-in."</p><div class="attr">— Joe Brumm, creator of <em>Bluey</em></div></div>
+    <div class="info-card"><h3>🏠 Redefining Gender Roles</h3><p>The number of stay-at-home fathers has <strong>more than doubled</strong> over the past two decades as dual-income households rethink how responsibilities are divided.</p></div>
+    <div class="info-card"><h3>🧠 Why It Matters for Kids</h3><ul><li>Fewer mental health challenges</li><li>Lower levels of aggression</li><li>Stronger relationships</li><li>A father's vocabulary with a 2-year-old helps predict language development at age 3!</li></ul></div>
+    <div style="font-family:'Fredoka One',cursive;font-size:18px;margin:0 0 12px;color:var(--navy)">📵 Screen-Free Ways to Connect</div>
+    <div class="ways-list">
+      <div class="way-item"><div class="way-emoji">🎣</div><div class="way-text"><h4>Get Outside</h4><p>Go fishing, toss a ball, or take a walk to naturally spark conversation.</p></div></div>
+      <div class="way-item"><div class="way-emoji">🔨</div><div class="way-text"><h4>Build Something Together</h4><p>A Home Depot workshop or model airplane — it's about the experience.</p></div></div>
+      <div class="way-item"><div class="way-emoji">🎪</div><div class="way-text"><h4>Play Their Way</h4><p>From tea parties to LEGO, when parents enter a child's world, kids feel seen.</p></div></div>
+      <div class="way-item"><div class="way-emoji">🏟️</div><div class="way-text"><h4>Catch a Game</h4><p>Talk about teamwork, effort, winning and losing — at any level.</p></div></div>
+      <div class="way-item"><div class="way-emoji">🍩</div><div class="way-text"><h4>Create a Simple Ritual</h4><p>Saturday donuts, afterschool walks, or weekly "dad dates." Consistency beats complexity.</p></div></div>
+    </div>
+    <div class="quote-card" style="margin-top:16px"><p>"Fatherhood has given me purpose. My identity now is being a good and present father."</p><div class="attr">— Deren Schneider, Rancho San Diego</div></div>
+  </div>
+</div>
+
+<script>
+const EVENTS = {
+  1: [
+    { name:"Nighttime Zoo", icon:"🦁", type:"paid", time:"Through Aug. 9 (excl. June 13 & July 9)", loc:"San Diego Zoo, Balboa Park", desc:"Explore the zoo at night with family-friendly entertainment and live shows.", url:"sandiegozoowildlifealliance.org", free:false },
+    { name:"Ocean of Dreams Drone Show", icon:"🌊", type:"outdoor", time:"Nightly through Aug. 9, then weekends through Sept. 7", loc:"SeaWorld, 500 Sea World Dr.", desc:"600 fully synchronized drones celebrating ocean beauty and conservation. Incredible for all ages!", url:"seaworldsandiego.com", free:false },
+    { name:"Blue Star Museums — Free Military Admission", icon:"⭐", type:"free", time:"Through Sept. 7", loc:"Participating museums nationwide", desc:"FREE admission for active-duty military & families, including National Guard and Reserve.", url:"arts.gov/initiatives/blue-star-museums", free:true },
+    { name:"Kids Bowl FREE", icon:"🎳", type:"free", time:"All summer long", loc:"Aztec Lanes, East Village Tavern + Bowl, Mira Mesa Lanes", desc:"Two free games of bowling per day all summer! Register online first.", url:"kidsbowlfree.com", free:true },
+    { name:"Sesame Summer Splash", icon:"🎡", type:"paid", time:"Open daily through Sept. 7", loc:"2052 Entertainment Cir., Chula Vista", desc:"Meet your favorite Sesame Street characters and enjoy family-friendly rides!", url:"sesameplace.com", free:false },
+    { name:"SeaWorld Summer Spectacular", icon:"🎆", type:"paid", time:"Select dates through Sept. 7", loc:"SeaWorld, 500 Sea World Dr.", desc:"New shows, live music and the dazzling Enchanted Wonders Fireworks spectacular.", url:"seaworldsandiego.com", free:false },
+    { name:"U-Pick Strawberry Fields", icon:"🍓", type:"paid", time:"Daily 9am–5pm · $10–$25", loc:"Carlsbad Strawberry Company, Cannon Rd. & I-5", desc:"A delicious family outing picking fresh strawberries straight from the field!", url:"carlsbadstrawberrycompany.com", free:false },
+    { name:"LEGOLAND Water Park", icon:"🧱", type:"paid", time:"Open daily (CHIMA Water Park opens June 13)", loc:"One LEGOLAND Dr., Carlsbad", desc:"Seven slides, sandy beaches, Build-A-Raft River, Pirate Reef and LEGO Legends of CHIMA Water Park.", url:"legoland.com", free:false },
+  ],
+  2: [
+    { name:"Residents FREE Days at Balboa Park", icon:"🎨", type:"free", time:"Tuesdays on a rotating basis", loc:"Balboa Park museums", desc:"Park museums offer free admission for SD city/county residents and active military on rotating Tuesdays.", url:"balboapark.org", free:true },
+    { name:'"The Monsters" at La Jolla Playhouse', icon:"🎭", type:"show", time:"Through June 28 (closed Mondays)", loc:"La Jolla Playhouse, 2910 La Jolla Village Dr.", desc:"A warm-hearted sibling story exploring how to love each other better and build a life to be proud of.", url:"lajollaplayhouse.org", free:false },
+  ],
+  3: [
+    { name:'"The Most Happy Fella"', icon:"🎭", type:"show", time:"Through June 28 (closed Mon & Tue)", loc:"North Coast Rep., 987 Lomas Santa Fe, Solana Beach", desc:"A musical filled with soaring melodies, tender ballads and Broadway showstoppers.", url:"northcoastrep.org", free:false },
+    { name:"FREE Cajon Cruise", icon:"🚗", type:"free", time:"Wednesdays through Aug. 5, 7:30pm", loc:"Downtown El Cajon", desc:"Exciting showcase of vehicles blending nostalgic classics with cutting-edge modern designs.", url:"downtownelcajon.com", free:true },
+    { name:'"Mean Girls" Musical', icon:"🎭", type:"show", time:"Through June 20 (closed Mon & Tue)", loc:"Moonlight Amphitheatre, 1250 Vale Terrace Dr., Vista", desc:"Redefines high school hierarchy with razor-sharp wit and infectious pop energy.", url:"moonlightstage.com", free:false },
+  ],
+  4: [
+    { name:"UltraStar Cinemas Discount Thursdays", icon:"🎬", type:"paid", time:"All day every Thursday", loc:"7510 Hazard Center Dr.", desc:"50% off ALL movie tickets and popcorn every Thursday! A great family deal.", url:"ultrastarmovies.com", free:false },
+  ],
+  5: [
+    { name:"Nat at Night", icon:"🌙", type:"paid", time:"Fridays 10am–11pm (half price after 5pm) · $14–$24", loc:"SD Natural History Museum, Balboa Park", desc:"Explore the museum's wonders after hours. Under 2 free.", url:"sdnat.org", free:false },
+    { name:"FREE First Friday La Jolla Art Walk", icon:"🖼️", type:"free", time:"4–7pm", loc:"La Jolla galleries", desc:"Wander through galleries and pop-up artists scattered across La Jolla village.", url:"lajollabythesea.com", free:true },
+    { name:"FREE Music on Main", icon:"🎵", type:"free", time:"Fridays through August, 6–8pm", loc:"Downtown El Cajon", desc:"Free live music all summer long in downtown El Cajon!", url:"downtownelcajon.com", free:true },
+    { name:"Movies on the Beach", icon:"🎬", type:"paid", time:"8pm · $25.75", loc:"Del Beach, 1500 Orange Ave., Coronado", desc:"Outdoor movies on the beach! Also playing June 6, 12, 13, 19 & 27.", url:"hoteldel.com", free:false },
+    { name:"Padres vs. Mets", icon:"⚾", type:"paid", time:"June 5–7", loc:"Petco Park", desc:"San Diego Padres home series against the New York Mets!", url:"padres.com", free:false },
+  ],
+  6: [
+    { name:"Roar & Snore Safari", icon:"🦁", type:"paid", time:"Starting at $205", loc:"Safari Park, 15500 San Pasqual Valley Rd., Escondido", desc:"Sleepover at the Safari Park! Observe nighttime wildlife and morning wildlife presentations.", url:"sdzsafaripark.org", free:false },
+    { name:"The Wave Waterpark Opens!", icon:"🌊", type:"paid", time:"Daily through Aug. 9, then weekends through Sept. 27", loc:"101 Wave Dr., Vista", desc:"Slide tower, flow rider, riptide slide and more — it's opening day!", url:"thewavewaterpark.com", free:false },
+    { name:"FREE Seaport Village Daycation Celebration", icon:"🎉", type:"free", time:"3–7pm", loc:"849 W. Harbor Dr., Seaport Village", desc:"Summer kick-off with live music, DJ dance party, FREE carousel rides and family-friendly activities!", url:"seaportvillage.com", free:true },
+    { name:"FREE Sam Hinton Folk Festival", icon:"🎸", type:"free", time:"10am–5pm", loc:"Old Poway Park, 14134 Midland Rd., Poway", desc:"Cajun, bluegrass and kids music all day long!", url:"poway.org", free:true },
+    { name:"FREE Annual San Marcos Trails Day", icon:"🥾", type:"free", time:"8:30–10am", loc:"Lakeview Park, 650 Foxhall Dr., San Marcos", desc:"Hike, bike, walk, or trot and explore the beauty of San Marcos' parks and trails.", url:"san-marcos.net", free:true },
+    { name:"North Park Music Fest", icon:"🎶", type:"paid", time:"12–10pm · $25 wristband", loc:"North Park Mini Park", desc:"Multiple venues in the heart of North Park — an all-day music celebration!", url:"northparkmusicfest.org", free:false },
+    { name:"Rooftop Cinema: Zootopia 2", icon:"🎬", type:"paid", time:"1pm · $11–$20", loc:"The Porto Vista Hotel, 1835 Columbia St., Little Italy", desc:"Classic cinema concessions, personal headphones and an amazing rooftop view!", url:"rooftopcinemaclub.com", free:false },
+  ],
+  7: [
+    { name:"KidsFest at Petco Park", icon:"⚾", type:"paid", time:"Game day (also June 28)", loc:"Petco Park", desc:"Bounce houses, face painting, games and more on game day!", url:"padres.com", free:false },
+    { name:"Birch After Hours", icon:"🐟", type:"paid", time:"Sundays 5–7pm · $34.95–$39.95", loc:"Birch Aquarium, 2300 Expedition Way, La Jolla", desc:"Relaxed nighttime vibe — experience the aquarium in a whole new light! Under 3 free.", url:"aquarium.ucsd.edu", free:false },
+    { name:"Kids Markets", icon:"🛍️", type:"outdoor", time:"9am–2pm", loc:"Fiesta Island, Mission Bay Park, 1590 E. Mission Bay Dr.", desc:"Kid entrepreneurs showcase creativity and learn to manage their own businesses!", url:"kidsmarkets.com", free:false },
+  ],
+  10: [
+    { name:"The SpongeBob Musical OPENS", icon:"🧽", type:"show", time:"June 10–July 12", loc:"Cygnet Theatre, Arts District Liberty Station", desc:"Dive into Bikini Bottom! Colorful, high-energy musical filled with laughter and music for all ages.", url:"cygnettheatre.org", free:false },
+    { name:"San Diego County Fair OPENS", icon:"🎡", type:"paid", time:"June 10–July 5 (closed Mon & Tue) · $14–$25", loc:"Del Mar Fairgrounds, 2260 Jimmy Durante Blvd.", desc:"Live music, delicious food, amazing exhibits, thrilling rides and endless family entertainment!", url:"sdfair.com", free:false },
+    { name:"Toyota Summer Concert Series", icon:"🎤", type:"paid", time:"Various dates through summer", loc:"Del Mar Fairgrounds, Corona Grandstand Stage", desc:"A variety of classic favorites and rising stars all summer long.", url:"sdfair.com", free:false },
+    { name:"Humphreys Concerts by the Bay", icon:"🎵", type:"paid", time:"Tonight, June 23 & 26", loc:"2241 Shelter Island Dr.", desc:"Sparkling views of Point Loma and San Diego Bay with top entertainment in an outdoor venue.", url:"humphreysconcerts.com", free:false },
+  ],
+  11: [
+    { name:"FIFA World Cup Experience at LEGOLAND", icon:"⚽", type:"paid", time:"Daily through June 19", loc:"LEGOLAND, One LEGOLAND Dr., Carlsbad", desc:"High-energy celebration with interactive games, an epic LEGO build and FIFA character experiences.", url:"legoland.com", free:false },
+    { name:"Residents FREE at Gaslamp Museum", icon:"🏛️", type:"free", time:"Every 2nd Thursday, 10am–4pm", loc:"Gaslamp Museum, 410 Island Ave.", desc:"Free admission for SD residents — exhibits, tours, festivals and educational programs.", url:"gaslampmuseum.org", free:true },
+    { name:"Concerts at the Cove", icon:"🎵", type:"free", time:"Thursdays starting June 11, 6–7:45pm", loc:"Fletcher Cove Park, 111 S. Sierra Ave., Solana Beach", desc:"Free outdoor concerts at beautiful Fletcher Cove all summer!", url:"cityofsolanabeach.ca.gov", free:true },
+  ],
+  12: [
+    { name:"FREE Movies in the Park: Lilo & Stitch", icon:"🎬", type:"free", time:"6:30pm, movie at sunset", loc:"Woodland Park, 671 Woodland Pkwy., San Marcos", desc:"Free outdoor movie night! Bring blankets and enjoy Lilo & Stitch under the stars.", url:"sanmarcosca.gov", free:true },
+    { name:"Friday Night Splash", icon:"💦", type:"paid", time:"4–8pm · $16 (also June 26)", loc:"The Wave Waterpark, 101 Wave Dr., Vista", desc:"Extended evening hours at the waterpark — a fun Friday night for the family!", url:"thewavewaterpark.com", free:false },
+    { name:"Jimbo's Garden Workshop", icon:"🌱", type:"paid", time:"11–11:30am · $14", loc:"Children's Museum of Discovery, 320 N. Broadway, Escondido", desc:"Special garden workshop with local, seasonal ingredients in the Discovery Garden.", url:"visitcmod.org", free:false },
+  ],
+  13: [
+    { name:"FREE La Mesa Flag Day Parade", icon:"🇺🇸", type:"free", time:"10am", loc:"La Mesa Village, Memorial Dr. to Acacia Ave.", desc:"Celebrate our nation's colors and spirit of patriotism with a community parade!", url:"cityoflamesa.gov", free:true },
+    { name:"U.S. Police & Fire Championships", icon:"🏅", type:"paid", time:"Through June 20", loc:"San Diego Marriott Mission Valley, 8757 Rio San Diego Dr.", desc:"First responders from across the nation compete in 40 Olympic-style sports.", url:"uspfc.org", free:false },
+    { name:"FREE Bro-Am Beach Fest", icon:"🏄", type:"free", time:"7am–5pm", loc:"Moonlight Beach, 400 B St., Encinitas", desc:"Live concerts with Grammy award-winning Switchfoot, surf contests and more!", url:"broam.org", free:true },
+    { name:"San Diego Smooth Jazz Festival", icon:"🎷", type:"paid", time:"3pm today & tomorrow", loc:"The Rady Shell at Jacobs Park, 222 Marina Park Way", desc:"Soothing jazz, delicious cuisine and amazing waterfront atmosphere.", url:"theshell.org", free:false },
+    { name:"FREE 2nd Saturday Art Walk", icon:"🖼️", type:"free", time:"3–10pm", loc:"Grand Ave., Escondido", desc:"Visual arts, theater, live music, museums and local history — fun for all ages!", url:"visitescondido.com", free:true },
+  ],
+  14: [
+    { name:"National Parks Fee FREE Day", icon:"🏞️", type:"free", time:"All day", loc:"All National Park Service sites", desc:"All National Park sites that charge an entrance fee offer FREE admission to everyone today!", url:"nps.gov/planyourvisit/passes.htm", free:true },
+    { name:"FREE Summer Sundays at Village Walk", icon:"🎈", type:"free", time:"Sundays 5–7pm through July 19", loc:"Eastlake Pkwy. at Miller Dr.", desc:"Balloon sculptures, glitter tattoos and kids crafts every Sunday. Today: wood treasure box!", url:"shopvillagewalk.com", free:true },
+    { name:"San Diego Dreamin': Pre-Father's Day Beach Bash", icon:"🌊", type:"paid", time:"10am–1pm · $25 per family", loc:"AleSmith Brewing, 9990 AleSmith Ct.", desc:"Retro vibes, lawn games, inflatables, face painting and more — a fun pre-Father's Day outing!", url:"alesmith.com", free:false },
+  ],
+  16: [
+    { name:"Taste of Little Italy", icon:"🍝", type:"paid", time:"4–8pm · $70.50 (also June 17)", loc:"Piazza della Famiglia, Little Italy", desc:"Curated bites and live music in the heart of San Diego's Little Italy neighborhood.", url:"littleitalysd.com", free:false },
+    { name:"FREE All About E-Bikes Class", icon:"🚲", type:"free", time:"5–6pm", loc:"Revolution Bike Shop, 235 S. Hwy. 101, Solana Beach", desc:"Start your e-biking journey with comprehensive training covering all the essentials! Register online.", url:"cityofsolanabeach.ca.gov", free:true },
+  ],
+  17: [
+    { name:"Mainly Mozart All-Star Orchestra Festival", icon:"🎻", type:"paid", time:"Through June 27, 7pm nightly", loc:"Various venues — see website", desc:"The largest gathering of principal orchestra players in North America.", url:"mainlymozart.org/allstar", free:false },
+  ],
+  18: [
+    { name:"Father's Day Lunch & Tea", icon:"☕", type:"paid", time:"11:30am, 1 & 2:30pm · Through June 22 · $15.95–$44.95", loc:"Julian Tea & Cottage Arts, 2124 Third St.", desc:"Reservations required. A sweet and charming way to celebrate Dad early!", url:"juliantea.com", free:false },
+    { name:"Sunset Luaus on the Bay", icon:"🌺", type:"paid", time:"Thursdays through Sept. 3, 6–9pm", loc:"Catamaran Resort Hotel, 3999 Mission Blvd.", desc:"Family-friendly event with leis, island music, dance entertainment and more!", url:"catamaranresort.com", free:false },
+    { name:"FREE Encinitas Cruise Night", icon:"🚗", type:"free", time:"5:30–7:30pm", loc:"S. Coast Hwy. 101, Encinitas", desc:"Classic cars, live music and more in Encinitas!", url:"encinitas101.com", free:true },
+    { name:"FREE Hillcrest Classic Car Show", icon:"🚘", type:"free", time:"1–3:30pm", loc:"3720 Fifth Ave., Hillcrest", desc:"Classic cars on display in the heart of Hillcrest!", url:"fabuloushillcrest.com", free:true },
+  ],
+  19: [
+    { name:"NASCAR San Diego Weekend", icon:"🏎️", type:"paid", time:"June 19–21", loc:"Naval Base Coronado", desc:"Three days of races with NASCAR Cup Series, Xfinity Series and CRAFTSMAN Truck Series!", url:"nascarsandiego.com", free:false },
+  ],
+  20: [
+    { name:"FREE Accessibility Mornings at the Fleet", icon:"🔬", type:"free", time:"Sensory-friendly 9–10am; Movie at 10am", loc:"Fleet Science Center, Balboa Park", desc:"Sensory-friendly experience + Sea Otters movie with house lights on and lower volume. Free for visitor + 1 guest!", url:"fleetscience.org", free:true },
+    { name:"SD Scottish Highland Games", icon:"🏴󠁧󠁢󠁳󠁣󠁴󠁿", type:"paid", time:"Today & tomorrow, 9am–5pm · $5–$20", loc:"Mission Valley River Park, River Park Rd.", desc:"Five decades of Scottish heritage, athleticism, music and community spirit.", url:"sdhighlandgames.org", free:false },
+    { name:"Petco Park Summer Concerts: NASCAR Countryfest", icon:"🎤", type:"paid", time:"7pm · $48", loc:"Gallagher Square, Petco Park", desc:"KSON NASCAR Weekend Countryfest — country music under the stars!", url:"padres.com/concerts", free:false },
+  ],
+  21: [
+    { name:"🎉 Father's Day!", icon:"👨‍👧", type:"paid", time:"All day", loc:"Everywhere!", desc:"Happy Father's Day! Check out the cruise and brunch options below to make it extra special.", url:"sandiegofamily.com", free:false },
+    { name:"Father's Day Gondola Cruise", icon:"🚣", type:"paid", time:"1–9pm", loc:"503 Grand Caribe Causeway, Coronado", desc:"A memorable gondola cruise soaking in beautiful waterfront views — a unique way to celebrate Dad!", url:"gondolacompany.com", free:false },
+    { name:"Father's Day Brunch Cruise — Flagship", icon:"🛥️", type:"paid", time:"11am–1pm", loc:"Flagship Cruises, 990 N. Harbor Dr.", desc:"Sit back and celebrate Father's Day with a relaxing brunch cruise on San Diego Bay!", url:"flagshipsd.com", free:false },
+    { name:"Father's Day Premier Brunch Cruise — Hornblower", icon:"⚓", type:"paid", time:"11am–1pm", loc:"Pier 1 Hornblower Landing, 1800 N. Harbor Dr.", desc:"Create family memories treasured forever with a day on the beautiful San Diego Bay.", url:"cityexperiences.com", free:false },
+    { name:"Sundays at Six Summer Concerts", icon:"🎵", type:"free", time:"Sundays at 6pm, June 21–July 26", loc:"Harry Griffen Park, 9550 Milden St., La Mesa", desc:"Free outdoor concert series every Sunday evening all summer!", url:"cityoflamesa.us", free:true },
+  ],
+  26: [
+    { name:"Music by the Sea Concert", icon:"🌊", type:"paid", time:"7–8:30pm · $13–$24", loc:"Encinitas Library, 540 Cornish Dr.", desc:"A beautiful outdoor concert experience by the sea in Encinitas.", url:"encinitasca.gov", free:false },
+    { name:"San Diego Symphony: Opening Night", icon:"🎶", type:"paid", time:"7:30pm", loc:"The Rady Shell at Jacobs Park, 222 Marina Park Way", desc:"Opening night of the summer season at the gorgeous outdoor Rady Shell!", url:"theshell.org", free:false },
+    { name:'"A Bad Case of the Stripes: The Musical"', icon:"🎭", type:"show", time:"Fri–Sun through July 12 · $22.50 (opens June 26)", loc:"Casa del Prado Theatre, Balboa Park", desc:"A colorful, fun musical for kids by San Diego Junior Theatre. San Diego Premiere! All ages recommended.", url:"juniortheatre.com", free:false },
+    { name:"FREE Música en la Plaza", icon:"🎸", type:"free", time:"7–10pm", loc:"California Center for the Arts, Escondido, 340 N. Escondido Blvd.", desc:"Feel the rhythm and soul of Latin music under the stars — free admission!", url:"artcenter.org", free:true },
+  ],
+  27: [
+    { name:"FREE Ocean Beach Street Fair & Chili Cook-Off", icon:"🌶️", type:"free", time:"10am–8pm", loc:"Ocean Beach", desc:"Eclectic fun with tasty festival food, art, beach entertainment and a family fun zone!", url:"oceanbeachsandiego.com", free:true },
+    { name:"FREE Oceanside Independence Parade", icon:"🎺", type:"free", time:"10am–12noon", loc:"Coast Hwy., Oceanside (Wisconsin to Civic Center Dr.)", desc:"Floats, bands, cool cars and more for a patriotic community celebration!", url:"mainstreetoceanside.com", free:true },
+    { name:"FREE USA 250: Stars, Stripes and Surf Festival", icon:"🇺🇸", type:"free", time:"12–6pm", loc:"Junior Seau Pier Amphitheatre, 301 The Strand N., Oceanside", desc:"Chili cook-off, country music festival, pinewood derby, fun zone and more — all free!", url:"oceansidechamber.com", free:true },
+    { name:"Lake Poway Family Campout", icon:"🏕️", type:"paid", time:"1pm Saturday to 10am Sunday · $65", loc:"14644 Lake Poway Rd., Poway", desc:"Hikes, campfire with s'mores and a magic/comedy show. A true overnight family adventure!", url:"poway.org", free:false },
+    { name:"Natsu Nights: Kawaii Trinketcore Night", icon:"🌸", type:"paid", time:"5–8pm · $5", loc:"Japanese Friendship Garden, Balboa Park", desc:"Extended evening hours in the garden to enjoy perfect summer weather.", url:"niwa.org", free:false },
+  ],
+  28: [
+    { name:"Scoop San Diego Ice Cream Festival", icon:"🍦", type:"paid", time:"12–4pm · $49", loc:"30th St. & North Park Way", desc:"10 one-ounce samples shareable with your family — dozens of flavors from local and national creameries!", url:"scoopsandiego.org", free:false },
+    { name:"FREE Carlsbad Art in the Village", icon:"🖼️", type:"free", time:"9am–5pm", loc:"Grand Ave., Carlsbad", desc:"Artists from all over the region showcase their work in beautiful Carlsbad Village.", url:"carlsbad-village.com", free:true },
+    { name:"Taste of Adams Avenue", icon:"🍽️", type:"paid", time:"11am–3pm · $50–$65", loc:"Adams Ave., University Heights through Kensington", desc:"40+ restaurants, coffee houses and unique eateries — a foodie family adventure!", url:"adamsavenuebusiness.com", free:false },
+    { name:"KidsFest at Petco Park", icon:"⚾", type:"paid", time:"Game day", loc:"Petco Park", desc:"Bounce houses, face painting, games and more on game day!", url:"padres.com", free:false },
+  ],
+};
+
+const CAMPS = [
+  { name:"YMCA Overnight Camps", type:"overnight", ages:"7–17", dates:"June–August", loc:"Julian & Imperial Beach", desc:"Raintree Ranch Horse Camp, Camp Surf, and Camp Marston. Life-changing outdoor experiences with lasting friendships.", url:"ymcasd.org/camps" },
+  { name:"YMCA Day Camps", type:"overnight", ages:"5–13", dates:"June–August", loc:"15 countywide locations", desc:"Robotics, ceramics, karate, gymnastics, Minecraft, flag football, kayaking and tons more!", url:"ymcasd.org/daycamp" },
+  { name:"SeaWorld Resident & Career Camps", type:"overnight", ages:"Grades 5–12", dates:"June–August", loc:"Mission Bay", desc:"Fun overnight camp with close-up animal experiences, park rides, shows and learning activities.", url:"seaworld.com/san-diego/educational-programs" },
+  { name:"Fleet Science Center STEM Camps", type:"stem", ages:"Grades K–8", dates:"June 1–Aug. 7", loc:"Balboa Park", desc:"Explore paleontology, space, geology, biology, robotics and more! Inquiry and innovation-focused.", url:"fleetscience.org/events/camps" },
+  { name:"Model Railroading Summer Camps", type:"stem", ages:"Grades TK–12", dates:"June 17–Aug. 7", loc:"Balboa Park", desc:"Kids design layouts, build landscapes and explore the science behind trains at the SD Model Railroad Museum.", url:"sdmrm.org/summer-camps" },
+  { name:"City Ballet Dance Camps", type:"arts", ages:"4–18", dates:"June 15–July 10", loc:"Pacific Beach", desc:"Two-week sessions with age and skill level-appropriate ballet classes for all levels.", url:"cityballet.org/school/intensives/summer-dance-camps" },
+  { name:"Comic Camps @ Little Fish", type:"arts", ages:"7–18", dates:"June 1–Aug. 7", loc:"College Area", desc:"Learn to develop characters and comics from idea to completed page at Little Fish Comic Book Studio!", url:"lilfish.us/camps" },
+  { name:"Hot Spot Creative Kids", type:"arts", ages:"6+", dates:"June–July", loc:"4S Ranch & Liberty Station", desc:"Drop-in pottery painting, candle making, mosaics, fairy gardens or slime! 1 or 3-day camps available.", url:"thehotspotstudios.com" },
+  { name:"MCASD Summer Camps", type:"arts", ages:"6–10", dates:"July 6–24", loc:"La Jolla", desc:"Create fun art projects inspired by the museum's collection and special exhibitions with MCASD educators.", url:"mcasd.org/events/summer-camp-2026" },
+  { name:"San Diego Junior Theatre Camps", type:"arts", ages:"Grades K–12", dates:"June 8–Aug. 7", loc:"Balboa Park", desc:"Acting, singing, dancing in performance camps, musical theater intensives and acting academies.", url:"juniortheatre.com/classes/programs" },
+  { name:"San Diego Civic Youth Summer Ballet", type:"arts", ages:"4+", dates:"June 15–Aug. 7", loc:"Balboa Park", desc:"Half-day ballet camps for ages 4–6 and 7–10. Intermediate and advanced intensives also available.", url:"sdcyb.org" },
+  { name:"Birch Aquarium Summer Camps", type:"animal", ages:"4–13", dates:"June 15–Aug. 7", loc:"La Jolla", desc:"Explore underwater worlds, play games, create crafts and meet ocean creatures with expert educators.", url:"aquarium.ucsd.edu/learn/camps/summer-camps" },
+  { name:"SeaWorld San Diego Day Camps", type:"animal", ages:"Grades 1–12", dates:"June–August", loc:"Mission Bay", desc:"Close-up animal experiences, park rides, shows and learning with trained counselors.", url:"seaworld.com/san-diego/educational-programs" },
+  { name:"Summer Critter Camp at Helen Woodward", type:"animal", ages:"4–13", dates:"June 1–Aug. 21", loc:"Rancho Santa Fe", desc:"Interactive animal fun with themes like Bioscience & Beyond and Amazing Animal Athletes! Spots limited.", url:"animalcenter.org/education" },
+  { name:"HECD Research Study Camp at UCSD", type:"academic", ages:"4–5", dates:"July 6–Sept.", loc:"UCSD, La Jolla", desc:"Free 5-day research study camp with age-appropriate learning activities. Earn up to $180 for participating!", url:"ucsdedlab.org/currentstudies" },
+  { name:"Pacific View Charter: Middle School Prep", type:"academic", ages:"Incoming 5th & 6th graders", dates:"July 20–24 or July 27–31", loc:"Oceanside", desc:"FREE camp! Prepare for middle school with math, reading, social studies, STEM and team-building activities.", url:"pacificview.org" },
+  { name:"Waldorf School Summer Camp", type:"academic", ages:"Grades 2–6", dates:"June 29–Aug. 14", loc:"City Heights", desc:"Hands-on activities: music-making, storytelling, gardening, furniture building. Registration deadline June 5.", url:"waldorfsandiego.org" },
+  { name:"Rock Academy Camp", type:"academic", ages:"Grades K–6", dates:"May 26–July 31", loc:"Point Loma (Liberty Station)", desc:"Full-day Christ-centered camps with sports, science, art and adventure. Open to all San Diegans.", url:"therockacademy.org" },
+  { name:"Children's Museum of Discovery Camps", type:"academic", ages:"4–8", dates:"June 15–Aug. 14", loc:"Escondido", desc:"Access to museum exhibits, hands-on engineering and paleontology exploration with trained staff.", url:"visitcmod.org/events/summer-camp-3" },
+  { name:"GRIT Gymnastics Camp", type:"sports", ages:"4–14", dates:"June 1–Aug. 7", loc:"Clairemont Mesa", desc:"High-energy gymnastics, games, obstacle courses and strength activities. Full or half days available!", url:"gritgymnasticsclub.com/camps" },
+  { name:"Warrior Kids Camp at Victory MMA", type:"sports", ages:"8+", dates:"June 1–July 31", loc:"Point Loma", desc:"Learn Jiu-Jitsu, boxing and Muay Thai while building self-confidence and discipline. Full week $350.", url:"victorygyms.com" },
+  { name:"Aqua Pros Swim School", type:"sports", ages:"All ages", dates:"Year-round", loc:"Clairemont Mesa", desc:"3-to-1 student/teacher ratio in a warm 90° indoor pool. Free introductory lesson for new students!", url:"aquapros.org" },
+];
+
+let selectedDayEl = null;
+let currentFilter = 'all';
+
+function showPage(page) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById('page-' + page).classList.add('active');
+  const idx = ['home','calendar','camps','adventures','dads'].indexOf(page);
+  document.querySelectorAll('.nav-btn')[idx].classList.add('active');
+  document.getElementById('page-' + page).scrollTop = 0;
+}
+
+function selectDay(day, el) {
+  if (selectedDayEl) selectedDayEl.classList.remove('selected');
+  el.classList.add('selected');
+  selectedDayEl = el;
+  renderEvents(day);
+  document.getElementById('events-panel').scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+function renderEvents(day) {
+  const panel = document.getElementById('events-panel');
+  const events = EVENTS[day] || [];
+  if (!events.length) {
+    panel.innerHTML = `<div class="events-panel-title">📆 June ${day}</div><div class="no-events">😴 No specific events listed for this day.<br><small style="color:var(--teal);display:block;margin-top:6px">Many ongoing events run all month — try June 1!</small></div>`;
+    return;
+  }
+  let html = `<div class="events-panel-title">📆 June ${day} — ${events.length} Event${events.length > 1 ? 's' : ''}</div>`;
+  events.forEach(e => {
+    html += `
+      <div class="event-item">
+        <div class="event-icon ${e.type}">${e.icon}</div>
+        <div class="event-content">
+          <div class="event-name">${e.name}${e.free ? '<span class="free-badge">FREE</span>' : ''}</div>
+          <div class="event-time-loc">
+            <span>🕐 ${e.time}</span>
+            <span>📍 ${e.loc}</span>
+          </div>
+          <div class="event-desc">${e.desc}</div>
+          <a class="event-link" href="https://${e.url}" target="_blank" rel="noopener">🔗 ${e.url}</a>
+        </div>
+      </div>`;
+  });
+  panel.innerHTML = html;
+}
+
+function filterCamps(type, btn) {
+  currentFilter = type;
+  document.querySelectorAll('.filter-chip').forEach(c => c.classList.remove('active'));
+  btn.classList.add('active');
+  renderCamps();
+}
+
+function renderCamps() {
+  const list = document.getElementById('camps-list');
+  const filtered = currentFilter === 'all' ? CAMPS : CAMPS.filter(c => c.type === currentFilter);
+  const labels = { overnight:'🌙 Overnight', arts:'🎨 Arts', stem:'🔬 STEM', academic:'📚 Academic', animal:'🐬 Animals', sports:'⚽ Sports' };
+  list.innerHTML = filtered.map(c => `
+    <div class="camp-card ${c.type}">
+      <div class="camp-header">
+        <div class="camp-name">${c.name}</div>
+        <div class="camp-type-badge">${labels[c.type]}</div>
+      </div>
+      <div class="camp-meta">
+        <span>👧 ${c.ages}</span>&nbsp;
+        <span>📅 ${c.dates}</span>&nbsp;
+        <span>📍 ${c.loc}</span>
+      </div>
+      <div class="camp-desc">${c.desc}</div>
+      <a class="camp-url" href="https://${c.url}" target="_blank" rel="noopener">🔗 ${c.url}</a>
+    </div>`).join('');
+}
+
+renderCamps();
+setTimeout(() => { selectDay(1, document.querySelector('.cal-day.today')); }, 150);
+</script>
+</body>
+</html>
