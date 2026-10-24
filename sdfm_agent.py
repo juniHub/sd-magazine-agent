@@ -172,58 +172,88 @@ def format_articles(articles, issue_url):
     return "\n".join(out)
 
 
-def day_text(year, month, day):
-    """Text of the magazine site's page for ONE day (it lists that day's events with FREE categories)."""
+TIME_RE = re.compile(r"\d{1,2}(?::\d{2})?\s*(?:am|pm)(?:\s*[\u2013-]\s*\d{1,2}(?::\d{2})?\s*(?:am|pm))?", re.I)
+WEB_RE = re.compile(r"(?:https?://|www\.)[^\s,;)]+", re.I)
+ICONS = [("free", "\U0001F193"), ("halloween", "\U0001F383"), ("concert", "\U0001F3B5"), ("museum", "\U0001F3DB\uFE0F"),
+         ("amusement", "\U0001F3A2"), ("skating", "\u26F8\uFE0F"), ("muertos", "\U0001F480"), ("tea", "\u2615")]
+
+
+def parse_day(year, month, day):
+    """Read one day page on the magazine's calendar. Every event is a list item with a title link,
+    location, category links (incl. FREE) and a description, so no AI is needed."""
     url = f"{BASE}/things-to-do/events-calendar/day/{month:02d}-{day:02d}-{year}"
     try:
-        text = get_soup(url).get_text("\n", strip=True)
+        soup = get_soup(url)
     except Exception:
-        return ""
-    i = text.find("Events from")
-    return text[i:i + 2500] if i >= 0 else ""
+        return []
+    out, seen = [], set()
+    for a in soup.find_all("a", href=re.compile(r"/events-calendar/event/")):
+        title, li = a.get_text(" ", strip=True), a.find_parent("li")
+        if not title or not li or title in seen:
+            continue
+        seen.add(title)
+        cats = [c.get_text(strip=True) for c in li.find_all("a", href=re.compile(r"/events-calendar/category/"))]
+        loc = li.find("a", href=re.compile(r"/events-calendar/location/"))
+        lines = li.get_text("\n", strip=True).split("\n")
+        desc = lines[-1]
+        if cats and cats[-1] in lines:
+            desc = " ".join(lines[len(lines) - 1 - lines[::-1].index(cats[-1]) + 1:]) or desc
+        for prefix in ("free " + title, title):
+            if desc.lower().startswith(prefix.lower()):
+                desc = desc[len(prefix):]
+                break
+        desc = desc.lstrip(" .:").strip()
+        free = any(c.upper() == "FREE" for c in cats) or desc.upper().startswith("FREE")
+        w = WEB_RE.search(desc)
+        site = w.group(0).rstrip(".") if w else ""
+        if site and not site.lower().startswith("http"):
+            site = "https://" + site
+        t = TIME_RE.search(desc)
+        joined = " ".join(cats).lower()
+        out.append({
+            "name": title, "free": free, "type": "free" if free else "other",
+            "icon": next((i for k, i in ICONS if k in joined or (k == "free" and free)), "\U0001F4C5"),
+            "time": t.group(0) if t else "", "loc": loc.get_text(" ", strip=True) if loc else "",
+            "desc": desc[:300], "url": site or urljoin(BASE, a["href"]),
+        })
+    return out
 
 
 def extract_events(year, month):
-    """Read every day page of the month, then ask the AI to structure each day's events.
-    Dates come from the page address (not guessed). Returns {day: [event, ...]}."""
-    days = calendar.monthrange(year, month)[1]
-    blocks = []
-    for d in range(1, days + 1):
-        t = day_text(year, month, d)
-        if "Categories" in t:
-            blocks.append((d, t))
-    events = {}
-    for i in range(0, len(blocks), 6):  # 6 days per AI call keeps prompts small
-        group = blocks[i:i + 6]
-        reply = summarize(
-            "Each block below is one day of a San Diego family events calendar. Extract the events. "
-            "Return ONLY JSON shaped {\"<day number>\": [{\"name\":..,\"icon\":\"one emoji\","
-            "\"type\":\"free|paid|show|outdoor\",\"time\":..,\"loc\":..,\"desc\":\"one sentence\","
-            "\"url\":\"\",\"free\":true|false}]}. Use ONLY facts in the text. "
-            "free=true if the Categories include FREE or the description says free. "
-            "Set url only if a web address appears in the text (add https://), else empty string.\n\n"
-            + "\n\n".join(f"=== DAY {d} ===\n{t}" for d, t in group),
-            "", max_tokens=4000,
-        )
-        try:
-            raw = json.loads(reply[reply.index("{"): reply.rindex("}") + 1])
-            for k, v in raw.items():
-                if isinstance(v, list):
-                    events.setdefault(str(int(k)), []).extend(v)
-        except Exception:
-            print(f"AI returned nothing usable for days {[d for d, _ in group]}", file=sys.stderr)
-        time.sleep(2)
-    return events
+    """Returns ({day: [events]}, [ongoing events]). An event listed on 5+ days is 'ongoing'
+    (e.g. 'Through Oct. 31') and is kept once instead of being repeated every day."""
+    seen = {}
+    for d in range(1, calendar.monthrange(year, month)[1] + 1):
+        for e in parse_day(year, month, d):
+            seen.setdefault(e["name"], []).append((d, e))
+        time.sleep(0.3)
+    events, ongoing = {}, []
+    for items in seen.values():
+        if len(items) >= 5:
+            ongoing.append(items[0][1])
+        else:
+            for d, e in items:
+                events.setdefault(str(d), []).append(e)
+    return events, ongoing
 
 
-def write_site_data(year, month, issue_url, articles, events):
+def free_markdown(events, ongoing, year, month):
+    mon = f"{dt.date(year, month, 1):%b}"
+    link = lambda e: f"[{e['name']}]({e['url']})"
+    lines = [f"- {link(e)} (ongoing) - {e['loc']}" for e in ongoing if e["free"]]
+    for d in sorted(events, key=int):
+        lines += [f"- {mon} {d}: {link(e)} - {e['loc']}" for e in events[d] if e["free"]]
+    return "\n".join(lines) or "_No free events detected._"
+
+
+def write_site_data(year, month, issue_url, articles, events, ongoing):
     """Write issues/YYYY-MM.json (what index.html reads) and refresh issues/index.json."""
     d = pathlib.Path("issues")
     d.mkdir(exist_ok=True)
     key = f"{year}-{month:02d}"
     (d / f"{key}.json").write_text(json.dumps({
         "month": key, "label": f"{dt.date(year, month, 1):%B %Y}", "subtitle": "",
-        "issue_url": issue_url or "", "articles": articles, "events": events, "camps": [],
+        "issue_url": issue_url or "", "articles": articles, "events": events, "ongoing": ongoing, "camps": [],
     }, indent=1, ensure_ascii=False), encoding="utf-8")
     idx = d / "index.json"
     months = set(json.loads(idx.read_text())) if idx.exists() else set()
@@ -239,16 +269,10 @@ def main():
 
     issue_url = find_issue_url(year, month)
     articles = get_articles(issue_url) if issue_url else []
-    events = get_free_events(year, month)
+    events, ongoing = extract_events(year, month)
 
     article_md = format_articles(articles, issue_url)
-
-    event_md = summarize(
-        f"From these San Diego event listings, pick the best FREE family events for {label}. "
-        "Group them by date, one line each with the name and where. Do not invent details.\n\n"
-        + "\n".join(events),
-        "\n".join(f"- {e}" for e in events) or "_No free events detected._",
-    ) if events else "_No free events detected._"
+    event_md = free_markdown(events, ongoing, year, month)
 
     digest = (
         f"# San Diego Family Magazine, {label}\n\n"
@@ -258,7 +282,7 @@ def main():
         f"Full calendar: {CALENDAR}\n"
     )
 
-    write_site_data(year, month, issue_url, articles, extract_events(year, month))
+    write_site_data(year, month, issue_url, articles, events, ongoing)
 
     out = pathlib.Path("digests")
     out.mkdir(exist_ok=True)
