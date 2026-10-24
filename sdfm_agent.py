@@ -17,12 +17,14 @@ Setup:
 Run:   python sdfm_agent.py            # current month
        python sdfm_agent.py 2026 11    # a specific month
 """
+import calendar
 import datetime as dt
 import json
 import os
 import pathlib
 import re
 import sys
+import time
 from urllib.parse import quote_plus, urljoin
 
 import requests
@@ -170,30 +172,48 @@ def format_articles(articles, issue_url):
     return "\n".join(out)
 
 
-def extract_events(year, month):
-    """Ask the AI to turn the calendar page text into the website's event format.
-    Returns {day: [event, ...]}; empty if AI is unavailable (never invents data)."""
-    soup = get_soup(CALENDAR)
-    text = soup.get_text("\n", strip=True)[:12000]
-    links = "\n".join(
-        f"{a.get_text(' ', strip=True)} | {urljoin(BASE, a['href'])}"
-        for a in soup.find_all("a", href=True) if len(a.get_text(strip=True)) > 4
-    )[:5000]
-    label = f"{dt.date(year, month, 1):%B %Y}"
-    reply = summarize(
-        f"From the calendar text below, extract family events happening in {label} ONLY. "
-        "Return ONLY JSON shaped {\"<day number>\": [{\"name\":..,\"icon\":\"one emoji\",\"type\":\"free|paid|show|outdoor\","
-        "\"time\":..,\"loc\":..,\"desc\":\"one sentence\",\"url\":\"\",\"free\":true|false}]}. "
-        "Use ONLY facts in the text. free=true only if the text says free. "
-        "Set url only if it appears in the LINKS list; otherwise empty string. Skip anything without a clear date.\n\n"
-        f"TEXT:\n{text}\n\nLINKS:\n{links}",
-        "", max_tokens=4000,
-    )
+def day_text(year, month, day):
+    """Text of the magazine site's page for ONE day (it lists that day's events with FREE categories)."""
+    url = f"{BASE}/things-to-do/events-calendar/day/{month:02d}-{day:02d}-{year}"
     try:
-        raw = json.loads(reply[reply.index("{"): reply.rindex("}") + 1])
-        return {str(int(k)): v for k, v in raw.items() if isinstance(v, list)}
+        text = get_soup(url).get_text("\n", strip=True)
     except Exception:
-        return {}
+        return ""
+    i = text.find("Events from")
+    return text[i:i + 2500] if i >= 0 else ""
+
+
+def extract_events(year, month):
+    """Read every day page of the month, then ask the AI to structure each day's events.
+    Dates come from the page address (not guessed). Returns {day: [event, ...]}."""
+    days = calendar.monthrange(year, month)[1]
+    blocks = []
+    for d in range(1, days + 1):
+        t = day_text(year, month, d)
+        if "Categories" in t:
+            blocks.append((d, t))
+    events = {}
+    for i in range(0, len(blocks), 6):  # 6 days per AI call keeps prompts small
+        group = blocks[i:i + 6]
+        reply = summarize(
+            "Each block below is one day of a San Diego family events calendar. Extract the events. "
+            "Return ONLY JSON shaped {\"<day number>\": [{\"name\":..,\"icon\":\"one emoji\","
+            "\"type\":\"free|paid|show|outdoor\",\"time\":..,\"loc\":..,\"desc\":\"one sentence\","
+            "\"url\":\"\",\"free\":true|false}]}. Use ONLY facts in the text. "
+            "free=true if the Categories include FREE or the description says free. "
+            "Set url only if a web address appears in the text (add https://), else empty string.\n\n"
+            + "\n\n".join(f"=== DAY {d} ===\n{t}" for d, t in group),
+            "", max_tokens=4000,
+        )
+        try:
+            raw = json.loads(reply[reply.index("{"): reply.rindex("}") + 1])
+            for k, v in raw.items():
+                if isinstance(v, list):
+                    events.setdefault(str(int(k)), []).extend(v)
+        except Exception:
+            print(f"AI returned nothing usable for days {[d for d, _ in group]}", file=sys.stderr)
+        time.sleep(2)
+    return events
 
 
 def write_site_data(year, month, issue_url, articles, events):
