@@ -76,14 +76,20 @@ document.querySelectorAll('.nb').forEach(b => b.onclick = () => show(b.dataset.p
 async function load(m) {
   try { D = await (await fetch(`issues/${m}.json`)).json(); }
   catch (e) { $('page-home').innerHTML = '<div class="empty">Could not load this issue.</div>'; return; }
-  D.events = D.events || {}; D.camps = D.camps || []; D.articles = D.articles || [];
+  D.events = D.events || {}; D.ongoing = D.ongoing || []; D.camps = D.camps || []; D.articles = D.articles || [];
   $('campsBtn').style.display = D.camps.length ? '' : 'none';
   filter = 'all';
   renderHome(); renderCalendar(); renderCamps(); show('home');
 }
 
+function evBox(e) {
+  return `<div class="box ev"><div class="ic ${esc(e.type)}">${esc(e.icon || '📅')}</div><div><h3>${esc(e.name)}${e.free ? '<span class="fb">FREE</span>' : ''}</h3>
+    <p>🕐 ${esc(e.time || '')} &nbsp; 📍 ${esc(e.loc || '')}</p><p>${esc(e.desc || '')}</p>
+    ${e.url ? `<a class="lk" href="${esc(href(e.url))}" target="_blank" rel="noopener">🔗 ${esc(e.url.replace(/^https?:\/\//, ''))}</a>` : ''}</div></div>`;
+}
+
 function renderHome() {
-  const free = [];
+  const free = D.ongoing.filter(e => e.free).map(e => [0, e]);
   Object.keys(D.events).map(Number).sort((a, b) => a - b).forEach(d => D.events[d].forEach(e => e.free && free.push([d, e])));
   const [y, m] = D.month.split('-').map(Number);
   const mon = new Date(y, m - 1, 1).toLocaleString('en-US', { month: 'short' });
@@ -95,7 +101,7 @@ function renderHome() {
     <h3><a href="${esc(href(a.url))}" target="_blank" rel="noopener" style="text-decoration:none">${esc(a.title)}</a></h3>
     ${a.blurb ? `<p>${esc(a.blurb)}</p>` : ''}${a.why ? `<p class="why">💡 ${esc(a.why)}</p>` : ''}</div>`).join('') || '<div class="empty">No articles found for this issue yet.</div>';
   h += '<div class="st">🆓 Free This Month</div>';
-  h += free.map(([d, e]) => `<div class="box" style="cursor:pointer" onclick="pick(${d});show('calendar')"><div class="meta">${mon} ${d} · ${esc(e.time || '')}</div><h3>${esc(e.icon || '')} ${esc(e.name)}</h3><p>📍 ${esc(e.loc || '')}</p></div>`).join('') || '<div class="empty">No free events listed yet.</div>';
+  h += free.map(([d, e]) => `<div class="box" style="cursor:pointer" onclick="${d ? `pick(${d});` : ''}show('calendar')"><div class="meta">${d ? mon + ' ' + d : 'Ongoing'} · ${esc(e.time || '')}</div><h3>${esc(e.icon || '')} ${esc(e.name)}</h3><p>📍 ${esc(e.loc || '')}</p></div>`).join('') || '<div class="empty">No free events listed yet.</div>';
   $('page-home').innerHTML = h;
 }
 
@@ -108,18 +114,18 @@ function renderCalendar() {
     const has = (D.events[d] || []).length;
     g += `<div class="cd ${has ? 'has' : ''} ${isNow && now.getDate() === d ? 'today' : ''}" data-d="${d}" onclick="pick(${d})">${d}${has ? '<div class="dot"></div>' : ''}</div>`;
   }
-  $('page-calendar').innerHTML = `<div style="padding:16px 20px 8px"><div style="font-family:'Fredoka One',cursive;font-size:28px;color:var(--teal)">${esc(D.label)}</div></div><div class="cal-grid">${g}</div><div id="panel" style="padding-top:12px"></div>`;
+  $('page-calendar').innerHTML = `<div style="padding:16px 20px 8px"><div style="font-family:'Fredoka One',cursive;font-size:28px;color:var(--teal)">${esc(D.label)}</div></div><div class="cal-grid">${g}</div><div id="panel" style="padding-top:12px"></div>${D.ongoing.length ? `<div class="st" id="ongoing">🔁 Ongoing This Month</div>${D.ongoing.map(evBox).join('')}` : ''}`;
   const firstDay = Object.keys(D.events).map(Number).sort((a, b) => a - b)[0];
-  if (firstDay) pick(firstDay, false); else $('panel').innerHTML = '<div class="empty">No events listed for this month yet.</div>';
+  if (firstDay) pick(firstDay, false); else $('panel').innerHTML = (D.ongoing.length ? '<div class="empty">No events tied to a single date.</div>' : '<div class="empty">No events listed for this month yet.</div>') + ongoingLink();
 }
+
+const ongoingLink = () => D.ongoing.length ? `<div style="padding:4px 16px 12px"><a href="#ongoing" onclick="document.getElementById('ongoing').scrollIntoView({behavior:'smooth'});return false">⬇ ${D.ongoing.length} ongoing events all month (pumpkin patches, free days and more)</a></div>` : '';
 
 function pick(d, scroll = true) {
   document.querySelectorAll('.cd').forEach(c => c.classList.toggle('sel', +c.dataset.d === d));
   const list = D.events[d] || [];
   $('panel').innerHTML = `<div class="st" style="padding-top:0;font-size:18px">📆 ${esc(D.label.split(' ')[0])} ${d}</div>` +
-    (list.map(e => `<div class="box ev"><div class="ic ${esc(e.type)}">${esc(e.icon || '📅')}</div><div><h3>${esc(e.name)}${e.free ? '<span class="fb">FREE</span>' : ''}</h3>
-      <p>🕐 ${esc(e.time || '')} &nbsp; 📍 ${esc(e.loc || '')}</p><p>${esc(e.desc || '')}</p>
-      ${e.url ? `<a class="lk" href="${esc(href(e.url))}" target="_blank" rel="noopener">🔗 ${esc(e.url.replace(/^https?:\/\//, ''))}</a>` : ''}</div></div>`).join('') || '<div class="empty">No specific events listed for this day.</div>');
+    (list.map(evBox).join('') || '<div class="empty">No specific events listed for this day.</div>') + ongoingLink();
   if (scroll) $('panel').scrollIntoView({ behavior: 'smooth' });
 }
 
