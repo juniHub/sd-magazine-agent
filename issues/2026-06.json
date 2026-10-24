@@ -1,0 +1,1041 @@
+{
+ "month": "2026-06",
+ "label": "June 2026",
+ "subtitle": "National Camping Month · Great Outdoors Month · Zoo & Aquarium Month",
+ "issue_url": "",
+ "legacy": "sd_family_june2026.html",
+ "articles": [
+  {
+   "title": "Modern Dads: Redefining Fatherhood",
+   "blurb": "How today’s dads spend 3× more time with kids than in the 1960s.",
+   "url": "sd_family_june2026.html",
+   "kind": "direct",
+   "why": ""
+  },
+  {
+   "title": "School’s Out — Camp’s In!",
+   "blurb": "Overnight, STEM, arts, animal, sports & more.",
+   "url": "sd_family_june2026.html",
+   "kind": "direct",
+   "why": ""
+  },
+  {
+   "title": "Summer Micro-Adventures",
+   "blurb": "Easy, low-cost ways to make magical memories.",
+   "url": "sd_family_june2026.html",
+   "kind": "direct",
+   "why": ""
+  },
+  {
+   "title": "SpongeBob Musical & Tons More!",
+   "blurb": "June calendar: Cygnet Theatre, SD County Fair, free concerts and more.",
+   "url": "sd_family_june2026.html",
+   "kind": "direct",
+   "why": ""
+  }
+ ],
+ "events": {
+  "1": [
+   {
+    "name": "Nighttime Zoo",
+    "icon": "🦁",
+    "type": "paid",
+    "time": "Through Aug. 9 (excl. June 13 & July 9)",
+    "loc": "San Diego Zoo, Balboa Park",
+    "desc": "Explore the zoo at night with family-friendly entertainment and live shows.",
+    "url": "sandiegozoowildlifealliance.org",
+    "free": false
+   },
+   {
+    "name": "Ocean of Dreams Drone Show",
+    "icon": "🌊",
+    "type": "outdoor",
+    "time": "Nightly through Aug. 9, then weekends through Sept. 7",
+    "loc": "SeaWorld, 500 Sea World Dr.",
+    "desc": "600 fully synchronized drones celebrating ocean beauty and conservation. Incredible for all ages!",
+    "url": "seaworldsandiego.com",
+    "free": false
+   },
+   {
+    "name": "Blue Star Museums — Free Military Admission",
+    "icon": "⭐",
+    "type": "free",
+    "time": "Through Sept. 7",
+    "loc": "Participating museums nationwide",
+    "desc": "FREE admission for active-duty military & families, including National Guard and Reserve.",
+    "url": "arts.gov/initiatives/blue-star-museums",
+    "free": true
+   },
+   {
+    "name": "Kids Bowl FREE",
+    "icon": "🎳",
+    "type": "free",
+    "time": "All summer long",
+    "loc": "Aztec Lanes, East Village Tavern + Bowl, Mira Mesa Lanes",
+    "desc": "Two free games of bowling per day all summer! Register online first.",
+    "url": "kidsbowlfree.com",
+    "free": true
+   },
+   {
+    "name": "Sesame Summer Splash",
+    "icon": "🎡",
+    "type": "paid",
+    "time": "Open daily through Sept. 7",
+    "loc": "2052 Entertainment Cir., Chula Vista",
+    "desc": "Meet your favorite Sesame Street characters and enjoy family-friendly rides!",
+    "url": "sesameplace.com",
+    "free": false
+   },
+   {
+    "name": "SeaWorld Summer Spectacular",
+    "icon": "🎆",
+    "type": "paid",
+    "time": "Select dates through Sept. 7",
+    "loc": "SeaWorld, 500 Sea World Dr.",
+    "desc": "New shows, live music and the dazzling Enchanted Wonders Fireworks spectacular.",
+    "url": "seaworldsandiego.com",
+    "free": false
+   },
+   {
+    "name": "U-Pick Strawberry Fields",
+    "icon": "🍓",
+    "type": "paid",
+    "time": "Daily 9am–5pm · $10–$25",
+    "loc": "Carlsbad Strawberry Company, Cannon Rd. & I-5",
+    "desc": "A delicious family outing picking fresh strawberries straight from the field!",
+    "url": "carlsbadstrawberrycompany.com",
+    "free": false
+   },
+   {
+    "name": "LEGOLAND Water Park",
+    "icon": "🧱",
+    "type": "paid",
+    "time": "Open daily (CHIMA Water Park opens June 13)",
+    "loc": "One LEGOLAND Dr., Carlsbad",
+    "desc": "Seven slides, sandy beaches, Build-A-Raft River, Pirate Reef and LEGO Legends of CHIMA Water Park.",
+    "url": "legoland.com",
+    "free": false
+   }
+  ],
+  "2": [
+   {
+    "name": "Residents FREE Days at Balboa Park",
+    "icon": "🎨",
+    "type": "free",
+    "time": "Tuesdays on a rotating basis",
+    "loc": "Balboa Park museums",
+    "desc": "Park museums offer free admission for SD city/county residents and active military on rotating Tuesdays.",
+    "url": "balboapark.org",
+    "free": true
+   },
+   {
+    "name": "\"The Monsters\" at La Jolla Playhouse",
+    "icon": "🎭",
+    "type": "show",
+    "time": "Through June 28 (closed Mondays)",
+    "loc": "La Jolla Playhouse, 2910 La Jolla Village Dr.",
+    "desc": "A warm-hearted sibling story exploring how to love each other better and build a life to be proud of.",
+    "url": "lajollaplayhouse.org",
+    "free": false
+   }
+  ],
+  "3": [
+   {
+    "name": "\"The Most Happy Fella\"",
+    "icon": "🎭",
+    "type": "show",
+    "time": "Through June 28 (closed Mon & Tue)",
+    "loc": "North Coast Rep., 987 Lomas Santa Fe, Solana Beach",
+    "desc": "A musical filled with soaring melodies, tender ballads and Broadway showstoppers.",
+    "url": "northcoastrep.org",
+    "free": false
+   },
+   {
+    "name": "FREE Cajon Cruise",
+    "icon": "🚗",
+    "type": "free",
+    "time": "Wednesdays through Aug. 5, 7:30pm",
+    "loc": "Downtown El Cajon",
+    "desc": "Exciting showcase of vehicles blending nostalgic classics with cutting-edge modern designs.",
+    "url": "downtownelcajon.com",
+    "free": true
+   },
+   {
+    "name": "\"Mean Girls\" Musical",
+    "icon": "🎭",
+    "type": "show",
+    "time": "Through June 20 (closed Mon & Tue)",
+    "loc": "Moonlight Amphitheatre, 1250 Vale Terrace Dr., Vista",
+    "desc": "Redefines high school hierarchy with razor-sharp wit and infectious pop energy.",
+    "url": "moonlightstage.com",
+    "free": false
+   }
+  ],
+  "4": [
+   {
+    "name": "UltraStar Cinemas Discount Thursdays",
+    "icon": "🎬",
+    "type": "paid",
+    "time": "All day every Thursday",
+    "loc": "7510 Hazard Center Dr.",
+    "desc": "50% off ALL movie tickets and popcorn every Thursday! A great family deal.",
+    "url": "ultrastarmovies.com",
+    "free": false
+   }
+  ],
+  "5": [
+   {
+    "name": "Nat at Night",
+    "icon": "🌙",
+    "type": "paid",
+    "time": "Fridays 10am–11pm (half price after 5pm) · $14–$24",
+    "loc": "SD Natural History Museum, Balboa Park",
+    "desc": "Explore the museum's wonders after hours. Under 2 free.",
+    "url": "sdnat.org",
+    "free": false
+   },
+   {
+    "name": "FREE First Friday La Jolla Art Walk",
+    "icon": "🖼️",
+    "type": "free",
+    "time": "4–7pm",
+    "loc": "La Jolla galleries",
+    "desc": "Wander through galleries and pop-up artists scattered across La Jolla village.",
+    "url": "lajollabythesea.com",
+    "free": true
+   },
+   {
+    "name": "FREE Music on Main",
+    "icon": "🎵",
+    "type": "free",
+    "time": "Fridays through August, 6–8pm",
+    "loc": "Downtown El Cajon",
+    "desc": "Free live music all summer long in downtown El Cajon!",
+    "url": "downtownelcajon.com",
+    "free": true
+   },
+   {
+    "name": "Movies on the Beach",
+    "icon": "🎬",
+    "type": "paid",
+    "time": "8pm · $25.75",
+    "loc": "Del Beach, 1500 Orange Ave., Coronado",
+    "desc": "Outdoor movies on the beach! Also playing June 6, 12, 13, 19 & 27.",
+    "url": "hoteldel.com",
+    "free": false
+   },
+   {
+    "name": "Padres vs. Mets",
+    "icon": "⚾",
+    "type": "paid",
+    "time": "June 5–7",
+    "loc": "Petco Park",
+    "desc": "San Diego Padres home series against the New York Mets!",
+    "url": "padres.com",
+    "free": false
+   }
+  ],
+  "6": [
+   {
+    "name": "Roar & Snore Safari",
+    "icon": "🦁",
+    "type": "paid",
+    "time": "Starting at $205",
+    "loc": "Safari Park, 15500 San Pasqual Valley Rd., Escondido",
+    "desc": "Sleepover at the Safari Park! Observe nighttime wildlife and morning wildlife presentations.",
+    "url": "sdzsafaripark.org",
+    "free": false
+   },
+   {
+    "name": "The Wave Waterpark Opens!",
+    "icon": "🌊",
+    "type": "paid",
+    "time": "Daily through Aug. 9, then weekends through Sept. 27",
+    "loc": "101 Wave Dr., Vista",
+    "desc": "Slide tower, flow rider, riptide slide and more — it's opening day!",
+    "url": "thewavewaterpark.com",
+    "free": false
+   },
+   {
+    "name": "FREE Seaport Village Daycation Celebration",
+    "icon": "🎉",
+    "type": "free",
+    "time": "3–7pm",
+    "loc": "849 W. Harbor Dr., Seaport Village",
+    "desc": "Summer kick-off with live music, DJ dance party, FREE carousel rides and family-friendly activities!",
+    "url": "seaportvillage.com",
+    "free": true
+   },
+   {
+    "name": "FREE Sam Hinton Folk Festival",
+    "icon": "🎸",
+    "type": "free",
+    "time": "10am–5pm",
+    "loc": "Old Poway Park, 14134 Midland Rd., Poway",
+    "desc": "Cajun, bluegrass and kids music all day long!",
+    "url": "poway.org",
+    "free": true
+   },
+   {
+    "name": "FREE Annual San Marcos Trails Day",
+    "icon": "🥾",
+    "type": "free",
+    "time": "8:30–10am",
+    "loc": "Lakeview Park, 650 Foxhall Dr., San Marcos",
+    "desc": "Hike, bike, walk, or trot and explore the beauty of San Marcos' parks and trails.",
+    "url": "san-marcos.net",
+    "free": true
+   },
+   {
+    "name": "North Park Music Fest",
+    "icon": "🎶",
+    "type": "paid",
+    "time": "12–10pm · $25 wristband",
+    "loc": "North Park Mini Park",
+    "desc": "Multiple venues in the heart of North Park — an all-day music celebration!",
+    "url": "northparkmusicfest.org",
+    "free": false
+   },
+   {
+    "name": "Rooftop Cinema: Zootopia 2",
+    "icon": "🎬",
+    "type": "paid",
+    "time": "1pm · $11–$20",
+    "loc": "The Porto Vista Hotel, 1835 Columbia St., Little Italy",
+    "desc": "Classic cinema concessions, personal headphones and an amazing rooftop view!",
+    "url": "rooftopcinemaclub.com",
+    "free": false
+   }
+  ],
+  "7": [
+   {
+    "name": "KidsFest at Petco Park",
+    "icon": "⚾",
+    "type": "paid",
+    "time": "Game day (also June 28)",
+    "loc": "Petco Park",
+    "desc": "Bounce houses, face painting, games and more on game day!",
+    "url": "padres.com",
+    "free": false
+   },
+   {
+    "name": "Birch After Hours",
+    "icon": "🐟",
+    "type": "paid",
+    "time": "Sundays 5–7pm · $34.95–$39.95",
+    "loc": "Birch Aquarium, 2300 Expedition Way, La Jolla",
+    "desc": "Relaxed nighttime vibe — experience the aquarium in a whole new light! Under 3 free.",
+    "url": "aquarium.ucsd.edu",
+    "free": false
+   },
+   {
+    "name": "Kids Markets",
+    "icon": "🛍️",
+    "type": "outdoor",
+    "time": "9am–2pm",
+    "loc": "Fiesta Island, Mission Bay Park, 1590 E. Mission Bay Dr.",
+    "desc": "Kid entrepreneurs showcase creativity and learn to manage their own businesses!",
+    "url": "kidsmarkets.com",
+    "free": false
+   }
+  ],
+  "10": [
+   {
+    "name": "The SpongeBob Musical OPENS",
+    "icon": "🧽",
+    "type": "show",
+    "time": "June 10–July 12",
+    "loc": "Cygnet Theatre, Arts District Liberty Station",
+    "desc": "Dive into Bikini Bottom! Colorful, high-energy musical filled with laughter and music for all ages.",
+    "url": "cygnettheatre.org",
+    "free": false
+   },
+   {
+    "name": "San Diego County Fair OPENS",
+    "icon": "🎡",
+    "type": "paid",
+    "time": "June 10–July 5 (closed Mon & Tue) · $14–$25",
+    "loc": "Del Mar Fairgrounds, 2260 Jimmy Durante Blvd.",
+    "desc": "Live music, delicious food, amazing exhibits, thrilling rides and endless family entertainment!",
+    "url": "sdfair.com",
+    "free": false
+   },
+   {
+    "name": "Toyota Summer Concert Series",
+    "icon": "🎤",
+    "type": "paid",
+    "time": "Various dates through summer",
+    "loc": "Del Mar Fairgrounds, Corona Grandstand Stage",
+    "desc": "A variety of classic favorites and rising stars all summer long.",
+    "url": "sdfair.com",
+    "free": false
+   },
+   {
+    "name": "Humphreys Concerts by the Bay",
+    "icon": "🎵",
+    "type": "paid",
+    "time": "Tonight, June 23 & 26",
+    "loc": "2241 Shelter Island Dr.",
+    "desc": "Sparkling views of Point Loma and San Diego Bay with top entertainment in an outdoor venue.",
+    "url": "humphreysconcerts.com",
+    "free": false
+   }
+  ],
+  "11": [
+   {
+    "name": "FIFA World Cup Experience at LEGOLAND",
+    "icon": "⚽",
+    "type": "paid",
+    "time": "Daily through June 19",
+    "loc": "LEGOLAND, One LEGOLAND Dr., Carlsbad",
+    "desc": "High-energy celebration with interactive games, an epic LEGO build and FIFA character experiences.",
+    "url": "legoland.com",
+    "free": false
+   },
+   {
+    "name": "Residents FREE at Gaslamp Museum",
+    "icon": "🏛️",
+    "type": "free",
+    "time": "Every 2nd Thursday, 10am–4pm",
+    "loc": "Gaslamp Museum, 410 Island Ave.",
+    "desc": "Free admission for SD residents — exhibits, tours, festivals and educational programs.",
+    "url": "gaslampmuseum.org",
+    "free": true
+   },
+   {
+    "name": "Concerts at the Cove",
+    "icon": "🎵",
+    "type": "free",
+    "time": "Thursdays starting June 11, 6–7:45pm",
+    "loc": "Fletcher Cove Park, 111 S. Sierra Ave., Solana Beach",
+    "desc": "Free outdoor concerts at beautiful Fletcher Cove all summer!",
+    "url": "cityofsolanabeach.ca.gov",
+    "free": true
+   }
+  ],
+  "12": [
+   {
+    "name": "FREE Movies in the Park: Lilo & Stitch",
+    "icon": "🎬",
+    "type": "free",
+    "time": "6:30pm, movie at sunset",
+    "loc": "Woodland Park, 671 Woodland Pkwy., San Marcos",
+    "desc": "Free outdoor movie night! Bring blankets and enjoy Lilo & Stitch under the stars.",
+    "url": "sanmarcosca.gov",
+    "free": true
+   },
+   {
+    "name": "Friday Night Splash",
+    "icon": "💦",
+    "type": "paid",
+    "time": "4–8pm · $16 (also June 26)",
+    "loc": "The Wave Waterpark, 101 Wave Dr., Vista",
+    "desc": "Extended evening hours at the waterpark — a fun Friday night for the family!",
+    "url": "thewavewaterpark.com",
+    "free": false
+   },
+   {
+    "name": "Jimbo's Garden Workshop",
+    "icon": "🌱",
+    "type": "paid",
+    "time": "11–11:30am · $14",
+    "loc": "Children's Museum of Discovery, 320 N. Broadway, Escondido",
+    "desc": "Special garden workshop with local, seasonal ingredients in the Discovery Garden.",
+    "url": "visitcmod.org",
+    "free": false
+   }
+  ],
+  "13": [
+   {
+    "name": "FREE La Mesa Flag Day Parade",
+    "icon": "🇺🇸",
+    "type": "free",
+    "time": "10am",
+    "loc": "La Mesa Village, Memorial Dr. to Acacia Ave.",
+    "desc": "Celebrate our nation's colors and spirit of patriotism with a community parade!",
+    "url": "cityoflamesa.gov",
+    "free": true
+   },
+   {
+    "name": "U.S. Police & Fire Championships",
+    "icon": "🏅",
+    "type": "paid",
+    "time": "Through June 20",
+    "loc": "San Diego Marriott Mission Valley, 8757 Rio San Diego Dr.",
+    "desc": "First responders from across the nation compete in 40 Olympic-style sports.",
+    "url": "uspfc.org",
+    "free": false
+   },
+   {
+    "name": "FREE Bro-Am Beach Fest",
+    "icon": "🏄",
+    "type": "free",
+    "time": "7am–5pm",
+    "loc": "Moonlight Beach, 400 B St., Encinitas",
+    "desc": "Live concerts with Grammy award-winning Switchfoot, surf contests and more!",
+    "url": "broam.org",
+    "free": true
+   },
+   {
+    "name": "San Diego Smooth Jazz Festival",
+    "icon": "🎷",
+    "type": "paid",
+    "time": "3pm today & tomorrow",
+    "loc": "The Rady Shell at Jacobs Park, 222 Marina Park Way",
+    "desc": "Soothing jazz, delicious cuisine and amazing waterfront atmosphere.",
+    "url": "theshell.org",
+    "free": false
+   },
+   {
+    "name": "FREE 2nd Saturday Art Walk",
+    "icon": "🖼️",
+    "type": "free",
+    "time": "3–10pm",
+    "loc": "Grand Ave., Escondido",
+    "desc": "Visual arts, theater, live music, museums and local history — fun for all ages!",
+    "url": "visitescondido.com",
+    "free": true
+   }
+  ],
+  "14": [
+   {
+    "name": "National Parks Fee FREE Day",
+    "icon": "🏞️",
+    "type": "free",
+    "time": "All day",
+    "loc": "All National Park Service sites",
+    "desc": "All National Park sites that charge an entrance fee offer FREE admission to everyone today!",
+    "url": "nps.gov/planyourvisit/passes.htm",
+    "free": true
+   },
+   {
+    "name": "FREE Summer Sundays at Village Walk",
+    "icon": "🎈",
+    "type": "free",
+    "time": "Sundays 5–7pm through July 19",
+    "loc": "Eastlake Pkwy. at Miller Dr.",
+    "desc": "Balloon sculptures, glitter tattoos and kids crafts every Sunday. Today: wood treasure box!",
+    "url": "shopvillagewalk.com",
+    "free": true
+   },
+   {
+    "name": "San Diego Dreamin': Pre-Father's Day Beach Bash",
+    "icon": "🌊",
+    "type": "paid",
+    "time": "10am–1pm · $25 per family",
+    "loc": "AleSmith Brewing, 9990 AleSmith Ct.",
+    "desc": "Retro vibes, lawn games, inflatables, face painting and more — a fun pre-Father's Day outing!",
+    "url": "alesmith.com",
+    "free": false
+   }
+  ],
+  "16": [
+   {
+    "name": "Taste of Little Italy",
+    "icon": "🍝",
+    "type": "paid",
+    "time": "4–8pm · $70.50 (also June 17)",
+    "loc": "Piazza della Famiglia, Little Italy",
+    "desc": "Curated bites and live music in the heart of San Diego's Little Italy neighborhood.",
+    "url": "littleitalysd.com",
+    "free": false
+   },
+   {
+    "name": "FREE All About E-Bikes Class",
+    "icon": "🚲",
+    "type": "free",
+    "time": "5–6pm",
+    "loc": "Revolution Bike Shop, 235 S. Hwy. 101, Solana Beach",
+    "desc": "Start your e-biking journey with comprehensive training covering all the essentials! Register online.",
+    "url": "cityofsolanabeach.ca.gov",
+    "free": true
+   }
+  ],
+  "17": [
+   {
+    "name": "Mainly Mozart All-Star Orchestra Festival",
+    "icon": "🎻",
+    "type": "paid",
+    "time": "Through June 27, 7pm nightly",
+    "loc": "Various venues — see website",
+    "desc": "The largest gathering of principal orchestra players in North America.",
+    "url": "mainlymozart.org/allstar",
+    "free": false
+   }
+  ],
+  "18": [
+   {
+    "name": "Father's Day Lunch & Tea",
+    "icon": "☕",
+    "type": "paid",
+    "time": "11:30am, 1 & 2:30pm · Through June 22 · $15.95–$44.95",
+    "loc": "Julian Tea & Cottage Arts, 2124 Third St.",
+    "desc": "Reservations required. A sweet and charming way to celebrate Dad early!",
+    "url": "juliantea.com",
+    "free": false
+   },
+   {
+    "name": "Sunset Luaus on the Bay",
+    "icon": "🌺",
+    "type": "paid",
+    "time": "Thursdays through Sept. 3, 6–9pm",
+    "loc": "Catamaran Resort Hotel, 3999 Mission Blvd.",
+    "desc": "Family-friendly event with leis, island music, dance entertainment and more!",
+    "url": "catamaranresort.com",
+    "free": false
+   },
+   {
+    "name": "FREE Encinitas Cruise Night",
+    "icon": "🚗",
+    "type": "free",
+    "time": "5:30–7:30pm",
+    "loc": "S. Coast Hwy. 101, Encinitas",
+    "desc": "Classic cars, live music and more in Encinitas!",
+    "url": "encinitas101.com",
+    "free": true
+   },
+   {
+    "name": "FREE Hillcrest Classic Car Show",
+    "icon": "🚘",
+    "type": "free",
+    "time": "1–3:30pm",
+    "loc": "3720 Fifth Ave., Hillcrest",
+    "desc": "Classic cars on display in the heart of Hillcrest!",
+    "url": "fabuloushillcrest.com",
+    "free": true
+   }
+  ],
+  "19": [
+   {
+    "name": "NASCAR San Diego Weekend",
+    "icon": "🏎️",
+    "type": "paid",
+    "time": "June 19–21",
+    "loc": "Naval Base Coronado",
+    "desc": "Three days of races with NASCAR Cup Series, Xfinity Series and CRAFTSMAN Truck Series!",
+    "url": "nascarsandiego.com",
+    "free": false
+   }
+  ],
+  "20": [
+   {
+    "name": "FREE Accessibility Mornings at the Fleet",
+    "icon": "🔬",
+    "type": "free",
+    "time": "Sensory-friendly 9–10am; Movie at 10am",
+    "loc": "Fleet Science Center, Balboa Park",
+    "desc": "Sensory-friendly experience + Sea Otters movie with house lights on and lower volume. Free for visitor + 1 guest!",
+    "url": "fleetscience.org",
+    "free": true
+   },
+   {
+    "name": "SD Scottish Highland Games",
+    "icon": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
+    "type": "paid",
+    "time": "Today & tomorrow, 9am–5pm · $5–$20",
+    "loc": "Mission Valley River Park, River Park Rd.",
+    "desc": "Five decades of Scottish heritage, athleticism, music and community spirit.",
+    "url": "sdhighlandgames.org",
+    "free": false
+   },
+   {
+    "name": "Petco Park Summer Concerts: NASCAR Countryfest",
+    "icon": "🎤",
+    "type": "paid",
+    "time": "7pm · $48",
+    "loc": "Gallagher Square, Petco Park",
+    "desc": "KSON NASCAR Weekend Countryfest — country music under the stars!",
+    "url": "padres.com/concerts",
+    "free": false
+   }
+  ],
+  "21": [
+   {
+    "name": "🎉 Father's Day!",
+    "icon": "👨‍👧",
+    "type": "paid",
+    "time": "All day",
+    "loc": "Everywhere!",
+    "desc": "Happy Father's Day! Check out the cruise and brunch options below to make it extra special.",
+    "url": "sandiegofamily.com",
+    "free": false
+   },
+   {
+    "name": "Father's Day Gondola Cruise",
+    "icon": "🚣",
+    "type": "paid",
+    "time": "1–9pm",
+    "loc": "503 Grand Caribe Causeway, Coronado",
+    "desc": "A memorable gondola cruise soaking in beautiful waterfront views — a unique way to celebrate Dad!",
+    "url": "gondolacompany.com",
+    "free": false
+   },
+   {
+    "name": "Father's Day Brunch Cruise — Flagship",
+    "icon": "🛥️",
+    "type": "paid",
+    "time": "11am–1pm",
+    "loc": "Flagship Cruises, 990 N. Harbor Dr.",
+    "desc": "Sit back and celebrate Father's Day with a relaxing brunch cruise on San Diego Bay!",
+    "url": "flagshipsd.com",
+    "free": false
+   },
+   {
+    "name": "Father's Day Premier Brunch Cruise — Hornblower",
+    "icon": "⚓",
+    "type": "paid",
+    "time": "11am–1pm",
+    "loc": "Pier 1 Hornblower Landing, 1800 N. Harbor Dr.",
+    "desc": "Create family memories treasured forever with a day on the beautiful San Diego Bay.",
+    "url": "cityexperiences.com",
+    "free": false
+   },
+   {
+    "name": "Sundays at Six Summer Concerts",
+    "icon": "🎵",
+    "type": "free",
+    "time": "Sundays at 6pm, June 21–July 26",
+    "loc": "Harry Griffen Park, 9550 Milden St., La Mesa",
+    "desc": "Free outdoor concert series every Sunday evening all summer!",
+    "url": "cityoflamesa.us",
+    "free": true
+   }
+  ],
+  "26": [
+   {
+    "name": "Music by the Sea Concert",
+    "icon": "🌊",
+    "type": "paid",
+    "time": "7–8:30pm · $13–$24",
+    "loc": "Encinitas Library, 540 Cornish Dr.",
+    "desc": "A beautiful outdoor concert experience by the sea in Encinitas.",
+    "url": "encinitasca.gov",
+    "free": false
+   },
+   {
+    "name": "San Diego Symphony: Opening Night",
+    "icon": "🎶",
+    "type": "paid",
+    "time": "7:30pm",
+    "loc": "The Rady Shell at Jacobs Park, 222 Marina Park Way",
+    "desc": "Opening night of the summer season at the gorgeous outdoor Rady Shell!",
+    "url": "theshell.org",
+    "free": false
+   },
+   {
+    "name": "\"A Bad Case of the Stripes: The Musical\"",
+    "icon": "🎭",
+    "type": "show",
+    "time": "Fri–Sun through July 12 · $22.50 (opens June 26)",
+    "loc": "Casa del Prado Theatre, Balboa Park",
+    "desc": "A colorful, fun musical for kids by San Diego Junior Theatre. San Diego Premiere! All ages recommended.",
+    "url": "juniortheatre.com",
+    "free": false
+   },
+   {
+    "name": "FREE Música en la Plaza",
+    "icon": "🎸",
+    "type": "free",
+    "time": "7–10pm",
+    "loc": "California Center for the Arts, Escondido, 340 N. Escondido Blvd.",
+    "desc": "Feel the rhythm and soul of Latin music under the stars — free admission!",
+    "url": "artcenter.org",
+    "free": true
+   }
+  ],
+  "27": [
+   {
+    "name": "FREE Ocean Beach Street Fair & Chili Cook-Off",
+    "icon": "🌶️",
+    "type": "free",
+    "time": "10am–8pm",
+    "loc": "Ocean Beach",
+    "desc": "Eclectic fun with tasty festival food, art, beach entertainment and a family fun zone!",
+    "url": "oceanbeachsandiego.com",
+    "free": true
+   },
+   {
+    "name": "FREE Oceanside Independence Parade",
+    "icon": "🎺",
+    "type": "free",
+    "time": "10am–12noon",
+    "loc": "Coast Hwy., Oceanside (Wisconsin to Civic Center Dr.)",
+    "desc": "Floats, bands, cool cars and more for a patriotic community celebration!",
+    "url": "mainstreetoceanside.com",
+    "free": true
+   },
+   {
+    "name": "FREE USA 250: Stars, Stripes and Surf Festival",
+    "icon": "🇺🇸",
+    "type": "free",
+    "time": "12–6pm",
+    "loc": "Junior Seau Pier Amphitheatre, 301 The Strand N., Oceanside",
+    "desc": "Chili cook-off, country music festival, pinewood derby, fun zone and more — all free!",
+    "url": "oceansidechamber.com",
+    "free": true
+   },
+   {
+    "name": "Lake Poway Family Campout",
+    "icon": "🏕️",
+    "type": "paid",
+    "time": "1pm Saturday to 10am Sunday · $65",
+    "loc": "14644 Lake Poway Rd., Poway",
+    "desc": "Hikes, campfire with s'mores and a magic/comedy show. A true overnight family adventure!",
+    "url": "poway.org",
+    "free": false
+   },
+   {
+    "name": "Natsu Nights: Kawaii Trinketcore Night",
+    "icon": "🌸",
+    "type": "paid",
+    "time": "5–8pm · $5",
+    "loc": "Japanese Friendship Garden, Balboa Park",
+    "desc": "Extended evening hours in the garden to enjoy perfect summer weather.",
+    "url": "niwa.org",
+    "free": false
+   }
+  ],
+  "28": [
+   {
+    "name": "Scoop San Diego Ice Cream Festival",
+    "icon": "🍦",
+    "type": "paid",
+    "time": "12–4pm · $49",
+    "loc": "30th St. & North Park Way",
+    "desc": "10 one-ounce samples shareable with your family — dozens of flavors from local and national creameries!",
+    "url": "scoopsandiego.org",
+    "free": false
+   },
+   {
+    "name": "FREE Carlsbad Art in the Village",
+    "icon": "🖼️",
+    "type": "free",
+    "time": "9am–5pm",
+    "loc": "Grand Ave., Carlsbad",
+    "desc": "Artists from all over the region showcase their work in beautiful Carlsbad Village.",
+    "url": "carlsbad-village.com",
+    "free": true
+   },
+   {
+    "name": "Taste of Adams Avenue",
+    "icon": "🍽️",
+    "type": "paid",
+    "time": "11am–3pm · $50–$65",
+    "loc": "Adams Ave., University Heights through Kensington",
+    "desc": "40+ restaurants, coffee houses and unique eateries — a foodie family adventure!",
+    "url": "adamsavenuebusiness.com",
+    "free": false
+   },
+   {
+    "name": "KidsFest at Petco Park",
+    "icon": "⚾",
+    "type": "paid",
+    "time": "Game day",
+    "loc": "Petco Park",
+    "desc": "Bounce houses, face painting, games and more on game day!",
+    "url": "padres.com",
+    "free": false
+   }
+  ]
+ },
+ "camps": [
+  {
+   "name": "YMCA Overnight Camps",
+   "type": "overnight",
+   "ages": "7–17",
+   "dates": "June–August",
+   "loc": "Julian & Imperial Beach",
+   "desc": "Raintree Ranch Horse Camp, Camp Surf, and Camp Marston. Life-changing outdoor experiences with lasting friendships.",
+   "url": "ymcasd.org/camps"
+  },
+  {
+   "name": "YMCA Day Camps",
+   "type": "overnight",
+   "ages": "5–13",
+   "dates": "June–August",
+   "loc": "15 countywide locations",
+   "desc": "Robotics, ceramics, karate, gymnastics, Minecraft, flag football, kayaking and tons more!",
+   "url": "ymcasd.org/daycamp"
+  },
+  {
+   "name": "SeaWorld Resident & Career Camps",
+   "type": "overnight",
+   "ages": "Grades 5–12",
+   "dates": "June–August",
+   "loc": "Mission Bay",
+   "desc": "Fun overnight camp with close-up animal experiences, park rides, shows and learning activities.",
+   "url": "seaworld.com/san-diego/educational-programs"
+  },
+  {
+   "name": "Fleet Science Center STEM Camps",
+   "type": "stem",
+   "ages": "Grades K–8",
+   "dates": "June 1–Aug. 7",
+   "loc": "Balboa Park",
+   "desc": "Explore paleontology, space, geology, biology, robotics and more! Inquiry and innovation-focused.",
+   "url": "fleetscience.org/events/camps"
+  },
+  {
+   "name": "Model Railroading Summer Camps",
+   "type": "stem",
+   "ages": "Grades TK–12",
+   "dates": "June 17–Aug. 7",
+   "loc": "Balboa Park",
+   "desc": "Kids design layouts, build landscapes and explore the science behind trains at the SD Model Railroad Museum.",
+   "url": "sdmrm.org/summer-camps"
+  },
+  {
+   "name": "City Ballet Dance Camps",
+   "type": "arts",
+   "ages": "4–18",
+   "dates": "June 15–July 10",
+   "loc": "Pacific Beach",
+   "desc": "Two-week sessions with age and skill level-appropriate ballet classes for all levels.",
+   "url": "cityballet.org/school/intensives/summer-dance-camps"
+  },
+  {
+   "name": "Comic Camps @ Little Fish",
+   "type": "arts",
+   "ages": "7–18",
+   "dates": "June 1–Aug. 7",
+   "loc": "College Area",
+   "desc": "Learn to develop characters and comics from idea to completed page at Little Fish Comic Book Studio!",
+   "url": "lilfish.us/camps"
+  },
+  {
+   "name": "Hot Spot Creative Kids",
+   "type": "arts",
+   "ages": "6+",
+   "dates": "June–July",
+   "loc": "4S Ranch & Liberty Station",
+   "desc": "Drop-in pottery painting, candle making, mosaics, fairy gardens or slime! 1 or 3-day camps available.",
+   "url": "thehotspotstudios.com"
+  },
+  {
+   "name": "MCASD Summer Camps",
+   "type": "arts",
+   "ages": "6–10",
+   "dates": "July 6–24",
+   "loc": "La Jolla",
+   "desc": "Create fun art projects inspired by the museum's collection and special exhibitions with MCASD educators.",
+   "url": "mcasd.org/events/summer-camp-2026"
+  },
+  {
+   "name": "San Diego Junior Theatre Camps",
+   "type": "arts",
+   "ages": "Grades K–12",
+   "dates": "June 8–Aug. 7",
+   "loc": "Balboa Park",
+   "desc": "Acting, singing, dancing in performance camps, musical theater intensives and acting academies.",
+   "url": "juniortheatre.com/classes/programs"
+  },
+  {
+   "name": "San Diego Civic Youth Summer Ballet",
+   "type": "arts",
+   "ages": "4+",
+   "dates": "June 15–Aug. 7",
+   "loc": "Balboa Park",
+   "desc": "Half-day ballet camps for ages 4–6 and 7–10. Intermediate and advanced intensives also available.",
+   "url": "sdcyb.org"
+  },
+  {
+   "name": "Birch Aquarium Summer Camps",
+   "type": "animal",
+   "ages": "4–13",
+   "dates": "June 15–Aug. 7",
+   "loc": "La Jolla",
+   "desc": "Explore underwater worlds, play games, create crafts and meet ocean creatures with expert educators.",
+   "url": "aquarium.ucsd.edu/learn/camps/summer-camps"
+  },
+  {
+   "name": "SeaWorld San Diego Day Camps",
+   "type": "animal",
+   "ages": "Grades 1–12",
+   "dates": "June–August",
+   "loc": "Mission Bay",
+   "desc": "Close-up animal experiences, park rides, shows and learning with trained counselors.",
+   "url": "seaworld.com/san-diego/educational-programs"
+  },
+  {
+   "name": "Summer Critter Camp at Helen Woodward",
+   "type": "animal",
+   "ages": "4–13",
+   "dates": "June 1–Aug. 21",
+   "loc": "Rancho Santa Fe",
+   "desc": "Interactive animal fun with themes like Bioscience & Beyond and Amazing Animal Athletes! Spots limited.",
+   "url": "animalcenter.org/education"
+  },
+  {
+   "name": "HECD Research Study Camp at UCSD",
+   "type": "academic",
+   "ages": "4–5",
+   "dates": "July 6–Sept.",
+   "loc": "UCSD, La Jolla",
+   "desc": "Free 5-day research study camp with age-appropriate learning activities. Earn up to $180 for participating!",
+   "url": "ucsdedlab.org/currentstudies"
+  },
+  {
+   "name": "Pacific View Charter: Middle School Prep",
+   "type": "academic",
+   "ages": "Incoming 5th & 6th graders",
+   "dates": "July 20–24 or July 27–31",
+   "loc": "Oceanside",
+   "desc": "FREE camp! Prepare for middle school with math, reading, social studies, STEM and team-building activities.",
+   "url": "pacificview.org"
+  },
+  {
+   "name": "Waldorf School Summer Camp",
+   "type": "academic",
+   "ages": "Grades 2–6",
+   "dates": "June 29–Aug. 14",
+   "loc": "City Heights",
+   "desc": "Hands-on activities: music-making, storytelling, gardening, furniture building. Registration deadline June 5.",
+   "url": "waldorfsandiego.org"
+  },
+  {
+   "name": "Rock Academy Camp",
+   "type": "academic",
+   "ages": "Grades K–6",
+   "dates": "May 26–July 31",
+   "loc": "Point Loma (Liberty Station)",
+   "desc": "Full-day Christ-centered camps with sports, science, art and adventure. Open to all San Diegans.",
+   "url": "therockacademy.org"
+  },
+  {
+   "name": "Children's Museum of Discovery Camps",
+   "type": "academic",
+   "ages": "4–8",
+   "dates": "June 15–Aug. 14",
+   "loc": "Escondido",
+   "desc": "Access to museum exhibits, hands-on engineering and paleontology exploration with trained staff.",
+   "url": "visitcmod.org/events/summer-camp-3"
+  },
+  {
+   "name": "GRIT Gymnastics Camp",
+   "type": "sports",
+   "ages": "4–14",
+   "dates": "June 1–Aug. 7",
+   "loc": "Clairemont Mesa",
+   "desc": "High-energy gymnastics, games, obstacle courses and strength activities. Full or half days available!",
+   "url": "gritgymnasticsclub.com/camps"
+  },
+  {
+   "name": "Warrior Kids Camp at Victory MMA",
+   "type": "sports",
+   "ages": "8+",
+   "dates": "June 1–July 31",
+   "loc": "Point Loma",
+   "desc": "Learn Jiu-Jitsu, boxing and Muay Thai while building self-confidence and discipline. Full week $350.",
+   "url": "victorygyms.com"
+  },
+  {
+   "name": "Aqua Pros Swim School",
+   "type": "sports",
+   "ages": "All ages",
+   "dates": "Year-round",
+   "loc": "Clairemont Mesa",
+   "desc": "3-to-1 student/teacher ratio in a warm 90° indoor pool. Free introductory lesson for new students!",
+   "url": "aquapros.org"
+  }
+ ]
+}
