@@ -18,6 +18,7 @@ Run:   python sdfm_agent.py            # current month
        python sdfm_agent.py 2026 11    # a specific month
 """
 import datetime as dt
+import json
 import os
 import pathlib
 import re
@@ -108,7 +109,7 @@ def get_free_events(year, month):
     return out[:40]
 
 
-def summarize(prompt, fallback):
+def summarize(prompt, fallback, max_tokens=None):
     """Free AI summary. Tries GitHub Models (inside GitHub Actions), then local Ollama,
     and finally falls back to the plain text so the script never breaks."""
     token = os.environ.get("GITHUB_TOKEN")
@@ -117,7 +118,8 @@ def summarize(prompt, fallback):
             r = requests.post(
                 GH_MODELS_URL,
                 headers={"Authorization": f"Bearer {token}", "Content-Type": "application/json"},
-                json={"model": GH_MODEL, "messages": [{"role": "user", "content": prompt}]},
+                json={"model": GH_MODEL, "messages": [{"role": "user", "content": prompt}],
+                      **({"max_tokens": max_tokens} if max_tokens else {})},
                 timeout=120,
             )
             r.raise_for_status()
@@ -153,6 +155,8 @@ def format_articles(articles, issue_url):
         m = re.match(r"^\s*(\d+)[.)]\s*(.+)$", line)
         if m:
             why[int(m.group(1))] = m.group(2).strip()
+    for i, x in enumerate(articles, 1):
+        x["why"] = why.get(i, "")
     labels = {"direct": "", "section": " (related section)", "search": " (search)"}
     out = []
     for i, x in enumerate(articles, 1):
@@ -164,6 +168,47 @@ def format_articles(articles, issue_url):
             line += f"\n  - Why read: {why[i]}"
         out.append(line)
     return "\n".join(out)
+
+
+def extract_events(year, month):
+    """Ask the AI to turn the calendar page text into the website's event format.
+    Returns {day: [event, ...]}; empty if AI is unavailable (never invents data)."""
+    soup = get_soup(CALENDAR)
+    text = soup.get_text("\n", strip=True)[:12000]
+    links = "\n".join(
+        f"{a.get_text(' ', strip=True)} | {urljoin(BASE, a['href'])}"
+        for a in soup.find_all("a", href=True) if len(a.get_text(strip=True)) > 4
+    )[:5000]
+    label = f"{dt.date(year, month, 1):%B %Y}"
+    reply = summarize(
+        f"From the calendar text below, extract family events happening in {label} ONLY. "
+        "Return ONLY JSON shaped {\"<day number>\": [{\"name\":..,\"icon\":\"one emoji\",\"type\":\"free|paid|show|outdoor\","
+        "\"time\":..,\"loc\":..,\"desc\":\"one sentence\",\"url\":\"\",\"free\":true|false}]}. "
+        "Use ONLY facts in the text. free=true only if the text says free. "
+        "Set url only if it appears in the LINKS list; otherwise empty string. Skip anything without a clear date.\n\n"
+        f"TEXT:\n{text}\n\nLINKS:\n{links}",
+        "", max_tokens=4000,
+    )
+    try:
+        raw = json.loads(reply[reply.index("{"): reply.rindex("}") + 1])
+        return {str(int(k)): v for k, v in raw.items() if isinstance(v, list)}
+    except Exception:
+        return {}
+
+
+def write_site_data(year, month, issue_url, articles, events):
+    """Write issues/YYYY-MM.json (what index.html reads) and refresh issues/index.json."""
+    d = pathlib.Path("issues")
+    d.mkdir(exist_ok=True)
+    key = f"{year}-{month:02d}"
+    (d / f"{key}.json").write_text(json.dumps({
+        "month": key, "label": f"{dt.date(year, month, 1):%B %Y}", "subtitle": "",
+        "issue_url": issue_url or "", "articles": articles, "events": events, "camps": [],
+    }, indent=1, ensure_ascii=False), encoding="utf-8")
+    idx = d / "index.json"
+    months = set(json.loads(idx.read_text())) if idx.exists() else set()
+    months.add(key)
+    idx.write_text(json.dumps(sorted(months)))
 
 
 def main():
@@ -192,6 +237,8 @@ def main():
         f"## Free events\n{event_md}\n\n"
         f"Full calendar: {CALENDAR}\n"
     )
+
+    write_site_data(year, month, issue_url, articles, extract_events(year, month))
 
     out = pathlib.Path("digests")
     out.mkdir(exist_ok=True)
