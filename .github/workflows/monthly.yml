@@ -2,7 +2,7 @@ name: Monthly SD Family digest
 
 on: { schedule: [{ cron: "0 15 1 * *" }, { cron: "0 15 15 * *" }], workflow_dispatch: {} }
 
-permissions: { contents: write, models: read, issues: write }
+permissions: { contents: write, models: read, issues: write, pages: write }
 
 jobs:
   digest:
@@ -23,6 +23,11 @@ jobs:
           git add digests issues
           git commit -m "Add monthly digest" || echo "Nothing to commit"
           git push
+      - name: Rebuild site
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh api -X POST repos/${{ github.repository }}/pages/builds
       - name: Email me via GitHub Issue
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -32,4 +37,7 @@ jobs:
           if grep -q "not found yet" "$FILE"; then echo "Issue not posted yet; skipping"; exit 0; fi
           EXISTING=$(gh issue list --state all --search "\"$TITLE\" in:title" --json number --jq '.[0].number')
           if [ -n "$EXISTING" ]; then echo "Issue already exists; skipping"; exit 0; fi
-          gh issue create --title "$TITLE" --body-file "$FILE" --assignee "${{ github.repository_owner }}"
+          OWNER=$(echo "${{ github.repository_owner }}" | tr 'A-Z' 'a-z')
+          SITE="https://$OWNER.github.io/${{ github.event.repository.name }}/"
+          { echo "🌐 Browse this month's guide: $SITE"; echo; cat "$FILE"; } > body.md
+          gh issue create --title "$TITLE" --body-file body.md --assignee "${{ github.repository_owner }}"
