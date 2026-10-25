@@ -1,1383 +1,382 @@
 {
  "month": "2026-10",
  "label": "October 2026",
- "subtitle": "",
- "issue_url": "https://www.sandiegofamily.com/?view=article&id=2771:san-diego-family-magazine-october-2026&catid=398",
- "articles": [
+ "subtitle": "Halloween Safety Month · National Book Month · National Apple Month",
+ "issue_url": "https://issuu.com/sandiegofamilymagazine/docs/san_diego_family_october_2026",
+ "sections": [
   {
-   "page": "14",
-   "title": "Build Community with Fall Traditions",
-   "blurb": "How and why to bring your neighborhood together",
-   "url": "https://www.google.com/search?q=site%3Asandiegofamily.com+Build+Community+with+Fall+Traditions",
-   "kind": "search",
-   "why": ""
+   "title": "Short & Sweet",
+   "icon": "⭐",
+   "intro": "News, tips and editor's picks from page 12, plus the free Halloween Fun Fest.",
+   "items": [
+    {
+     "name": "San Diego Family Fun Fest: Halloween",
+     "meta": "FREE · Sun, Oct. 4 · 10am–1pm",
+     "desc": "Trick-or-treating, prizes and dance parties, family resources, haunted zipline, costume parade, Halloween crafts and inflatables. Sign up for free tickets.",
+     "url": "https://SDFamilyHalloween2026.eventbrite.com",
+     "loc": "Salvation Army Kroc Center Corner Zone, 6845 University Ave, SD 92115"
+    },
+    {
+     "name": "Kids FREE San Diego",
+     "meta": "Through Oct. 31",
+     "desc": "Kids 12 & under get free admission (with a paid adult) to local attractions, museums, aquariums, gardens and more.",
+     "url": "https://www.sandiegomuseumcouncil.org/specials/kidsfree"
+    },
+    {
+     "name": "Parents (and Kids) Theater Day Out",
+     "meta": "Sun, Oct. 11",
+     "desc": "Parents see the matinee of A Black-Billed Cuckoo while kids 7–12 join a 'Behind the Curtain' theater workshop. Tickets $64–$74; workshop $20 each.",
+     "url": "https://www.lajollaplayhouse.org/behind-the-curtain",
+     "loc": "La Jolla Playhouse"
+    },
+    {
+     "name": "October is ADHD Awareness Month",
+     "meta": "Resources",
+     "desc": "Learn the facts, symptoms and treatment options through the Special Needs Resource Foundation of San Diego.",
+     "url": "https://www.SNRFSD.org"
+    },
+    {
+     "name": "Dolly Parton's Imagination Library",
+     "meta": "Coming to San Diego",
+     "desc": "Free monthly books for every San Diego County child from birth to age 5, in partnership with the local Dr. Seuss Foundation.",
+     "url": "https://www.imaginationlibrary.com"
+    },
+    {
+     "name": "Editor's Picks: books",
+     "meta": "Hispanic Heritage & Halloween",
+     "desc": "The Haunted Playground (R.J. Palacio), Peter's Halloween Peek-a-Boo! (lift-and-find board book for babies and toddlers), and My Sister's Quiñceanera (Delia Ruiz), created with the Smithsonian's National Museum of the American Latino."
+    }
+   ]
   },
   {
-   "page": "16",
-   "title": "Science, Animals, Engineering & More",
-   "blurb": "Discovering 4-H in San Diego County",
-   "url": "https://www.google.com/search?q=site%3Asandiegofamily.com+Science%2C+Animals%2C+Engineering+%26+More",
-   "kind": "search",
-   "why": ""
+   "title": "Fall Traditions",
+   "icon": "🍂",
+   "intro": "Five ways to build community with your neighbors this fall, by Amanda Cavallari (pages 14–15).",
+   "items": [
+    {
+     "name": "1. Carve pumpkins together",
+     "meta": "Idea",
+     "desc": "Invite a couple of families to a pumpkin decorating party in the driveway. Everyone brings carving tools or décor and snacks, with a fun music playlist."
+    },
+    {
+     "name": "2. Host a driveway firepit gathering",
+     "meta": "Idea",
+     "desc": "Chairs, picnic blankets and a s'mores bar, with Hot Apple Pear Cider. Find a cider recipe in the Apple Recipe Round-Up.",
+     "url": "https://www.sandiegofamily.com/things-to-do/dining-and-recipes/apple-recipe-round-up"
+    },
+    {
+     "name": "3. Boo your neighbors",
+     "meta": "Idea",
+     "desc": "Leave a surprise on a neighbor's doorstep or decorate their yard. Start early in the month so others can boo too. Free printables available.",
+     "url": "https://www.sandiegofamily.com/things-to-do/seasonal-happenings/boo-neighbors-free-printable"
+    },
+    {
+     "name": "4. Launch a neighborhood decorating contest",
+     "meta": "Idea",
+     "desc": "Categories like Spookiest Yard, Coziest Porch or Kids Favorite. Bragging rights beat prizes. Bring the Halloween Scavenger Hunt on your walk.",
+     "url": "https://www.sandiegofamily.com/for-the-kids/crafts-for-kids/halloween-bingo-scavenger-hunt"
+    },
+    {
+     "name": "5. Deliver sweet treats",
+     "meta": "Idea",
+     "desc": "Bake brownies, pumpkin muffins or shortbread and deliver them with cards the kids made."
+    }
+   ],
+   "tips": [
+    "Let kids be involved: they can decorate invitations, pick snacks, make signs or hand out cider.",
+    "Start small. A casual pumpkin-carving night can become an annual tradition."
+   ]
   },
   {
-   "page": "18",
-   "title": "Take the Hassle Out of Homework",
-   "blurb": "Tips to reduce frustration",
-   "url": "https://www.sandiegofamily.com/parenting/big-kid",
-   "kind": "section",
-   "why": ""
-  },
-  {
-   "page": "20",
-   "title": "When Besties & Buddies Drift",
-   "blurb": "How to help kids navigate changing friendships",
-   "url": "https://www.sandiegofamily.com/parenting/big-kid",
-   "kind": "section",
-   "why": ""
-  },
-  {
-   "page": "22",
-   "title": "October Calendar",
-   "blurb": "Birch Aquarium’s Halloween Aglow and tons more family fun!",
-   "url": "https://www.sandiegofamily.com/things-to-do/events-calendar",
-   "kind": "section",
-   "why": ""
-  },
-  {
-   "page": "24",
    "title": "Pumpkin Patches",
-   "blurb": "Find fall fun at local pumpkin patches throughout San Diego County",
-   "url": "https://www.sandiegofamily.com/things-to-do/seasonal-happenings",
-   "kind": "section",
-   "why": ""
+   "icon": "🎃",
+   "intro": "Page 24 list. FREE means free admission; activities may cost extra. Confirm hours before you go.",
+   "items": [
+    {
+     "name": "Pumpkin Station",
+     "meta": "FREE · Daily through Oct. 31",
+     "desc": "Giant slides, rides, petting zoo and pumpkins. Attractions need a separate ticket; hours vary by location.",
+     "url": "https://www.pumpkinstation.com",
+     "loc": "Del Mar, Plaza Bonita, Rancho Bernardo Farm, Bonita Pumpkin Farm"
+    },
+    {
+     "name": "Family Christmas Tree Farm",
+     "meta": "Oct. 1–31 · daily 10am–8pm · $7",
+     "desc": "Pumpkins, tractor rides, hay ride and hay maze. Ages 2 and under free.",
+     "url": "https://www.familychristmastreefarm.com",
+     "loc": "300 Pepper Dr., El Cajon"
+    },
+    {
+     "name": "Carlsbad Strawberry Company",
+     "meta": "Oct. 1–Nov. 8",
+     "desc": "Pumpkins, corn maze, tractor rides, photo ops. Sun–Thu 9am–6pm; Fri–Sat 9am–10pm. Haunted Corn Maze Fri & Sat 7–10pm.",
+     "url": "https://www.carlsbadstrawberrycompany.com",
+     "loc": "1050 Cannon Rd., Carlsbad"
+    },
+    {
+     "name": "Pumpkins in the Pines",
+     "meta": "Sat & Sun in October · $49–$59",
+     "desc": "Pumpkin patch, pumpkin painting and a Sleepy Hollow puppet show. Parking $15.",
+     "url": "https://www.skyparksantasvillage.com",
+     "loc": "Skypark, 28950 California 18, Skyforest"
+    },
+    {
+     "name": "Bates Nut Farm",
+     "meta": "Oct. 1–31",
+     "desc": "Tractor hayrides and a straw maze. Activity tickets $2.50; weekend parking $10.",
+     "url": "https://batesnutfarm.biz",
+     "loc": "15954 Woods Valley Rd., Valley Center"
+    },
+    {
+     "name": "Goff Family Pumpkin Patch",
+     "meta": "FREE · Oct. 1–31",
+     "desc": "Sun–Thu 9am–8pm; Fri–Sat 9am–9pm.",
+     "url": "https://www.gofffamilypumpkinpatch.com",
+     "loc": "2830 Perry Rd., Liberty Station"
+    },
+    {
+     "name": "Peltzer Pumpkin Farm",
+     "meta": "Oct. 1–31 · $2–$4",
+     "desc": "Pumpkins and a petting farm. Mon–Fri 10am–8pm; Sat & Sun 9am–8pm.",
+     "url": "https://www.peltzerfarms.com",
+     "loc": "39925 Calle Contento, Temecula"
+    },
+    {
+     "name": "Summers Past Farm",
+     "meta": "FREE · closed Mon–Wed",
+     "desc": "Pumpkins, corn maze, hay fort and more.",
+     "url": "https://www.summerspastfarms.com",
+     "loc": "15602 Olde Hwy. 80, Flinn Springs"
+    },
+    {
+     "name": "Fallbrook Pumpkin Patch",
+     "meta": "FREE · Oct. 1–31",
+     "desc": "Wed–Fri 4–8pm; Sat 10am–8pm; Sun 12–8pm. Closed Mon & Tue.",
+     "url": "https://www.fallbrookpumpkinpatch.com",
+     "loc": "1924 E. Mission Rd., Fallbrook"
+    },
+    {
+     "name": "Mr. Jack O' Lanterns",
+     "meta": "FREE · Oct. 2–Nov. 1",
+     "desc": "Pumpkins, seasonal photo spots and family-friendly fall activities.",
+     "url": "https://www.mrjackolanternspumpkins.com",
+     "loc": "3901 Clairemont Dr."
+    }
+   ]
   },
   {
-   "page": "26",
-   "title": "Hispanic Heritage Month Crafts",
-   "blurb": "Creative projects to celebrate culture and tradition",
-   "url": "https://www.sandiegofamily.com/for-the-kids/crafts-for-kids",
-   "kind": "section",
-   "why": ""
+   "title": "Día de los Muertos",
+   "icon": "💀",
+   "intro": "Official dates are Nov. 1–2, but there are festivities all month (page 28). Craft projects and a cake recipe are on the magazine's website.",
+   "items": [
+    {
+     "name": "Fiesta de Reyes Día de los Muertos–La Experiencia",
+     "meta": "FREE · Oct. 1 through Nov. 2 · 10am–9pm",
+     "desc": "Decorated skulls and skeletons, traditional and contemporary altars, and marigold-inspired details.",
+     "url": "https://www.fiestadereyes.com"
+    },
+    {
+     "name": "Vista's Día de los Muertos Festival",
+     "meta": "FREE · Oct. 11 · 11am–5pm",
+     "desc": "Sugar skull decorating and children's activities.",
+     "url": "https://www.eventbrite.com/e/vistas-inaugural-dia-de-muertos-festival-2026-tickets-1992435584468",
+     "loc": "Along S. Santa Fe Ave."
+    },
+    {
+     "name": "Día de los Muertos at Rancho Guajome Adobe",
+     "meta": "Oct. 17 · 10am–4pm · $3–$6",
+     "desc": "Community altars, live entertainment, arts and crafts.",
+     "url": "https://www.sdparks.org/ranchoguajomeadobe",
+     "loc": "2210 N. Santa Fe Ave., Vista"
+    },
+    {
+     "name": "Día de los Muertos Festival at Mellano Farmstand",
+     "meta": "Oct. 17–18 · 10am–4pm · parking $5",
+     "desc": "Community Ofrenda, live music and corn maze.",
+     "url": "https://www.mellanofarmstand.com",
+     "loc": "5714 N. River Rd., Oceanside"
+    },
+    {
+     "name": "Día de los Muertos Celebration",
+     "meta": "FREE · Oct. 18 · 10am–5pm",
+     "desc": "Piñatas, Catrin/Catrina costume contest, crafts and a scavenger hunt.",
+     "url": "https://www.cityofsolanabeach.ca.gov",
+     "loc": "La Colonia Park, Solana Beach"
+    },
+    {
+     "name": "Encinitas Día de los Muertos",
+     "meta": "FREE · Oct. 25 · 12–4pm",
+     "desc": "Art-making workshops and live Mariachi.",
+     "url": "https://www.encinitasarts.org/programs/encinitas-dia-de-los-muertos-celebration",
+     "loc": "MiraCosta College San Elijo Campus, Cardiff"
+    },
+    {
+     "name": "Día de los Muertos Festival, Downtown Oceanside",
+     "meta": "FREE · Oct. 25 · 10am–4pm",
+     "desc": "Altars and chalk ceremonies.",
+     "url": "https://www.friendsofoceansidediadelosmuertos.org"
+    },
+    {
+     "name": "SeaWorld Día de los Muertos",
+     "meta": "Oct. 31 and Nov. 1 · included with admission",
+     "desc": "Sights, sounds and flavors of the Mexican holiday.",
+     "url": "https://www.seaworld.com",
+     "loc": "500 SeaWorld Dr."
+    },
+    {
+     "name": "Día de Los Muertos at Rancho Leo Carrillo",
+     "meta": "FREE · Oct. 31 · 10am–2pm",
+     "desc": "Face painting, a traditional Ofrenda, arts and crafts.",
+     "url": "https://www.carlsbadca.gov",
+     "loc": "Leo Carrillo Ranch Historic Park, Carlsbad"
+    }
+   ]
   },
   {
-   "page": "",
-   "title": "Afterschool Activities Guide",
-   "blurb": "Visit SanDiegoFamily.com/Afterschool to explore local programs and activities",
-   "url": "https://www.sandiegofamily.com/resources/afterschool-activities/best-afterschool-activities-san-diego",
-   "kind": "direct",
-   "why": ""
+   "title": "Hispanic Heritage Crafts",
+   "icon": "🎨",
+   "intro": "Hispanic Heritage Month runs Sept. 15–Oct. 15. These art projects (page 26) mix mini history lessons with crafts, provided by local art educator Alyssa Navapanich.",
+   "items": [
+    {
+     "name": "Alebrijes",
+     "meta": "Mexico City",
+     "desc": "Colorful painted creatures.",
+     "url": "https://www.sandiegofamily.com/things-to-do/seasonal-happenings/celebrate-hispanic-heritage-month-san-diego-with-kids"
+    },
+    {
+     "name": "Worry Dolls",
+     "meta": "Guatemala",
+     "desc": "Tiny dolls made from wood and yarn.",
+     "url": "https://www.sandiegofamily.com/things-to-do/seasonal-happenings/celebrate-hispanic-heritage-month-san-diego-with-kids"
+    },
+    {
+     "name": "Amate Bark Paintings",
+     "meta": "Mexico",
+     "desc": "Floral designs painted on bark-style paper.",
+     "url": "https://www.sandiegofamily.com/things-to-do/seasonal-happenings/celebrate-hispanic-heritage-month-san-diego-with-kids"
+    },
+    {
+     "name": "God's Eyes",
+     "meta": "Sierra Madre Occidental, Mexico",
+     "desc": "Woven yarn designs on sticks.",
+     "url": "https://www.sandiegofamily.com/things-to-do/seasonal-happenings/celebrate-hispanic-heritage-month-san-diego-with-kids"
+    },
+    {
+     "name": "La Boca Houses",
+     "meta": "Argentina",
+     "desc": "Colorful house collages.",
+     "url": "https://www.sandiegofamily.com/things-to-do/seasonal-happenings/celebrate-hispanic-heritage-month-san-diego-with-kids"
+    }
+   ],
+   "note": "Full instructions for each project, and where it originates, are on the magazine's website."
+  },
+  {
+   "title": "Discovering 4-H",
+   "icon": "🌱",
+   "intro": "4-H is for families across San Diego County, not just rural areas. By Amanda Cavallari (pages 16–17).",
+   "items": [
+    {
+     "name": "What 4-H is",
+     "meta": "Ages 5–19",
+     "desc": "A learn-by-doing youth program. Kids pick projects like science, engineering, animals, gardening, cooking or arts and crafts, guided by adult volunteers."
+    },
+    {
+     "name": "Every club is different",
+     "meta": "Volunteer-led",
+     "desc": "Projects depend on each club's volunteers. San Diego County has large chapters around Fallbrook, Valley Center and Escondido, with smaller ones across the county."
+    },
+    {
+     "name": "The County Fair",
+     "meta": "Show and share",
+     "desc": "Members show animals, demonstrate skills and exhibit projects. Examples in the article include a small tractor rebuild and a dairy heifer project."
+    },
+    {
+     "name": "National 4-H Week",
+     "meta": "Oct. 4–10 · theme 'Beyond Ready'",
+     "desc": "Visit the 4-H booth at San Diego Family's Halloween Fun Fest on Sun, Oct. 4.",
+     "url": "https://ucanr.edu/site/4-h-san-diego-county"
+    }
+   ],
+   "tips": [
+    "Look for a club that fits your location, interests and schedule.",
+    "A standard project meeting may be about an hour per month, but projects like dairy take much more time.",
+    "Check the UC Agriculture and Natural Resources San Diego County 4-H site to get started."
+   ]
+  },
+  {
+   "title": "Homework Help",
+   "icon": "📚",
+   "intro": "How to take the hassle out of homework, by Shannon Dean (pages 18–19).",
+   "items": [
+    {
+     "name": "Why so much homework?",
+     "meta": "Background",
+     "desc": "Teachers often assign it because class time is limited. The NEA and National PTA suggest about 10 minutes per grade level."
+    },
+    {
+     "name": "Homework Help at a Glance",
+     "meta": "DO",
+     "desc": "Offer support without solving: sit nearby, rephrase directions (don't rewrite them), break work into smaller steps, praise effort and persistence."
+    },
+    {
+     "name": "Homework Help at a Glance",
+     "meta": "DON'T",
+     "desc": "Don't finish a child's homework, argue with the teacher's method, or treat every assignment like a crisis."
+    },
+    {
+     "name": "Tutoring and apps",
+     "meta": "Resource",
+     "desc": "San Diego tutoring services and educational apps.",
+     "url": "https://www.sandiegofamily.com/resources/education-directory/homework-help-apps-and-san-diego-tutoring-services"
+    }
+   ],
+   "tips": [
+    "1. Consider schedule and study area: some kids need to decompress first, others should finish early. Keep the study space free of distractions.",
+    "2. Be present: your presence may be enough. Remember homework is the child's responsibility.",
+    "3. Discuss assignments: go over them together to avoid the bedtime rush, and break big ones into parts. Contact the teacher if the child is truly stuck.",
+    "4. Support kids in the way they learn: use hands-on, visual or listening approaches.",
+    "5. End on a positive note: ask kids to explain their answers and praise effort over results."
+   ]
+  },
+  {
+   "title": "When Friends Drift",
+   "icon": "👫",
+   "intro": "How to help kids navigate changing friendships, by Shannon Dean (pages 20–21). It's often developmental, not personal.",
+   "items": [
+    {
+     "name": "Why friendships change",
+     "meta": "Fall",
+     "desc": "New classes, routines and activities can disrupt friend circles, and kids' peer preferences shift as they mature."
+    },
+    {
+     "name": "The social media complication",
+     "meta": "Watch for it",
+     "desc": "Kids can see friends' outings in real time, which can be painful."
+    },
+    {
+     "name": "The 'Two New Names' challenge",
+     "meta": "Expand the circle",
+     "desc": "Each week, your child learns two new classmates' names and one thing about each."
+    },
+    {
+     "name": "Activity-based connection",
+     "meta": "Expand the circle",
+     "desc": "Sports, clubs and art classes create natural chances to make friends."
+    },
+    {
+     "name": "One new friend at a time",
+     "meta": "Expand the circle",
+     "desc": "One genuine friend is worth more than 10 acquaintances."
+    }
+   ],
+   "tips": [
+    "Listen carefully and reflect back what you hear, including feelings.",
+    "Normalize the shift: friendship changes don't mean something is wrong with your child.",
+    "Coach, don't rescue: ask what they could try instead of fixing it for them.",
+    "Help kids stay connected, or find new friends through afterschool activities and clubs.",
+    "Watch for warning signs like withdrawal or loss of interest, and consider a teacher, school counselor or therapist."
+   ]
   }
  ],
- "events": {
-  "24": [
-   {
-    "name": "LEGOLAND Water Park",
-    "free": false,
-    "type": "other",
-    "icon": "🎢",
-    "time": "",
-    "loc": "LEGOLAND California Resort",
-    "desc": "Splash into spring with seven slides, sandy beaches, Build-A-Raft River, Pirate Reef and LEGO Legends of CHIMA Water Park. Open daily. LEGO CHIMA Water Park opens June 13. One LEGOLAND Dr., Carlsbad. www.legoland.com",
-    "url": "https://www.legoland.com"
-   },
-   {
-    "name": "Humphreys Concerts by the Bay",
-    "free": false,
-    "type": "other",
-    "icon": "🎵",
-    "time": "",
-    "loc": "San Diego, CA",
-    "desc": "Enjoy sparkling views of Point Loma and San Diego Bay while experiencing top entertainment in an outdoor venue. Tonight, June 23 & 26. 2241 Shelter Island Dr. Full schedule & tickets: www.humphreysconcerts.com",
-    "url": "https://www.humphreysconcerts.com"
-   },
-   {
-    "name": "Howl-O-Scream at SeaWorld",
-    "free": false,
-    "type": "other",
-    "icon": "🎃",
-    "time": "6 pm",
-    "loc": "SeaWorld San Diego",
-    "desc": "Select dates through Oct. 31. 6 pm–close. Recommended for adults only. $35.99. 500 SeaWorld Dr. www.seaworld.com",
-    "url": "https://www.seaworld.com"
-   },
-   {
-    "name": "Big Bear Lake Oktoberfest",
-    "free": false,
-    "type": "other",
-    "icon": "📅",
-    "time": "",
-    "loc": "Big Bear Lake Convention Center",
-    "desc": "Bands, beer, food and more. Weekends through Nov. 7. Sundays are Family Fun Days, kids under 12 free. Big Bear Convention Center, 42900 Big Bear Blvd. Tickets: www.bigbearevents.com",
-    "url": "https://www.bigbearevents.com"
-   },
-   {
-    "name": "The Count's Halloween Spooktacular",
-    "free": false,
-    "type": "other",
-    "icon": "🎃",
-    "time": "10 am–6 pm",
-    "loc": "Sesame Place San Diego",
-    "desc": "Silly, not-too-spooky fun. Select dates through Nov. 1, 10 am–6 pm. 2052 Entertainment Cir., Chula Vista. www.sesameplace.com",
-    "url": "https://www.sesameplace.com"
-   },
-   {
-    "name": "Brick-or-Treat",
-    "free": false,
-    "type": "other",
-    "icon": "🎃",
-    "time": "",
-    "loc": "LEGOLAND California Resort",
-    "desc": "Trick-or-treating, Brick or Treat Street, interactive light trail and more. Today & Sept. 26, then weekends through Nov. 1. Included with admission. LEGOLAND, One LEGOLAND Dr., Carlsbad. www.legoland.com",
-    "url": "https://www.legoland.com"
-   },
-   {
-    "name": "Julian Autumn Jubilee",
-    "free": false,
-    "type": "other",
-    "icon": "🎃",
-    "time": "10 am–5 pm",
-    "loc": "Fort Cross",
-    "desc": "Weekends through Oct. 25, 10 am–5 pm. Fort Cross, 4425 Hwy. 78, Santa Ysabel. Tickets: www.fortcross.com",
-    "url": "https://www.fortcross.com"
-   },
-   {
-    "name": "Halloween Aglow",
-    "free": false,
-    "type": "other",
-    "icon": "🎃",
-    "time": "8:30 pm",
-    "loc": "Birch Aquarium at Scripps",
-    "desc": "Embrace your inner scientist in the Boo and Goo Lab and discover the wonders of the sea after dark while you trick-or-treat in Adam R. Scripps Living Seas Gallery with glowing surprises around every corner. October 23–24, 6–8:30 pm. $49.95–$59.95. Birch Aquarium at Scripps, 2300 Expedition Way, La J",
-    "url": "https://aquarium.ucsd.edu"
-   },
-   {
-    "name": "Haunted Corn Maze",
-    "free": false,
-    "type": "other",
-    "icon": "🎃",
-    "time": "10 pm",
-    "loc": "Carlsbad Strawberry Fields",
-    "desc": "Fridays & Saturdays through Oct. 31. 7–10 pm. $25. Carlsbad Strawberry Fields, Cannon Rd. & I-15. www.carlsbadstrawberrycompany.com",
-    "url": "https://www.carlsbadstrawberrycompany.com"
-   },
-   {
-    "name": "HalGLOWeen",
-    "free": false,
-    "type": "other",
-    "icon": "🎃",
-    "time": "5 pm",
-    "loc": "San Diego Zoo, Balboa Park",
-    "desc": "Eerie-sistible entertainment, interactive festivities and lots of spooky surprises. Fri., Sat. & Sun. in October. 5 pm to close. San Diego Zoo, Balboa Park. www.sdzwa.org",
-    "url": "https://www.sdzwa.org"
-   },
-   {
-    "name": "Movies on the Beach",
-    "free": false,
-    "type": "other",
-    "icon": "📅",
-    "time": "8 pm",
-    "loc": "Hotel del Coronado",
-    "desc": "Tonight, 8 pm, Oct. 3, 9, 10, 11, 16, 17, 23, 24, 30 & 31 at 7:30 pm. $25.75. Del Beach, 1500 Orange Ave., Coronado. Full schedule: www.hoteldel.com",
-    "url": "https://www.hoteldel.com"
-   },
-   {
-    "name": "Roar & Snore Safari",
-    "free": false,
-    "type": "other",
-    "icon": "🏛️",
-    "time": "",
-    "loc": "San Diego Zoo Safari Park",
-    "desc": "Experience a sleepover and observe the nighttime activities of wildlife and morning wildlife presentations. Today, tomorrow, Oct. 9, 10, 16, 24 & 30. Starting at $205. Safari Park, 15500 San Pasqual Valley Rd., Escondido. www.sdzsafaripark.org",
-    "url": "https://www.sdzsafaripark.org"
-   },
-   {
-    "name": "Pumpkins in the Pines",
-    "free": false,
-    "type": "other",
-    "icon": "🎃",
-    "time": "",
-    "loc": "Skyforest, CA",
-    "desc": "Pumpkin patch, pumpkin painting, Sleepy Hollow puppet show and more. Sat. & Sun. in October. Skypark, 28950 California 18, Skyforest. www.skyparksantasvillage.com",
-    "url": "https://www.skyparksantasvillage.com"
-   },
-   {
-    "name": "Haunted Harvest",
-    "free": false,
-    "type": "other",
-    "icon": "🎃",
-    "time": "8 pm",
-    "loc": "Fort Cross",
-    "desc": "Haunted hayride, ghost stories and more. Today, Oct. 10, 17, 24 & 30; 7:30 & 8 pm. $30. 4425 Hwy. 78, Santa Ysabel. Reservations required: www.fortcross.com",
-    "url": "https://www.fortcross.com"
-   },
-   {
-    "name": "Farm Festival",
-    "free": false,
-    "type": "other",
-    "icon": "🎃",
-    "time": "10 am–4 pm",
-    "loc": "Oceanside, CA",
-    "desc": "Pumpkin patch, corn maze and more. Today, tomorrow, Oct. 10, 11, 24, 25, 31 & Nov. 1; 10 am–4 pm. $5 parking. Mellano Farmstand, 5714 N. River Rd., Oceanside. www.mellanofarmstand.com",
-    "url": "https://www.mellanofarmstand.com"
-   },
-   {
-    "name": "Howl-O-Ween Harvest Family Festival",
-    "free": false,
-    "type": "other",
-    "icon": "🎃",
-    "time": "9 am–1 pm",
-    "loc": "Helen Woodward Animal Center",
-    "desc": "Fall-themed hands-on animal encounters, festive crafts and more. Today, Oct. 17, 24 & 31; 9 am–1 pm. $10–$19. Helen Woodward Animal Center, 6447 Helen Woodward Way, Rancho Santa Fe. www.animalcenter.org",
-    "url": "https://www.animalcenter.org"
-   },
-   {
-    "name": "San Diego Gulls",
-    "free": false,
-    "type": "other",
-    "icon": "📅",
-    "time": "",
-    "loc": "Pechanga Arena San Diego",
-    "desc": "Tonight, Oct. 14, 21, 24 & 31. Pechanga Arena, 3500 Sports Arena Blvd. Tickets: www.sandiegogulls.com",
-    "url": "https://www.sandiegogulls.com"
-   },
-   {
-    "name": "Orchestral Soundtracks (OST) Fall Festival",
-    "free": true,
-    "type": "free",
-    "icon": "🆓",
-    "time": "9 pm",
-    "loc": "Del Mar",
-    "desc": "A festival where games and music collide. Local independent developers bring playable games, live bands perform, and a \"Name That Tune\" game show leads into a full orchestral set from Orchestral Soundtracks, San Diego's own videogame and anime community orchestra. Cosplay welcome, with food trucks o",
-    "url": "https://givebutter.com/ost-2026-fall-fest"
-   },
-   {
-    "name": "Fright for Future",
-    "free": true,
-    "type": "free",
-    "icon": "🆓",
-    "time": "9 pm",
-    "loc": "San Diego, CA",
-    "desc": "A haunted maze of \"true terrors\" bringing scary issues concerning people, planet and animals to light. For ages 10+. Oct. 16–18 & 23–25, 5–9 pm. $10. 3720 El Cajon Blvd. www.frightforfuture.org",
-    "url": "https://www.frightforfuture.org"
-   },
-   {
-    "name": "Antique Tractor Show",
-    "free": false,
-    "type": "other",
-    "icon": "📅",
-    "time": "9 am–4 pm",
-    "loc": "Antique Gas & Steam Engine Museum",
-    "desc": "Kids’ activities, crafts, games and more. Today, tomorrow & Oct. 24–25. 9 am–4 pm. $10; under 6 free. Antique Gas & Steam Engine Museum, 2040 N. Santa Fe Ave., Vista. www.agsem.com",
-    "url": "https://www.agsem.com"
-   },
-   {
-    "name": "Boo! At the Zoo",
-    "free": false,
-    "type": "other",
-    "icon": "🎃",
-    "time": "6 pm",
-    "loc": "Wild Wonders",
-    "desc": "Candy stations, apple cider and flashlights. Today, Oct. 24, 25 & 30; 6 pm. $26–$48. Wild Wonders, 5712 Via Montellano, Bonsall. www.wildwonders.org",
-    "url": "https://www.wildwonders.org"
-   },
-   {
-    "name": "“Charlie and the Chocolate Factory.”",
-    "free": false,
-    "type": "other",
-    "icon": "📅",
-    "time": "",
-    "loc": "Casa del Prado Theatre, Balboa Park",
-    "desc": "Enjoy songs from the motion picture including \"The Candy Man,\" \"Oompa Loompa Song,\" and \"Pure Imagination.\" Fri.–Sun., through Nov. 8. $23–$28. Casa del Prado Theatre, Balboa Park. www.juniortheatre.com",
-    "url": "https://www.juniortheatre.com"
-   },
-   {
-    "name": "Midway’s Fright Deck: Halloween Party & Movie Night",
-    "free": false,
-    "type": "other",
-    "icon": "🎃",
-    "time": "6 pm",
-    "loc": "USS Midway Museum",
-    "desc": "A swashbuckling evening of Halloween fun featuring an outdoor screening of Disney’s “Pirates of the Caribbean: The Curse of the Black Pearl.” 6 pm. $16–$26. USS Midway Museum, Flight Deck, 910 N. Harbor Dr. www.midway.org",
-    "url": "https://www.midway.org"
-   },
-   {
-    "name": "“American Icons.”",
-    "free": false,
-    "type": "other",
-    "icon": "📅",
-    "time": "",
-    "loc": "Balboa Theatre",
-    "desc": "A dazzling display of musicality, precision, and pure classical dance. Today & tomorrow. Balboa Theatre, 868 Fourth Ave. www.cityballet.org",
-    "url": "https://www.cityballet.org"
-   },
-   {
-    "name": "Pumpkin Bash",
-    "free": false,
-    "type": "other",
-    "icon": "🎃",
-    "time": "10 am",
-    "loc": "Lions, Tigers & Bears",
-    "desc": "Bears and big cats pounce, smash and snack on pumpkins. 10 am. $35–$60. Lions, Tigers & Bears, 24402 Martin Way, Alpine. www.lionstigersandbears.org",
-    "url": "https://www.lionstigersandbears.org"
-   },
-   {
-    "name": "Pumpkin Express",
-    "free": false,
-    "type": "other",
-    "icon": "🎃",
-    "time": "10:30 am",
-    "loc": "Pacific Southwest Railway Museum",
-    "desc": "Train rides, pumpkin decorating, haunted train cars and more. Today, tomorrow & Oct. 31; 10:30 am, 1 & 2:30 pm. $18.95–$39.95. Pacific Southwest Railway Museum, 750 Depot St., Campo. Reservations: www.psrm.org",
-    "url": "https://www.psrm.org"
-   },
-   {
-    "name": "Once Upon a Hallowe’en",
-    "free": true,
-    "type": "free",
-    "icon": "🆓",
-    "time": "8:30 pm",
-    "loc": "Poway, CA",
-    "desc": "Halloween parade, carnival games, train rides and more. 4:30–8:30 pm. Activities, $1. Old Poway Park, 14134 Midland Rd. www.poway.org",
-    "url": "https://www.poway.org"
-   },
-   {
-    "name": "Halloween Campout",
-    "free": false,
-    "type": "other",
-    "icon": "🎃",
-    "time": "1 pm",
-    "loc": "Lake Poway",
-    "desc": "Spooky night hike, a costume contest, trick-or-treating and a craft. Today, 1 pm–tomorrow, 10 am. $80 per car. Lake Poway, 14644 Lake Poway Rd., Poway. www.poway.org",
-    "url": "https://www.poway.org"
-   },
-   {
-    "name": "Howl-o-Ween Mutt Run 5K Run/Walk",
-    "free": false,
-    "type": "other",
-    "icon": "🎃",
-    "time": "8:30 am",
-    "loc": "San Diego, CA",
-    "desc": "Costume contest, prizes and more. 8:30 am. $60. Road Runner Sports, 5553 Copley Dr. www.labsandmore.org",
-    "url": "https://www.labsandmore.org"
-   },
-   {
-    "name": "Halloween Spooktacular at Santee Lakes",
-    "free": false,
-    "type": "other",
-    "icon": "🎃",
-    "time": "10 am–2 pm",
-    "loc": "Santee Lakes",
-    "desc": "Trunk-or-treating, games, inflatables, pirates and more. 10 am–2 pm. Parking, $10. 9310 Fanita Pkwy. www.santeelakes.com",
-    "url": "https://www.santeelakes.com"
-   },
-   {
-    "name": "Fallbrook Halloween Festival",
-    "free": true,
-    "type": "free",
-    "icon": "🆓",
-    "time": "6 pm",
-    "loc": "Fallbrook, CA",
-    "desc": "3–6 pm. Fallbrook Community Center, 341 Heald Ln. Details: www.fallbrookchamberofcommerce.org",
-    "url": "https://www.fallbrookchamberofcommerce.org"
-   },
-   {
-    "name": "Boo Bash 2026",
-    "free": true,
-    "type": "free",
-    "icon": "🆓",
-    "time": "5 pm",
-    "loc": "San Diego, CA",
-    "desc": "A Halloween party for LGBTQ+ youth and their families. 2–5 pm. 3845 Spring Dr., Spring Valley. https://transfamilysos.org/boobash",
-    "url": "https://transfamilysos.org/boobash"
-   },
-   {
-    "name": "Halloween Carnival",
-    "free": true,
-    "type": "free",
-    "icon": "🆓",
-    "time": "",
-    "loc": "San Diego, CA",
-    "desc": "Miramar Ranch Elementary School, 10770 Red Cedar Dr. Details: www.miramarranch.org",
-    "url": "https://www.miramarranch.org"
-   }
-  ],
-  "25": [
-   {
-    "name": "LEGOLAND Water Park",
-    "free": false,
-    "type": "other",
-    "icon": "🎢",
-    "time": "",
-    "loc": "LEGOLAND California Resort",
-    "desc": "Splash into spring with seven slides, sandy beaches, Build-A-Raft River, Pirate Reef and LEGO Legends of CHIMA Water Park. Open daily. LEGO CHIMA Water Park opens June 13. One LEGOLAND Dr., Carlsbad. www.legoland.com",
-    "url": "https://www.legoland.com"
-   },
-   {
-    "name": "Howl-O-Scream at SeaWorld",
-    "free": false,
-    "type": "other",
-    "icon": "🎃",
-    "time": "6 pm",
-    "loc": "SeaWorld San Diego",
-    "desc": "Select dates through Oct. 31. 6 pm–close. Recommended for adults only. $35.99. 500 SeaWorld Dr. www.seaworld.com",
-    "url": "https://www.seaworld.com"
-   },
-   {
-    "name": "Big Bear Lake Oktoberfest",
-    "free": false,
-    "type": "other",
-    "icon": "📅",
-    "time": "",
-    "loc": "Big Bear Lake Convention Center",
-    "desc": "Bands, beer, food and more. Weekends through Nov. 7. Sundays are Family Fun Days, kids under 12 free. Big Bear Convention Center, 42900 Big Bear Blvd. Tickets: www.bigbearevents.com",
-    "url": "https://www.bigbearevents.com"
-   },
-   {
-    "name": "The Count's Halloween Spooktacular",
-    "free": false,
-    "type": "other",
-    "icon": "🎃",
-    "time": "10 am–6 pm",
-    "loc": "Sesame Place San Diego",
-    "desc": "Silly, not-too-spooky fun. Select dates through Nov. 1, 10 am–6 pm. 2052 Entertainment Cir., Chula Vista. www.sesameplace.com",
-    "url": "https://www.sesameplace.com"
-   },
-   {
-    "name": "Brick-or-Treat",
-    "free": false,
-    "type": "other",
-    "icon": "🎃",
-    "time": "",
-    "loc": "LEGOLAND California Resort",
-    "desc": "Trick-or-treating, Brick or Treat Street, interactive light trail and more. Today & Sept. 26, then weekends through Nov. 1. Included with admission. LEGOLAND, One LEGOLAND Dr., Carlsbad. www.legoland.com",
-    "url": "https://www.legoland.com"
-   },
-   {
-    "name": "Julian Autumn Jubilee",
-    "free": false,
-    "type": "other",
-    "icon": "🎃",
-    "time": "10 am–5 pm",
-    "loc": "Fort Cross",
-    "desc": "Weekends through Oct. 25, 10 am–5 pm. Fort Cross, 4425 Hwy. 78, Santa Ysabel. Tickets: www.fortcross.com",
-    "url": "https://www.fortcross.com"
-   },
-   {
-    "name": "HalGLOWeen",
-    "free": false,
-    "type": "other",
-    "icon": "🎃",
-    "time": "5 pm",
-    "loc": "San Diego Zoo, Balboa Park",
-    "desc": "Eerie-sistible entertainment, interactive festivities and lots of spooky surprises. Fri., Sat. & Sun. in October. 5 pm to close. San Diego Zoo, Balboa Park. www.sdzwa.org",
-    "url": "https://www.sdzwa.org"
-   },
-   {
-    "name": "Pumpkins in the Pines",
-    "free": false,
-    "type": "other",
-    "icon": "🎃",
-    "time": "",
-    "loc": "Skyforest, CA",
-    "desc": "Pumpkin patch, pumpkin painting, Sleepy Hollow puppet show and more. Sat. & Sun. in October. Skypark, 28950 California 18, Skyforest. www.skyparksantasvillage.com",
-    "url": "https://www.skyparksantasvillage.com"
-   },
-   {
-    "name": "Farm Festival",
-    "free": false,
-    "type": "other",
-    "icon": "🎃",
-    "time": "10 am–4 pm",
-    "loc": "Oceanside, CA",
-    "desc": "Pumpkin patch, corn maze and more. Today, tomorrow, Oct. 10, 11, 24, 25, 31 & Nov. 1; 10 am–4 pm. $5 parking. Mellano Farmstand, 5714 N. River Rd., Oceanside. www.mellanofarmstand.com",
-    "url": "https://www.mellanofarmstand.com"
-   },
-   {
-    "name": "Fright for Future",
-    "free": true,
-    "type": "free",
-    "icon": "🆓",
-    "time": "9 pm",
-    "loc": "San Diego, CA",
-    "desc": "A haunted maze of \"true terrors\" bringing scary issues concerning people, planet and animals to light. For ages 10+. Oct. 16–18 & 23–25, 5–9 pm. $10. 3720 El Cajon Blvd. www.frightforfuture.org",
-    "url": "https://www.frightforfuture.org"
-   },
-   {
-    "name": "Antique Tractor Show",
-    "free": false,
-    "type": "other",
-    "icon": "📅",
-    "time": "9 am–4 pm",
-    "loc": "Antique Gas & Steam Engine Museum",
-    "desc": "Kids’ activities, crafts, games and more. Today, tomorrow & Oct. 24–25. 9 am–4 pm. $10; under 6 free. Antique Gas & Steam Engine Museum, 2040 N. Santa Fe Ave., Vista. www.agsem.com",
-    "url": "https://www.agsem.com"
-   },
-   {
-    "name": "Boo! At the Zoo",
-    "free": false,
-    "type": "other",
-    "icon": "🎃",
-    "time": "6 pm",
-    "loc": "Wild Wonders",
-    "desc": "Candy stations, apple cider and flashlights. Today, Oct. 24, 25 & 30; 6 pm. $26–$48. Wild Wonders, 5712 Via Montellano, Bonsall. www.wildwonders.org",
-    "url": "https://www.wildwonders.org"
-   },
-   {
-    "name": "“Charlie and the Chocolate Factory.”",
-    "free": false,
-    "type": "other",
-    "icon": "📅",
-    "time": "",
-    "loc": "Casa del Prado Theatre, Balboa Park",
-    "desc": "Enjoy songs from the motion picture including \"The Candy Man,\" \"Oompa Loompa Song,\" and \"Pure Imagination.\" Fri.–Sun., through Nov. 8. $23–$28. Casa del Prado Theatre, Balboa Park. www.juniortheatre.com",
-    "url": "https://www.juniortheatre.com"
-   },
-   {
-    "name": "“American Icons.”",
-    "free": false,
-    "type": "other",
-    "icon": "📅",
-    "time": "",
-    "loc": "Balboa Theatre",
-    "desc": "A dazzling display of musicality, precision, and pure classical dance. Today & tomorrow. Balboa Theatre, 868 Fourth Ave. www.cityballet.org",
-    "url": "https://www.cityballet.org"
-   },
-   {
-    "name": "Pumpkin Express",
-    "free": false,
-    "type": "other",
-    "icon": "🎃",
-    "time": "10:30 am",
-    "loc": "Pacific Southwest Railway Museum",
-    "desc": "Train rides, pumpkin decorating, haunted train cars and more. Today, tomorrow & Oct. 31; 10:30 am, 1 & 2:30 pm. $18.95–$39.95. Pacific Southwest Railway Museum, 750 Depot St., Campo. Reservations: www.psrm.org",
-    "url": "https://www.psrm.org"
-   },
-   {
-    "name": "Spreckels Organ Society Concerts",
-    "free": true,
-    "type": "free",
-    "icon": "🆓",
-    "time": "3 pm",
-    "loc": "Spreckels Organ Pavilion, Balboa Park",
-    "desc": "Sundays, 2–3 pm. Pavilion-Pan American Pl., Balboa Park. www.spreckelsorgan.org",
-    "url": "https://www.spreckelsorgan.org"
-   },
-   {
-    "name": "Belmont Park Trick-or-Treating",
-    "free": false,
-    "type": "other",
-    "icon": "🎃",
-    "time": "5 pm",
-    "loc": "Belmont Park",
-    "desc": "Sundays in October, 5 pm. 3146 Mission Blvd. www.belmontpark.com",
-    "url": "https://www.belmontpark.com"
-   },
-   {
-    "name": "Trick-or-Treat on India Street",
-    "free": true,
-    "type": "free",
-    "icon": "🆓",
-    "time": "7:30 pm",
-    "loc": "Little Italy, downtown San Diego",
-    "desc": "A Nightmare Before Christmas-themed Piazza della Famiglia featuring a giant Jack Skellington and towering pumpkin stacks for photos and more. 3:30–7:30 pm. Little Italy. www.littleitalysd.com",
-    "url": "https://www.littleitalysd.com"
-   },
-   {
-    "name": "San Diego Wave FC",
-    "free": false,
-    "type": "other",
-    "icon": "📅",
-    "time": "4 pm",
-    "loc": "Snapdragon Stadium",
-    "desc": "Cheer on our national women’s soccer team. 4 pm. Snapdragon Stadium, 2101 Stadium Way. Tickets: www.sandiegowavefc.com",
-    "url": "https://www.sandiegowavefc.com"
-   },
-   {
-    "name": "“An Evening with Celtic Thunder 2026: Celebrate Your Favorite Songs.”",
-    "free": false,
-    "type": "other",
-    "icon": "🎵",
-    "time": "5 pm",
-    "loc": "California Center for the Arts, Escondido",
-    "desc": "An unforgettable evening of music, memories and camaraderie. 3–5 pm. Starting at $40. California Center for the Arts, Escondido, 340 N. Escondido Blvd. www.artcenter.org",
-    "url": "https://www.artcenter.org"
-   },
-   {
-    "name": "Belmont Park Trunk or Treat",
-    "free": true,
-    "type": "free",
-    "icon": "🆓",
-    "time": "6 pm",
-    "loc": "Belmont Park",
-    "desc": "3–6 pm. 3146 Mission Blvd. www.belmontpark.com",
-    "url": "https://www.belmontpark.com"
-   },
-   {
-    "name": "Encinitas Día de los Muertos",
-    "free": true,
-    "type": "free",
-    "icon": "🆓",
-    "time": "4 pm",
-    "loc": "San Diego, CA",
-    "desc": "Art-making workshops, live Mariachi and more. 12–4 pm. MiraCosta College San Elijo Campus, 3333 Manchester Ave., Cardiff.",
-    "url": "https://www.sandiegofamily.com/things-to-do/events-calendar/event/53663-encinitas-dia-de-los-muertos"
-   },
-   {
-    "name": "Día de los Muertos Festival",
-    "free": true,
-    "type": "free",
-    "icon": "🆓",
-    "time": "10 am–4 pm",
-    "loc": "Oceanside, CA",
-    "desc": "Altars, chalk ceremonies and more. 10 am–4 pm. Downtown Oceanside. https://www.friendsofoceansidediadelosmuertos.org",
-    "url": "https://www.friendsofoceansidediadelosmuertos.org"
-   },
-   {
-    "name": "Gather on Grand",
-    "free": true,
-    "type": "free",
-    "icon": "🆓",
-    "time": "9 am–5 pm",
-    "loc": "Escondido CA",
-    "desc": "Family activities, interactive art and more. 9 am–5 pm. Grand Ave., downtown Escondido. www.downtownescondido.com",
-    "url": "https://www.downtownescondido.com"
-   }
-  ],
-  "27": [
-   {
-    "name": "Humphreys Concerts by the Bay",
-    "free": false,
-    "type": "other",
-    "icon": "🎵",
-    "time": "",
-    "loc": "San Diego, CA",
-    "desc": "Enjoy sparkling views of Point Loma and San Diego Bay while experiencing top entertainment in an outdoor venue. Tonight, June 23 & 26. 2241 Shelter Island Dr. Full schedule & tickets: www.humphreysconcerts.com",
-    "url": "https://www.humphreysconcerts.com"
-   },
-   {
-    "name": "Residents FREE Days at Balboa Park",
-    "free": true,
-    "type": "free",
-    "icon": "🆓",
-    "time": "",
-    "loc": "Balboa Park",
-    "desc": "Park museums offer free admission Tuesdays on a rotating basis throughout the month to residents of the City and County of San Diego, and to active military personnel and their dependents. Schedule: www.balboapark.org",
-    "url": "https://www.balboapark.org"
-   },
-   {
-    "name": "National Parks Fee FREE Days",
-    "free": true,
-    "type": "free",
-    "icon": "🆓",
-    "time": "",
-    "loc": "San Diego, CA",
-    "desc": "All National Park Service sites that charge an entrance fee will offer free admission to everyone. https://home.nps.gov/planyourvisit/passes.htm#free_entrance_days",
-    "url": "https://home.nps.gov/planyourvisit/passes.htm#free_entrance_days"
-   }
-  ],
-  "28": [
-   {
-    "name": "Humphreys Concerts by the Bay",
-    "free": false,
-    "type": "other",
-    "icon": "🎵",
-    "time": "",
-    "loc": "San Diego, CA",
-    "desc": "Enjoy sparkling views of Point Loma and San Diego Bay while experiencing top entertainment in an outdoor venue. Tonight, June 23 & 26. 2241 Shelter Island Dr. Full schedule & tickets: www.humphreysconcerts.com",
-    "url": "https://www.humphreysconcerts.com"
-   },
-   {
-    "name": "Bird Walk at the San Diego Botanic Garden",
-    "free": false,
-    "type": "other",
-    "icon": "🏛️",
-    "time": "10 am",
-    "loc": "San Diego Botanic Garden",
-    "desc": "Every second Wed., 10 am. $12–$20. 300 Quail Gardens Dr., Encinitas. www.sdbg.org",
-    "url": "https://www.sdbg.org"
-   },
-   {
-    "name": "A Haunting in Venice Cruise",
-    "free": false,
-    "type": "other",
-    "icon": "🎃",
-    "time": "",
-    "loc": "Coronado, CA",
-    "desc": "Celebrate Halloween on a gondola cruise through the eerie canals and spooky waterways of the Coronado Cays. Through Oct. 31. Starting at $139. The Gondola Company, 503 Grand Caribe Causeway, Coronado. www.gondolacompany.com",
-    "url": "https://www.gondolacompany.com"
-   }
-  ],
-  "30": [
-   {
-    "name": "Howl-O-Scream at SeaWorld",
-    "free": false,
-    "type": "other",
-    "icon": "🎃",
-    "time": "6 pm",
-    "loc": "SeaWorld San Diego",
-    "desc": "Select dates through Oct. 31. 6 pm–close. Recommended for adults only. $35.99. 500 SeaWorld Dr. www.seaworld.com",
-    "url": "https://www.seaworld.com"
-   },
-   {
-    "name": "Haunted Corn Maze",
-    "free": false,
-    "type": "other",
-    "icon": "🎃",
-    "time": "10 pm",
-    "loc": "Carlsbad Strawberry Fields",
-    "desc": "Fridays & Saturdays through Oct. 31. 7–10 pm. $25. Carlsbad Strawberry Fields, Cannon Rd. & I-15. www.carlsbadstrawberrycompany.com",
-    "url": "https://www.carlsbadstrawberrycompany.com"
-   },
-   {
-    "name": "HalGLOWeen",
-    "free": false,
-    "type": "other",
-    "icon": "🎃",
-    "time": "5 pm",
-    "loc": "San Diego Zoo, Balboa Park",
-    "desc": "Eerie-sistible entertainment, interactive festivities and lots of spooky surprises. Fri., Sat. & Sun. in October. 5 pm to close. San Diego Zoo, Balboa Park. www.sdzwa.org",
-    "url": "https://www.sdzwa.org"
-   },
-   {
-    "name": "Movies on the Beach",
-    "free": false,
-    "type": "other",
-    "icon": "📅",
-    "time": "8 pm",
-    "loc": "Hotel del Coronado",
-    "desc": "Tonight, 8 pm, Oct. 3, 9, 10, 11, 16, 17, 23, 24, 30 & 31 at 7:30 pm. $25.75. Del Beach, 1500 Orange Ave., Coronado. Full schedule: www.hoteldel.com",
-    "url": "https://www.hoteldel.com"
-   },
-   {
-    "name": "Roar & Snore Safari",
-    "free": false,
-    "type": "other",
-    "icon": "🏛️",
-    "time": "",
-    "loc": "San Diego Zoo Safari Park",
-    "desc": "Experience a sleepover and observe the nighttime activities of wildlife and morning wildlife presentations. Today, tomorrow, Oct. 9, 10, 16, 24 & 30. Starting at $205. Safari Park, 15500 San Pasqual Valley Rd., Escondido. www.sdzsafaripark.org",
-    "url": "https://www.sdzsafaripark.org"
-   },
-   {
-    "name": "Haunted Harvest",
-    "free": false,
-    "type": "other",
-    "icon": "🎃",
-    "time": "8 pm",
-    "loc": "Fort Cross",
-    "desc": "Haunted hayride, ghost stories and more. Today, Oct. 10, 17, 24 & 30; 7:30 & 8 pm. $30. 4425 Hwy. 78, Santa Ysabel. Reservations required: www.fortcross.com",
-    "url": "https://www.fortcross.com"
-   },
-   {
-    "name": "Boo! At the Zoo",
-    "free": false,
-    "type": "other",
-    "icon": "🎃",
-    "time": "6 pm",
-    "loc": "Wild Wonders",
-    "desc": "Candy stations, apple cider and flashlights. Today, Oct. 24, 25 & 30; 6 pm. $26–$48. Wild Wonders, 5712 Via Montellano, Bonsall. www.wildwonders.org",
-    "url": "https://www.wildwonders.org"
-   },
-   {
-    "name": "“Charlie and the Chocolate Factory.”",
-    "free": false,
-    "type": "other",
-    "icon": "📅",
-    "time": "",
-    "loc": "Casa del Prado Theatre, Balboa Park",
-    "desc": "Enjoy songs from the motion picture including \"The Candy Man,\" \"Oompa Loompa Song,\" and \"Pure Imagination.\" Fri.–Sun., through Nov. 8. $23–$28. Casa del Prado Theatre, Balboa Park. www.juniortheatre.com",
-    "url": "https://www.juniortheatre.com"
-   },
-   {
-    "name": "Halloween Carnival",
-    "free": true,
-    "type": "free",
-    "icon": "🆓",
-    "time": "",
-    "loc": "San Diego, CA",
-    "desc": "Food vendors, game booths, prizes and more. Costumes encouraged. Ellen Browning Scripps Elementary School, 11778 Cypress Canyon Rd. Details: https://ebscripps.sandiegounified.org",
-    "url": "https://ebscripps.sandiegounified.org"
-   },
-   {
-    "name": "A Haunting in Venice Cruise",
-    "free": false,
-    "type": "other",
-    "icon": "🎃",
-    "time": "",
-    "loc": "Coronado, CA",
-    "desc": "Celebrate Halloween on a gondola cruise through the eerie canals and spooky waterways of the Coronado Cays. Through Oct. 31. Starting at $139. The Gondola Company, 503 Grand Caribe Causeway, Coronado. www.gondolacompany.com",
-    "url": "https://www.gondolacompany.com"
-   },
-   {
-    "name": "Trick-or-Treat at Carmel Mountain Ranch Town Center",
-    "free": true,
-    "type": "free",
-    "icon": "🆓",
-    "time": "5 pm",
-    "loc": "San Diego, CA",
-    "desc": "Kids 12 and under are invited to put on their costumes, bring a bag and trick-or-treat. 3–5 pm. Just east of I-15 at Carmel Mtn. Rd. and Highland Rd.",
-    "url": "https://www.sandiegofamily.com/things-to-do/events-calendar/event/53671-trick-or-treat-at-carmel-mountain-ranch-town-center"
-   },
-   {
-    "name": "Trick-or-Treat at EastLake Village Marketplace",
-    "free": true,
-    "type": "free",
-    "icon": "🆓",
-    "time": "5 pm",
-    "loc": "San Diego, CA",
-    "desc": "Children ages 12 and under who are dressed in costume and accompanied by an adult will receive free treats from participating businesses. 3–5 pm. Corner of Otay Lakes Rd. & EastLake Pkwy., Chula Vista. www.shopeastlakemarketplace.com",
-    "url": "https://www.shopeastlakemarketplace.com"
-   },
-   {
-    "name": "Fun Animal Friday",
-    "free": false,
-    "type": "other",
-    "icon": "🏛️",
-    "time": "11:30 am",
-    "loc": "Children's Museum of Discovery",
-    "desc": "Storytime, hands-on activity and an animal meet-and-greet. 10–11:30 am. $14. Children’s Museum of Discovery, 320 N. Broadway, Escondido. www.visitcmod.org",
-    "url": "https://www.visitcmod.org"
-   },
-   {
-    "name": "Tierrasanta Trunk-or-Treat",
-    "free": true,
-    "type": "free",
-    "icon": "🆓",
-    "time": "8:30 pm",
-    "loc": "San Diego, CA",
-    "desc": "Candy, food, games and more. 5:30–8:30 pm. Newbreak Church, 10791 Tierrasanta Blvd. www.newbreak.church",
-    "url": "https://www.newbreak.church"
-   }
-  ],
-  "31": [
-   {
-    "name": "Howl-O-Scream at SeaWorld",
-    "free": false,
-    "type": "other",
-    "icon": "🎃",
-    "time": "6 pm",
-    "loc": "SeaWorld San Diego",
-    "desc": "Select dates through Oct. 31. 6 pm–close. Recommended for adults only. $35.99. 500 SeaWorld Dr. www.seaworld.com",
-    "url": "https://www.seaworld.com"
-   },
-   {
-    "name": "Big Bear Lake Oktoberfest",
-    "free": false,
-    "type": "other",
-    "icon": "📅",
-    "time": "",
-    "loc": "Big Bear Lake Convention Center",
-    "desc": "Bands, beer, food and more. Weekends through Nov. 7. Sundays are Family Fun Days, kids under 12 free. Big Bear Convention Center, 42900 Big Bear Blvd. Tickets: www.bigbearevents.com",
-    "url": "https://www.bigbearevents.com"
-   },
-   {
-    "name": "The Count's Halloween Spooktacular",
-    "free": false,
-    "type": "other",
-    "icon": "🎃",
-    "time": "10 am–6 pm",
-    "loc": "Sesame Place San Diego",
-    "desc": "Silly, not-too-spooky fun. Select dates through Nov. 1, 10 am–6 pm. 2052 Entertainment Cir., Chula Vista. www.sesameplace.com",
-    "url": "https://www.sesameplace.com"
-   },
-   {
-    "name": "Brick-or-Treat",
-    "free": false,
-    "type": "other",
-    "icon": "🎃",
-    "time": "",
-    "loc": "LEGOLAND California Resort",
-    "desc": "Trick-or-treating, Brick or Treat Street, interactive light trail and more. Today & Sept. 26, then weekends through Nov. 1. Included with admission. LEGOLAND, One LEGOLAND Dr., Carlsbad. www.legoland.com",
-    "url": "https://www.legoland.com"
-   },
-   {
-    "name": "Haunted Corn Maze",
-    "free": false,
-    "type": "other",
-    "icon": "🎃",
-    "time": "10 pm",
-    "loc": "Carlsbad Strawberry Fields",
-    "desc": "Fridays & Saturdays through Oct. 31. 7–10 pm. $25. Carlsbad Strawberry Fields, Cannon Rd. & I-15. www.carlsbadstrawberrycompany.com",
-    "url": "https://www.carlsbadstrawberrycompany.com"
-   },
-   {
-    "name": "HalGLOWeen",
-    "free": false,
-    "type": "other",
-    "icon": "🎃",
-    "time": "5 pm",
-    "loc": "San Diego Zoo, Balboa Park",
-    "desc": "Eerie-sistible entertainment, interactive festivities and lots of spooky surprises. Fri., Sat. & Sun. in October. 5 pm to close. San Diego Zoo, Balboa Park. www.sdzwa.org",
-    "url": "https://www.sdzwa.org"
-   },
-   {
-    "name": "Movies on the Beach",
-    "free": false,
-    "type": "other",
-    "icon": "📅",
-    "time": "8 pm",
-    "loc": "Hotel del Coronado",
-    "desc": "Tonight, 8 pm, Oct. 3, 9, 10, 11, 16, 17, 23, 24, 30 & 31 at 7:30 pm. $25.75. Del Beach, 1500 Orange Ave., Coronado. Full schedule: www.hoteldel.com",
-    "url": "https://www.hoteldel.com"
-   },
-   {
-    "name": "Pumpkins in the Pines",
-    "free": false,
-    "type": "other",
-    "icon": "🎃",
-    "time": "",
-    "loc": "Skyforest, CA",
-    "desc": "Pumpkin patch, pumpkin painting, Sleepy Hollow puppet show and more. Sat. & Sun. in October. Skypark, 28950 California 18, Skyforest. www.skyparksantasvillage.com",
-    "url": "https://www.skyparksantasvillage.com"
-   },
-   {
-    "name": "Farm Festival",
-    "free": false,
-    "type": "other",
-    "icon": "🎃",
-    "time": "10 am–4 pm",
-    "loc": "Oceanside, CA",
-    "desc": "Pumpkin patch, corn maze and more. Today, tomorrow, Oct. 10, 11, 24, 25, 31 & Nov. 1; 10 am–4 pm. $5 parking. Mellano Farmstand, 5714 N. River Rd., Oceanside. www.mellanofarmstand.com",
-    "url": "https://www.mellanofarmstand.com"
-   },
-   {
-    "name": "Howl-O-Ween Harvest Family Festival",
-    "free": false,
-    "type": "other",
-    "icon": "🎃",
-    "time": "9 am–1 pm",
-    "loc": "Helen Woodward Animal Center",
-    "desc": "Fall-themed hands-on animal encounters, festive crafts and more. Today, Oct. 17, 24 & 31; 9 am–1 pm. $10–$19. Helen Woodward Animal Center, 6447 Helen Woodward Way, Rancho Santa Fe. www.animalcenter.org",
-    "url": "https://www.animalcenter.org"
-   },
-   {
-    "name": "San Diego Gulls",
-    "free": false,
-    "type": "other",
-    "icon": "📅",
-    "time": "",
-    "loc": "Pechanga Arena San Diego",
-    "desc": "Tonight, Oct. 14, 21, 24 & 31. Pechanga Arena, 3500 Sports Arena Blvd. Tickets: www.sandiegogulls.com",
-    "url": "https://www.sandiegogulls.com"
-   },
-   {
-    "name": "“Charlie and the Chocolate Factory.”",
-    "free": false,
-    "type": "other",
-    "icon": "📅",
-    "time": "",
-    "loc": "Casa del Prado Theatre, Balboa Park",
-    "desc": "Enjoy songs from the motion picture including \"The Candy Man,\" \"Oompa Loompa Song,\" and \"Pure Imagination.\" Fri.–Sun., through Nov. 8. $23–$28. Casa del Prado Theatre, Balboa Park. www.juniortheatre.com",
-    "url": "https://www.juniortheatre.com"
-   },
-   {
-    "name": "Pumpkin Express",
-    "free": false,
-    "type": "other",
-    "icon": "🎃",
-    "time": "10:30 am",
-    "loc": "Pacific Southwest Railway Museum",
-    "desc": "Train rides, pumpkin decorating, haunted train cars and more. Today, tomorrow & Oct. 31; 10:30 am, 1 & 2:30 pm. $18.95–$39.95. Pacific Southwest Railway Museum, 750 Depot St., Campo. Reservations: www.psrm.org",
-    "url": "https://www.psrm.org"
-   },
-   {
-    "name": "A Haunting in Venice Cruise",
-    "free": false,
-    "type": "other",
-    "icon": "🎃",
-    "time": "",
-    "loc": "Coronado, CA",
-    "desc": "Celebrate Halloween on a gondola cruise through the eerie canals and spooky waterways of the Coronado Cays. Through Oct. 31. Starting at $139. The Gondola Company, 503 Grand Caribe Causeway, Coronado. www.gondolacompany.com",
-    "url": "https://www.gondolacompany.com"
-   },
-   {
-    "name": "Party at the Pop Jet at Del Mar Highlands",
-    "free": true,
-    "type": "free",
-    "icon": "🆓",
-    "time": "11:30 am",
-    "loc": "Del Mar Highlands Town Center",
-    "desc": "Family-friendly entertainment. Today & Oct. 31, 10–11:30 am. 12925 El Camino Real. www.delmarhighlandstowncenter.com",
-    "url": "https://www.delmarhighlandstowncenter.com"
-   },
-   {
-    "name": "SDSU Aztec Football Home Game",
-    "free": false,
-    "type": "other",
-    "icon": "📅",
-    "time": "",
-    "loc": "Snapdragon Stadium",
-    "desc": "Today, Oct. 17 & 31. Snapdragon Stadium, 2101 Stadium Way. Tickets: www.goaztecs.com",
-    "url": "https://www.goaztecs.com"
-   },
-   {
-    "name": "Hank’s House of Horrors",
-    "free": false,
-    "type": "other",
-    "icon": "🎃",
-    "time": "11 am–2 pm",
-    "loc": "San Diego, CA",
-    "desc": "Blur Martial Arts will host a live-actor haunted maze. Families can reserve five-minute maze windows, and participants ages seven and older can also reserve the Zombie Scenario Room. 11 am–2 pm.Timed reservations are recommended; walk-ins are welcome. Admission is donation-based. Donations help cove",
-    "url": "https://blurma.com/hanks-house-of-horrors"
-   },
-   {
-    "name": "Trick-or-Treat Symphony",
-    "free": false,
-    "type": "other",
-    "icon": "🎃",
-    "time": "11 am",
-    "loc": "San Diego, CA",
-    "desc": "Flying bats, swirling dances and a dash of orchestral mischief. Crafts, costumes and trick-or-treat fun before the concert. 11 am. For ages 6-12. $36. Jacobs Music Center, 1245 seventh Ave. www.sandiegosymphony.org",
-    "url": "https://www.sandiegosymphony.org"
-   },
-   {
-    "name": "Bayside Boo",
-    "free": false,
-    "type": "other",
-    "icon": "🎃",
-    "time": "9:30 pm",
-    "loc": "Seaport Village",
-    "desc": "A night of spooky beats and sweet treats. 6:30–9:30 pm. Seaport Village, 849 W. Harbor Dr. www.seaportvillage.com",
-    "url": "https://www.seaportvillage.com"
-   },
-   {
-    "name": "Halloween Family Day",
-    "free": false,
-    "type": "other",
-    "icon": "🎃",
-    "time": "11 am–4 pm",
-    "loc": "San Diego Model Railroad Museum",
-    "desc": "11 am–4 pm. San Diego Model Railroad Museum, Balboa Park. www.sdmrm.org",
-    "url": "https://www.sdmrm.org"
-   },
-   {
-    "name": "Trick-or-Treating in La Mesa Village",
-    "free": true,
-    "type": "free",
-    "icon": "🆓",
-    "time": "6 pm",
-    "loc": "San Diego, CA",
-    "desc": "Dress up in costume and trick-or-treat. 4–6 pm. La Mesa Blvd. between 4th St. & Acacia. www.lamesavillageassociation.org",
-    "url": "https://www.lamesavillageassociation.org"
-   },
-   {
-    "name": "SeaWorld Día de los Muertos",
-    "free": false,
-    "type": "other",
-    "icon": "💀",
-    "time": "",
-    "loc": "SeaWorld San Diego",
-    "desc": "Immerse yourself in the sights, sounds and flavors of this cherished Mexican holiday. Today & tomorrow. Included with admission. 500 SeaWorld Dr. www.seaworld.com",
-    "url": "https://www.seaworld.com"
-   },
-   {
-    "name": "Halloween Spooktacular at The Forum Carlsbad",
-    "free": true,
-    "type": "free",
-    "icon": "🆓",
-    "time": "5 pm",
-    "loc": "The Forum Carlsbad",
-    "desc": "Trick-or-treating, creepy characters, games, music and more. 2–5 pm. 1905 Calle Barcelona. www.theforumcarlsbad.com",
-    "url": "https://www.theforumcarlsbad.com"
-   },
-   {
-    "name": "Halloween in the Village",
-    "free": true,
-    "type": "free",
-    "icon": "🆓",
-    "time": "6 pm",
-    "loc": "Carlsbad",
-    "desc": "Trick-or-treating, carnival games, bounce house and more. 2–6 pm. 2695 State St. www.carlsbad-village.com",
-    "url": "https://www.carlsbad-village.com"
-   },
-   {
-    "name": "The Super Dentists 27th Annual Spooktacular",
-    "free": true,
-    "type": "free",
-    "icon": "🆓",
-    "time": "11 am–1 pm",
-    "loc": "San Diego, CA",
-    "desc": "Carnival games, face painting and more. 11 am–1 pm. 2226 Otay Lakes Rd. www.thesuperdentists.com",
-    "url": "https://www.thesuperdentists.com"
-   },
-   {
-    "name": "Adams Avenue Halloween Haunt",
-    "free": true,
-    "type": "free",
-    "icon": "🆓",
-    "time": "6 pm",
-    "loc": "San Diego, CA",
-    "desc": "Costumes, candy and fall festivities. 3–6 pm. Adams Ave. www.adamsavenuebusiness.com",
-    "url": "https://www.adamsavenuebusiness.com"
-   },
-   {
-    "name": "Encinitas Safe Trick-or-Treating",
-    "free": true,
-    "type": "free",
-    "icon": "🆓",
-    "time": "8 pm",
-    "loc": "Encinitas, CA",
-    "desc": "Trick-or-treat at your favorite local shops, enjoy live music and kids games. 5–8 pm. 101 S. Coast Hwy. 101, Encinitas. www.encinitas101.com",
-    "url": "https://www.encinitas101.com"
-   },
-   {
-    "name": "Día de Los Muertos at Rancho Leo Carrillo",
-    "free": true,
-    "type": "free",
-    "icon": "🆓",
-    "time": "10 am–2 pm",
-    "loc": "Carlsbad",
-    "desc": "Honoring tradition, community and remembrance with face painting, a traditional Ofrenda, arts and crafts and more. 10 am–2 pm. Leo Carrillo Ranch Historic Park, 6200 Flying Leo Carrillo Ln., Carlsbad. www.carlsbadca.gov",
-    "url": "https://www.carlsbadca.gov"
-   },
-   {
-    "name": "Yokai Masquerade",
-    "free": false,
-    "type": "other",
-    "icon": "📅",
-    "time": "10 pm",
-    "loc": "Japanese Friendship Garden",
-    "desc": "Arrive in costume and explore after-hours exhibit viewing and the yokai parade. 6–10 pm. $60. Japanese Friendship Garden, Balboa Park. www.niwa.org",
-    "url": "https://www.niwa.org"
-   },
-   {
-    "name": "Escondido Renaissance Fair",
-    "free": false,
-    "type": "other",
-    "icon": "📅",
-    "time": "",
-    "loc": "Escondido CA",
-    "desc": "Jousting, live entertainment and more. Today, tomorrow & Nov. 7–8. $15–$35; under 5 free. Felicita County Park, 742 Clarence Ln. www.oldetymeproductions.com",
-    "url": "https://www.oldetymeproductions.com"
-   },
-   {
-    "name": "Halloween Party Cruise",
-    "free": false,
-    "type": "other",
-    "icon": "🎃",
-    "time": "",
-    "loc": "San Diego, CA",
-    "desc": "Día de los Muertos–themed cruise across Mission Bay. 6:30–midnight. For adults only. $50. Bahia Hotel, 998 W. Mission Bay Dr. www.bahiahotel.com",
-    "url": "https://www.bahiahotel.com"
-   }
-  ],
-  "26": [
-   {
-    "name": "Butterfly Walk at the San Diego Botanic Garden",
-    "free": false,
-    "type": "other",
-    "icon": "🏛️",
-    "time": "10 am",
-    "loc": "San Diego Botanic Garden",
-    "desc": "Today & Oct. 26, 10 am. $12–$20. 300 Quail Gardens Dr., Encinitas. www.sdbg.org",
-    "url": "https://www.sdbg.org"
-   }
-  ],
-  "29": [
-   {
-    "name": "A Haunting in Venice Cruise",
-    "free": false,
-    "type": "other",
-    "icon": "🎃",
-    "time": "",
-    "loc": "Coronado, CA",
-    "desc": "Celebrate Halloween on a gondola cruise through the eerie canals and spooky waterways of the Coronado Cays. Through Oct. 31. Starting at $139. The Gondola Company, 503 Grand Caribe Causeway, Coronado. www.gondolacompany.com",
-    "url": "https://www.gondolacompany.com"
-   },
-   {
-    "name": "UltraStar Cinemas Discount Thursdays",
-    "free": false,
-    "type": "other",
-    "icon": "📅",
-    "time": "",
-    "loc": "UltraStar Mission Valley Cinemas at Hazard Center",
-    "desc": "50% off all movie tickets and popcorn. 7510 Hazard Center Dr. Showtimes: www.ultrastarmovies.com",
-    "url": "https://www.ultrastarmovies.com"
-   }
-  ]
- },
- "ongoing": [
-  {
-   "name": "Belmont Park’s Beachside Fall Fest",
-   "free": true,
-   "type": "free",
-   "icon": "🆓",
-   "time": "",
-   "loc": "Belmont Park",
-   "desc": "Seasonal entertainment, Halloween characters, trick-or-treating, live music and more. Through Oct. 31. 3146 Mission Blvd. www.belmontpark.com",
-   "url": "https://www.belmontpark.com"
-  },
-  {
-   "name": "Pumpkin Patch at Bates Nut Farm",
-   "free": false,
-   "type": "other",
-   "icon": "🎃",
-   "time": "",
-   "loc": "Bates Nut Farm",
-   "desc": "Tractor hayrides, straw maze and more. Through Oct. 31. 15954 Woods Valley Rd., Valley Center. https://batesnutfarm.biz",
-   "url": "https://batesnutfarm.biz"
-  },
-  {
-   "name": "Goff Family Pumpkin Patch at Liberty Station",
-   "free": false,
-   "type": "other",
-   "icon": "🎃",
-   "time": "9 am–8 pm",
-   "loc": "Liberty Station",
-   "desc": "Through Oct. 31, Sun.-Thurs., 9 am–8 pm & Fri.–Sat., 9 am–9 pm. 2830 Perry Rd. www.gofffamilypumpkinpatch.com",
-   "url": "https://www.gofffamilypumpkinpatch.com"
-  },
-  {
-   "name": "Peltzer Pumpkin Farm",
-   "free": false,
-   "type": "other",
-   "icon": "🎃",
-   "time": "10 am–8 pm",
-   "loc": "Temecula, CA",
-   "desc": "Pumpkins, petting farm and more. Through Oct. 31. Mon.–Fri., 10 am–8 pm; Sat. & Sun., 9 am–8 pm. $2–$4. 39925 Calle Contento, Temecula. www.peltzerfarms.com",
-   "url": "https://www.peltzerfarms.com"
-  },
-  {
-   "name": "Pumpkin Station",
-   "free": false,
-   "type": "other",
-   "icon": "🎃",
-   "time": "",
-   "loc": "San Diego, CA",
-   "desc": "Giant slides, rides, petting zoo, pumpkins and more. Attractions require a separate ticket. Daily through Oct. 31. Hours vary by location. Del Mar, 15555 Jimmy Durante Blvd.; Plaza Bonita, 3030 Plaza Bonita Rd., Rancho Bernardo Farm, 13421 Highland Valley Rd. & Bonita Pumpkin Farm, 5354 Sweetwater R",
-   "url": "https://www.pumpkinstation.com"
-  },
-  {
-   "name": "Family Christmas Tree Farm Pumpkin Patch",
-   "free": false,
-   "type": "other",
-   "icon": "🎃",
-   "time": "10 am–8 pm",
-   "loc": "El Cajon",
-   "desc": "Pumpkins, tractor rides, hay maze and more. Through Oct. 31. Open daily, 10 am–8 pm. $6. 300 Pepper Dr., El Cajon. www.familychristmastreefarm.com",
-   "url": "https://www.familychristmastreefarm.com"
-  },
-  {
-   "name": "Fallbrook Pumpkin Patch",
-   "free": false,
-   "type": "other",
-   "icon": "🎃",
-   "time": "8 pm",
-   "loc": "Fallbrook, CA",
-   "desc": "Wed.–Fri., 4–8 pm; Sat., 10 am–8 pm; Sun., 12–8 pm (closed Mon. & Tues.). Through Oct. 31. 1924 E. Mission Rd., Fallbrook. www.fallbrookpumpkinpatch.com",
-   "url": "https://www.fallbrookpumpkinpatch.com"
-  },
-  {
-   "name": "The Haunted Trail of Balboa Park",
-   "free": false,
-   "type": "other",
-   "icon": "🎃",
-   "time": "",
-   "loc": "San Diego, CA",
-   "desc": "Select dates through Nov. 1. $34.99. For ages 10+. Balboa Dr. & Juniper Rd. www.hauntedtrail.net",
-   "url": "https://www.hauntedtrail.net"
-  },
-  {
-   "name": "Summers Past Farm Pumpkin Patch",
-   "free": true,
-   "type": "free",
-   "icon": "🆓",
-   "time": "",
-   "loc": "Summers Past Farms",
-   "desc": "Pumpkins, corn maze, hay fort and more. Closed Mon.–Wed. 15602 Olde Hwy. 80, Flinn Springs. www.summerspastfarms.com",
-   "url": "https://www.summerspastfarms.com"
-  },
-  {
-   "name": "LEGO Galaxy",
-   "free": false,
-   "type": "other",
-   "icon": "🎢",
-   "time": "",
-   "loc": "LEGOLAND California Resort",
-   "desc": "All-new space-themed land with an indoor family coaster, two other cosmic rides, brand-new food and retail options, incredible LEGO space models, space-themed activities, and adventures for explorers of all ages. Open daily. One LEGOLAND Dr., Carlsbad. www.legoland.com",
-   "url": "https://www.legoland.com"
-  },
-  {
-   "name": "Kids FREE San Diego",
-   "free": true,
-   "type": "free",
-   "icon": "🆓",
-   "time": "",
-   "loc": "San Diego, CA",
-   "desc": "Attractions, museums, meals and more offer families with kids 12 & under complimentary attraction and museum admission, and more. Through Oct. 31. Details: www.sandiegomuseumcouncil.org/specials/kidsfree",
-   "url": "https://www.sandiegomuseumcouncil.org/specials/kidsfree"
-  },
-  {
-   "name": "Fiesta de Reyes Día de los Muertos–La Experiencia",
-   "free": true,
-   "type": "free",
-   "icon": "🆓",
-   "time": "10 am–9 pm",
-   "loc": "San Diego, CA",
-   "desc": "Family-friendly experience with decorated skulls and skeletons, traditional and contemporary altars and thousands of marigold-inspired details. Through Nov. 2, 10 am–9 pm. www.fiestadereyes.com",
-   "url": "https://www.fiestadereyes.com"
-  },
-  {
-   "name": "Ringers at Seaport Village",
-   "free": false,
-   "type": "other",
-   "icon": "⛸️",
-   "time": "",
-   "loc": "Belmont Park",
-   "desc": "An open-air roller-skating experience along the Embarcadero. Open daily. 821 West Harbor Dr. Details: www.seaportvillage.com/explore/ringers-roller-rink",
-   "url": "https://www.seaportvillage.com/explore/ringers-roller-rink"
-  },
-  {
-   "name": "Fallbrook Scarecrow Days",
-   "free": true,
-   "type": "free",
-   "icon": "🆓",
-   "time": "",
-   "loc": "Fallbrook, CA",
-   "desc": "Scarecrows displayed all over town. Through Oct. 31. www.fallbrookchamberofcommerce.org",
-   "url": "https://www.fallbrookchamberofcommerce.org"
-  },
-  {
-   "name": "SeaWorld Spooktacular",
-   "free": false,
-   "type": "other",
-   "icon": "🎃",
-   "time": "",
-   "loc": "SeaWorld San Diego",
-   "desc": "Baby Shark Halloween show, trick-or-treating, interactive adventures and seasonal entertainment. Fri.–Sun. through Nov. 1. Kids ages 3–9 receive free one-day admission with the purchase of adult ticket through Oct. 500 SeaWorld Dr. www.seaworld.com",
-   "url": "https://www.seaworld.com"
-  },
-  {
-   "name": "Wizarding Afternoon Tea Themed Tea",
-   "free": false,
-   "type": "other",
-   "icon": "☕",
-   "time": "3:30 pm",
-   "loc": "San Diego, CA",
-   "desc": "All themed teas are different, most include a “Did You Know?” intro, a game, quiz and a take home gift. Through Nov. 1, 12:30 & 3:30 pm. $64.95. The Britannia Tearooms, 2323 Midway Dr. Reservations: www.afternoonteasandiego.com",
-   "url": "https://www.afternoonteasandiego.com"
-  },
-  {
-   "name": "Mr. Jack O’ Lanterns Pumpkin Patch",
-   "free": false,
-   "type": "other",
-   "icon": "🎃",
-   "time": "",
-   "loc": "San Diego, CA",
-   "desc": "Pumpkins, seasonal photo opportunities and family-friendly fall activities. Through Nov. 1. 3901 Clairemont Dr. www.mrjackolanternspumpkins.com",
-   "url": "https://www.mrjackolanternspumpkins.com"
-  },
-  {
-   "name": "The Axolotl’s Garden",
-   "free": false,
-   "type": "other",
-   "icon": "🏛️",
-   "time": "9 am",
-   "loc": "Birch Aquarium at Scripps",
-   "desc": "Explore two axolotl habitats and discover other unique Mexican species, including tequila splitfins, blind cave tetras and more, while uncovering each animal’s tale of survival and adaptation. Open daily at 9 am. $34.95–$39.95. Birch Aquarium at Scripps, 2300 Expedition Way, La Jolla. www.aquarium.u",
-   "url": "https://www.aquarium.ucsd.edu"
-  }
- ],
- "camps": []
+ "overview": "Homework help, helping kids through changing friendships, and 4-H in San Diego County, plus fall traditions, pumpkin patches, Halloween fun and Día de los Muertos events."
 }
