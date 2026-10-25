@@ -162,7 +162,7 @@ def format_articles(articles, issue_url):
     labels = {"direct": "", "section": " (related section)", "search": " (search)"}
     out = []
     for i, x in enumerate(articles, 1):
-        page = f" (p. {x['page']}, [read in magazine]({issue_url}))" if x["page"] and issue_url else ""
+        page = f" (p. {x['page']}, [read in magazine]({x.get('page_url') or issue_url}))" if x["page"] and issue_url else ""
         line = f"- **[{x['title']}]({x['url']})**{labels[x['kind']]}{page}"
         if x["blurb"]:
             line += f" - {x['blurb']}"
@@ -248,7 +248,87 @@ def free_markdown(events, ongoing, year, month):
     return "\n".join(lines) or "_No free events detected._"
 
 
-def write_site_data(year, month, issue_url, articles, events, ongoing):
+SKIP_TITLES = ("calendar", "afterschool")
+ICON_RULES = [("pumpkin", "\U0001F383"), ("halloween", "\U0001F383"), ("muertos", "\U0001F480"), ("craft", "\U0001F3A8"),
+              ("homework", "\U0001F4DA"), ("friend", "\U0001F46B"), ("4-h", "\U0001F331"), ("tradition", "\U0001F342"),
+              ("camp", "\U0001F3D5\uFE0F"), ("holiday", "\U0001F384"), ("summer", "\u2600\uFE0F")]
+
+
+def pdf_sections(year, month, articles):
+    """If pdfs/YYYY-MM.pdf exists, turn each magazine article into a site tab using its page range.
+    The AI only reorganizes the article's own text into JSON; it is told not to add facts."""
+    path = pathlib.Path("pdfs") / f"{year}-{month:02d}.pdf"
+    if not path.exists():
+        print(f"No {path}; skipping article tabs.", file=sys.stderr)
+        return []
+    try:
+        from pypdf import PdfReader
+        pages = [(p.extract_text() or "") for p in PdfReader(str(path)).pages]
+    except Exception as e:
+        print(f"Could not read {path}: {e}", file=sys.stderr)
+        return []
+    starts = sorted({int(a["page"]) for a in articles if a.get("page")})
+    out = []
+    for a in articles:
+        title = a["title"]
+        if not a.get("page") or any(k in title.lower() for k in SKIP_TITLES):
+            continue
+        start = int(a["page"])
+        later = [p for p in starts if p > start]
+        end = min((later[0] - 1) if later else start + 1, len(pages))
+        text = "\n".join(pages[i - 1] for i in range(start, end + 1))[:9000]
+        reply = summarize(
+            f"Magazine article '{title}' ({a.get('blurb', '')}). Turn its text into JSON only: "
+            '{"intro":"1-2 sentences","items":[{"name":"","meta":"dates/price/FREE","desc":"","url":"","loc":""}],'
+            '"tips":["short tips"]}. Use ONLY facts in the text. Ignore ads, page headers and unrelated listings. '
+            "Use empty strings for missing fields. Set url only if a web address appears in the text (add https://).\n\n"
+            + text, "", max_tokens=1800)
+        try:
+            j = json.loads(reply[reply.index("{"): reply.rindex("}") + 1])
+        except Exception:
+            print(f"AI gave no usable JSON for '{title}'", file=sys.stderr)
+            continue
+        icon = next((i for k, i in ICON_RULES if k in title.lower()), "\U0001F4F0")
+        out.append({"title": title, "icon": icon, "intro": j.get("intro", ""),
+                    "items": [i for i in j.get("items", []) if i.get("name")],
+                    "tips": j.get("tips", []), "note": f"From page {start} of the magazine."})
+        time.sleep(2)
+    return out
+
+
+def issuu_url(year, month):
+    """The magazine's Issuu flipbook address follows a pattern. Only a 404 means it isn't there."""
+    url = f"https://issuu.com/sandiegofamilymagazine/docs/san_diego_family_{dt.date(year, month, 1):%B}_{year}".lower()
+    try:
+        r = requests.get(url, headers=HEADERS, timeout=20)
+        return url if r.status_code != 404 else None
+    except Exception:
+        return None
+
+
+PAGE_OFFSET = 0  # if links land one page off, change this to 1 or -1
+
+
+def reader_url(read_url, page):
+    """Issuu full-screen reader link that opens at a given page."""
+    slug = read_url.rstrip("/").rsplit("/", 1)[-1]
+    return f"https://issuu.com/rd4?p={int(page) + PAGE_OFFSET}&d={slug}&u=sandiegofamilymagazine"
+
+
+def issuu_overview(url):
+    """The publisher's own public description of the issue (page meta text), or ''."""
+    try:
+        soup = get_soup(url)
+        for attrs in ({"property": "og:description"}, {"name": "description"}):
+            tag = soup.find("meta", attrs=attrs)
+            if tag and tag.get("content") and len(tag["content"]) > 60:
+                return tag["content"].strip()
+    except Exception:
+        pass
+    return ""
+
+
+def write_site_data(year, month, issue_url, articles, events, ongoing, sections=None, overview=""):
     """Write issues/YYYY-MM.json (what index.html reads) and refresh issues/index.json."""
     d = pathlib.Path("issues")
     d.mkdir(exist_ok=True)
@@ -258,7 +338,7 @@ def write_site_data(year, month, issue_url, articles, events, ongoing):
     f.write_text(json.dumps({  # hand-made parts (subtitle, camps, sections) survive each re-run
         "month": key, "label": f"{dt.date(year, month, 1):%B %Y}", "subtitle": old.get("subtitle", ""),
         "issue_url": issue_url or "", "articles": articles, "events": events, "ongoing": ongoing,
-        "camps": old.get("camps", []), "sections": old.get("sections", []),
+        "overview": overview or old.get("overview", ""), "camps": old.get("camps", []), "sections": old.get("sections") or sections or [],
     }, indent=1, ensure_ascii=False), encoding="utf-8")
     idx = d / "index.json"
     months = set(json.loads(idx.read_text())) if idx.exists() else set()
@@ -276,7 +356,13 @@ def main():
     articles = get_articles(issue_url) if issue_url else []
     events, ongoing = extract_events(year, month)
 
-    article_md = format_articles(articles, issue_url)
+    read_url = issuu_url(year, month) or issue_url
+    overview = issuu_overview(read_url) if read_url and "issuu.com" in read_url else ""
+    if read_url and "issuu.com" in read_url:
+        for x in articles:
+            if x.get("page"):
+                x["page_url"] = reader_url(read_url, x["page"])
+    article_md = format_articles(articles, read_url)
     event_md = free_markdown(events, ongoing, year, month)
 
     digest = (
@@ -287,7 +373,7 @@ def main():
         f"Full calendar: {CALENDAR}\n"
     )
 
-    write_site_data(year, month, issue_url, articles, events, ongoing)
+    write_site_data(year, month, read_url, articles, events, ongoing, pdf_sections(year, month, articles), overview)
 
     out = pathlib.Path("digests")
     out.mkdir(exist_ok=True)
