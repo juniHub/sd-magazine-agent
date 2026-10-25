@@ -328,6 +328,188 @@ def issuu_overview(url):
     return ""
 
 
+DAY_HDR = re.compile(r"^(?:monday|tuesday|wednesday|thursday|friday|saturday|sunday)\s*\|\s*([\d ]+?)\s*$", re.I)
+URL_RE = re.compile(r"(?:https?://\S+|www\.\S+|\b[\w.-]+\.(?:com|org|net|gov|edu|biz|church)\b\S*)", re.I)
+TIME_RANGE = re.compile(r"\d{1,2}(?::\d{2})?\s*(?:am|pm)?\s*[\u2013-]\s*\d{1,2}(?::\d{2})?\s*(?:am|pm)", re.I)
+WD = {"mon": 0, "tue": 1, "wed": 2, "thu": 3, "fri": 4, "sat": 5, "sun": 6}
+WD_RE = r"(?:mon|tues?|wed|thu(?:rs?)?|fri|sat|sun)"
+
+
+def _wd(tok):
+    return WD[tok.lower()[:3]]
+
+
+def weekdays_in(text):
+    """Weekdays an event runs on, from phrases like 'Weekends', 'Fridays & Saturdays', 'Fri.-Sun.', 'Sat. & Sun.'."""
+    out = set()
+    if re.search(r"\bweekends?\b", text, re.I):
+        out |= {5, 6}
+    for m in re.finditer(rf"\b({WD_RE})\.?\s*[\u2013-]\s*({WD_RE})\b", text, re.I):
+        a, b = _wd(m.group(1)), _wd(m.group(2))
+        out |= {(a + i) % 7 for i in range(((b - a) % 7) + 1)}
+    for m in re.finditer(r"\b(monday|tuesday|wednesday|thursday|friday|saturday|sunday)s\b", text, re.I):
+        out.add(_wd(m.group(1)))
+    for m in re.finditer(rf"\b((?:{WD_RE})\.(?:\s*(?:,|&|and)\s*(?:{WD_RE})\.)+)", text, re.I):
+        out |= {_wd(t) for t in re.findall(WD_RE, m.group(1), re.I)}
+    return out
+
+
+def explicit_days(text, month):
+    """Day numbers written like 'Oct. 17 & 31', 'October 23-24' or 'Oct. 3, 9, 10' (ignores times like '10-11:30 am')."""
+    name = dt.date(2000, month, 1).strftime("%B")
+    days = set()
+    for m in re.finditer(rf"\b(?:{name[:3]}\.|{name})\s+(?=\d)", text):
+        if re.search(r"(?:through|until|thru)\s+$", text[:m.start()], re.I):
+            continue  # an end date, not an event date
+        pos = m.end()
+        while True:
+            it = re.match(r"(\d{1,2})(?:\s*[\u2013-]\s*(\d{1,2}))?", text[pos:])
+            if not it:
+                break
+            after = text[pos + it.end(): pos + it.end() + 12]
+            if re.match(r"\s*(?::|am\b|pm\b|a\.m|p\.m)", after):
+                break
+            a, b = int(it.group(1)), int(it.group(2) or it.group(1))
+            days |= set(range(a, b + 1)) if b >= a else {a}
+            sep = re.match(r"\s*(?:,|&|and)\s*(?=\d)", text[pos + it.end():])
+            if not sep:
+                break
+            pos += it.end() + sep.end()
+    return {d for d in days if 1 <= d <= 31}
+
+
+def expand_days(text, start, year, month):
+    """Every day an entry runs, from its listed day plus phrases like 'Open daily', 'through Oct. 11', 'Today & tomorrow'."""
+    last = calendar.monthrange(year, month)[1]
+    days = {d for d in explicit_days(text, month) if d <= last}
+    if days and start not in days and not re.search(r"\btoday\b", text, re.I):
+        return sorted(days)  # featured box with its own dates (e.g. 'Oct. 17, 5-8 pm') sitting under another day
+    days.add(start)
+    if re.search(r"\btomorrow\b", text, re.I) and start < last:
+        days.add(start + 1)
+    if re.search(r"select (?:dates|days|saturdays|sundays|fridays)|quarterly|rotating basis", text, re.I):
+        return sorted(days)
+    closed = set()
+    cm = re.search(rf"closed\s+({WD_RE})\.?(?:\s*[\u2013-]\s*({WD_RE})\b)?", text, re.I)
+    if cm:
+        a = _wd(cm.group(1)); b = _wd(cm.group(2)) if cm.group(2) else a
+        closed = {(a + i) % 7 for i in range(((b - a) % 7) + 1)}
+        text = text.replace(cm.group(0), " ")
+    wds = weekdays_in(text)
+    thr = re.search(rf"through\s+(?:{dt.date(2000, month, 1):%b}\.|{dt.date(2000, month, 1):%B})\s+(\d{{1,2}})", text, re.I)
+    ongoing = thr or re.search(r"through\s+(?:[A-Z][a-z]{2,8}\.?)\s+\d", text) or re.search(r"\b(open daily|daily)\b", text, re.I) or wds
+    if ongoing and not (wds and not thr and not re.search(r"through|daily|weekends?", text, re.I) and False):
+        end = min(int(thr.group(1)), last) if thr else last
+        for d in range(start, end + 1):
+            if (not wds or calendar.weekday(year, month, d) in wds) and calendar.weekday(year, month, d) not in closed:
+                days.add(d)
+    return sorted(d for d in days if calendar.weekday(year, month, d) not in closed or d == start)
+
+
+def _event_from_lines(buf, day, year, month):
+    text = ""
+    for l in buf:
+        text += l if text.endswith(("/", "-", "_")) else (" " + l if text else l)
+    text = re.sub(r"\s+", " ", text).strip()
+    free = bool(re.match(r"^[^.]{0,50}?\bFREE\b", text))
+    body = re.sub(r"^FREE\s+", "", text)
+    first = re.sub(r"^FREE\s+", "", buf[0].strip())
+    m = re.match(r"^(.{3,90}?\.[\u201d\"]?)\s", body)
+    minor = {"at", "of", "the", "and", "in", "for", "a", "to", "on", "with", "de", "los", "la", "&", "by", "from"}
+    heading_ok = (len(first.split()) <= 7 and "." not in first and first[:1].isupper() and not first.isupper()
+                  and all(w[:1].isupper() or not w[:1].isalpha() or w.lower() in minor for w in first.split())
+                  and re.search(r"\b(?:am|pm|oct\.?|october|weekends?|daily|through|today)\b", text, re.I))
+    # a short heading line followed by a long sentence (feature box) vs. a normal "Title. Description" entry
+    if heading_ok and (not m or len(m.group(1)) > len(first) + 45):
+        title = first
+    elif m:
+        title = m.group(1)
+    else:
+        return None
+    desc = body[len(title):].strip() if body.startswith(title) else body
+    title = title.strip(" .\u201c\u201d\"")
+    if len(title) < 3:
+        return None
+    urls = URL_RE.findall(text)
+    url = urls[-1].rstrip(".,;)") if urls else ""
+    if url and not url.lower().startswith("http"):
+        url = "https://" + url
+    t = TIME_RANGE.search(desc) or TIME_RE.search(desc)
+    days = expand_days(text, day, year, month)
+    return {"name": title, "free": free, "type": "free" if free else "other",
+            "icon": "\U0001F193" if free else "\U0001F4C5", "time": t.group(0) if t else "", "loc": "",
+            "desc": desc[:300], "url": url, "days": days}
+
+
+def parse_pdf_calendar(path, year, month, start_page=None):
+    """Read the month's calendar pages of the magazine PDF. Returns ({day: [events]}, [ongoing events])."""
+    from pypdf import PdfReader
+    pages = [(p.extract_text() or "") for p in PdfReader(str(path)).pages]
+    first = (start_page or 1) - 1
+    cur, entries = 1, []
+    for i in range(first, len(pages)):
+        lines = [l.strip() for l in pages[i].split("\n")]
+        if not any(DAY_HDR.match(l) for l in lines):
+            continue
+        buf, wrapped = [], False
+        for l in lines:
+            if (not l or "sandiegofamily.com" in l.lower() or re.fullmatch(r"(C|M|Y|CM|MY|CY|CMY|K)", l)
+                    or ".pdf" in l or re.match(r"^Calendar\b", l)):
+                continue
+            h = DAY_HDR.match(l)
+            if h:
+                buf, cur = [], int(h.group(1).replace(" ", ""))
+                continue
+            if l.startswith("FREE ") and buf:
+                entries.append((cur, buf)); buf = []
+            buf.append(l)
+            if wrapped:
+                entries.append((cur, buf)); buf, wrapped = [], False
+            elif URL_RE.search(l):
+                if l.endswith(("/", "-", "_")):
+                    wrapped = True
+                else:
+                    entries.append((cur, buf)); buf = []
+        if any("Find more events at" in l for l in lines):
+            break
+    seen, events, ongoing = set(), {}, []
+    for day, buf in entries:
+        e = _event_from_lines(buf, day, year, month)
+        if not e or (e["name"].lower(), tuple(e["days"])) in seen:
+            continue
+        seen.add((e["name"].lower(), tuple(e["days"])))
+        days = e.pop("days")
+        if len(days) >= 5:
+            e["days"] = days
+            ongoing.append(e)
+        else:
+            for d in days:
+                events.setdefault(str(d), []).append(dict(e))
+    return events, ongoing
+
+
+def _key(name):
+    return re.sub(r"[^a-z0-9]", "", re.sub(r"^free\s+", "", name.lower()))
+
+
+def merge_events(ev_a, og_a, ev_b, og_b):
+    """Union of two event sets. Same-named events on a day are kept once; ongoing events merge their days."""
+    ev = {d: list(v) for d, v in ev_a.items()}
+    for d, lst in ev_b.items():
+        have = {_key(e["name"]) for e in ev.get(d, [])}
+        for e in lst:
+            if _key(e["name"]) not in have:
+                ev.setdefault(d, []).append(e)
+    og = {_key(e["name"]): dict(e) for e in og_a}
+    for e in og_b:
+        k = _key(e["name"])
+        if k in og:
+            og[k]["days"] = sorted(set(og[k].get("days", [])) | set(e.get("days", [])))
+        else:
+            og[k] = dict(e)
+    return ev, list(og.values())
+
+
 def write_site_data(year, month, issue_url, articles, events, ongoing, sections=None, overview=""):
     """Write issues/YYYY-MM.json (what index.html reads) and refresh issues/index.json."""
     d = pathlib.Path("issues")
@@ -335,6 +517,7 @@ def write_site_data(year, month, issue_url, articles, events, ongoing, sections=
     key = f"{year}-{month:02d}"
     f = d / f"{key}.json"
     old = json.loads(f.read_text(encoding="utf-8")) if f.exists() else {}
+    events, ongoing = merge_events(events, ongoing, old.get("events", {}), old.get("ongoing", []))
     f.write_text(json.dumps({  # hand-made parts (subtitle, camps, sections) survive each re-run
         "month": key, "label": f"{dt.date(year, month, 1):%B %Y}", "subtitle": old.get("subtitle", ""),
         "issue_url": issue_url or "", "articles": articles, "events": events, "ongoing": ongoing,
@@ -355,6 +538,14 @@ def main():
     issue_url = find_issue_url(year, month)
     articles = get_articles(issue_url) if issue_url else []
     events, ongoing = extract_events(year, month)
+    pdf = pathlib.Path("pdfs") / f"{year}-{month:02d}.pdf"
+    if pdf.exists():
+        try:
+            cal_page = next((int(a["page"]) for a in articles if a.get("page") and "calendar" in a["title"].lower()), None)
+            pe, po = parse_pdf_calendar(pdf, year, month, cal_page)
+            events, ongoing = merge_events(pe, po, events, ongoing)
+        except Exception as e:
+            print(f"Could not read calendar from {pdf}: {e}", file=sys.stderr)
 
     read_url = issuu_url(year, month) or issue_url
     overview = issuu_overview(read_url) if read_url and "issuu.com" in read_url else ""
