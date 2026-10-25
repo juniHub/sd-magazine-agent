@@ -230,7 +230,9 @@ def extract_events(year, month):
     events, ongoing = {}, []
     for items in seen.values():
         if len(items) >= 5:
-            ongoing.append(items[0][1])
+            e = dict(items[0][1])
+            e["days"] = [d for d, _ in items]
+            ongoing.append(e)
         else:
             for d, e in items:
                 events.setdefault(str(d), []).append(e)
@@ -251,9 +253,12 @@ def write_site_data(year, month, issue_url, articles, events, ongoing):
     d = pathlib.Path("issues")
     d.mkdir(exist_ok=True)
     key = f"{year}-{month:02d}"
-    (d / f"{key}.json").write_text(json.dumps({
-        "month": key, "label": f"{dt.date(year, month, 1):%B %Y}", "subtitle": "",
-        "issue_url": issue_url or "", "articles": articles, "events": events, "ongoing": ongoing, "camps": [],
+    f = d / f"{key}.json"
+    old = json.loads(f.read_text(encoding="utf-8")) if f.exists() else {}
+    f.write_text(json.dumps({  # hand-made parts (subtitle, camps, sections) survive each re-run
+        "month": key, "label": f"{dt.date(year, month, 1):%B %Y}", "subtitle": old.get("subtitle", ""),
+        "issue_url": issue_url or "", "articles": articles, "events": events, "ongoing": ongoing,
+        "camps": old.get("camps", []), "sections": old.get("sections", []),
     }, indent=1, ensure_ascii=False), encoding="utf-8")
     idx = d / "index.json"
     months = set(json.loads(idx.read_text())) if idx.exists() else set()
