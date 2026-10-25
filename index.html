@@ -73,12 +73,29 @@ function show(p) {
 }
 document.querySelectorAll('.nb').forEach(b => b.onclick = () => show(b.dataset.p));
 
+function sectionHtml(s) {
+  let h = `<div class="hero"><h1>${esc(s.icon || '📌')} ${esc(s.title)}</h1><p>${esc(s.intro || '')}</p></div>`;
+  h += (s.items || []).map(i => `<div class="box"><div class="meta">${esc(i.meta || '')}</div>
+    <h3>${i.url ? `<a href="${esc(href(i.url))}" target="_blank" rel="noopener" style="text-decoration:none">${esc(i.name)}</a>` : esc(i.name)}</h3>
+    ${i.loc ? `<p>📍 ${esc(i.loc)}</p>` : ''}<p>${esc(i.desc || '')}</p></div>`).join('');
+  if (s.tips && s.tips.length) h += `<div class="box"><h3>Tips</h3>${s.tips.map(t => `<p>• ${esc(t)}</p>`).join('')}</div>`;
+  if (s.note) h += `<div class="banner">${esc(s.note)}</div>`;
+  return h;
+}
+
 async function load(m) {
   try { D = await (await fetch(`issues/${m}.json`)).json(); }
   catch (e) { $('page-home').innerHTML = '<div class="empty">Could not load this issue.</div>'; return; }
-  D.events = D.events || {}; D.ongoing = D.ongoing || []; D.camps = D.camps || []; D.articles = D.articles || [];
+  D.events = D.events || {}; D.ongoing = D.ongoing || []; D.sections = D.sections || []; D.camps = D.camps || []; D.articles = D.articles || [];
   $('campsBtn').style.display = D.camps.length ? '' : 'none';
   filter = 'all';
+  document.querySelectorAll('.dyn').forEach(x => x.remove());
+  D.sections.forEach((s, i) => {
+    const b = document.createElement('button'); b.className = 'nb dyn'; b.dataset.p = 's' + i;
+    b.textContent = (s.icon || '📌') + ' ' + s.title; b.onclick = () => show('s' + i); document.querySelector('nav').appendChild(b);
+    const p = document.createElement('div'); p.id = 'page-s' + i; p.className = 'page pad dyn'; p.innerHTML = sectionHtml(s);
+    document.body.insertBefore(p, document.querySelector('script'));
+  });
   renderHome(); renderCalendar(); renderCamps(); show('home');
 }
 
@@ -94,10 +111,11 @@ function renderHome() {
   const [y, m] = D.month.split('-').map(Number);
   const mon = new Date(y, m - 1, 1).toLocaleString('en-US', { month: 'short' });
   let h = `<div class="hero"><h1>${esc(D.label)}</h1><p>${esc(D.subtitle || 'Your guide to family fun in San Diego')}</p></div>`;
+  if (D.overview) h += `<div class="box" style="margin-top:14px"><div class="meta">About this issue</div><p class="why">${esc(D.overview)}</p></div>`;
   if (D.issue_url) h += `<div class="banner">📖 <a href="${esc(D.issue_url)}" target="_blank" rel="noopener">Read the full magazine issue</a></div>`;
   if (D.legacy) h += `<div class="banner">🎨 <a href="${esc(D.legacy)}">Open the full illustrated ${esc(D.label)} guide</a></div>`;
   h += '<div class="st">📰 Worth Reading</div>';
-  h += D.articles.map(a => `<div class="box"><div class="meta">${a.page ? 'Page ' + esc(a.page) : 'Article'}${a.kind && a.kind !== 'direct' ? ' · best-match link' : ''}</div>
+  h += D.articles.map(a => `<div class="box"><div class="meta">${a.page ? 'Page ' + esc(a.page) : 'Article'}${a.kind && a.kind !== 'direct' ? ' · best-match link' : ''}${a.page_url ? ` · <a href="${esc(a.page_url)}" target="_blank" rel="noopener">Read page ${esc(a.page)}</a>` : ''}</div>
     <h3><a href="${esc(href(a.url))}" target="_blank" rel="noopener" style="text-decoration:none">${esc(a.title)}</a></h3>
     ${a.blurb ? `<p>${esc(a.blurb)}</p>` : ''}${a.why ? `<p class="why">💡 ${esc(a.why)}</p>` : ''}</div>`).join('') || '<div class="empty">No articles found for this issue yet.</div>';
   h += '<div class="st">🆓 Free This Month</div>';
@@ -105,27 +123,29 @@ function renderHome() {
   $('page-home').innerHTML = h;
 }
 
+const dayEvents = d => (D.events[d] || []).concat(D.ongoing.filter(e => !e.days || e.days.includes(d)));
+
 function renderCalendar() {
   const [y, m] = D.month.split('-').map(Number);
   const first = new Date(y, m - 1, 1).getDay(), days = new Date(y, m, 0).getDate();
   const now = new Date(), isNow = now.getFullYear() === y && now.getMonth() === m - 1;
   let g = ['SUN','MON','TUE','WED','THU','FRI','SAT'].map(d => `<div class="dl">${d}</div>`).join('') + '<div></div>'.repeat(first);
   for (let d = 1; d <= days; d++) {
-    const has = (D.events[d] || []).length;
+    const has = dayEvents(d).length;
     g += `<div class="cd ${has ? 'has' : ''} ${isNow && now.getDate() === d ? 'today' : ''}" data-d="${d}" onclick="pick(${d})">${d}${has ? '<div class="dot"></div>' : ''}</div>`;
   }
-  $('page-calendar').innerHTML = `<div style="padding:16px 20px 8px"><div style="font-family:'Fredoka One',cursive;font-size:28px;color:var(--teal)">${esc(D.label)}</div></div><div class="cal-grid">${g}</div><div id="panel" style="padding-top:12px"></div>${D.ongoing.length ? `<div class="st" id="ongoing">🔁 Ongoing This Month</div>${D.ongoing.map(evBox).join('')}` : ''}`;
-  const firstDay = Object.keys(D.events).map(Number).sort((a, b) => a - b)[0];
-  if (firstDay) pick(firstDay, false); else $('panel').innerHTML = (D.ongoing.length ? '<div class="empty">No events tied to a single date.</div>' : '<div class="empty">No events listed for this month yet.</div>') + ongoingLink();
+  $('page-calendar').innerHTML = `<div style="padding:16px 20px 8px"><div style="font-family:'Fredoka One',cursive;font-size:28px;color:var(--teal)">${esc(D.label)}</div></div><div class="cal-grid">${g}</div><div id="panel" style="padding-top:12px"></div>`;
+  const firstDay = [...Array(days).keys()].map(i => i + 1).find(d => dayEvents(d).length);
+  if (firstDay) pick(firstDay, false); else $('panel').innerHTML = (D.ongoing.length ? '<div class="empty">No events tied to a single date.</div>' : '<div class="empty">No events listed for this month yet.</div>') 
 }
 
 const ongoingLink = () => D.ongoing.length ? `<div style="padding:4px 16px 12px"><a href="#ongoing" onclick="document.getElementById('ongoing').scrollIntoView({behavior:'smooth'});return false">⬇ ${D.ongoing.length} ongoing events all month (pumpkin patches, free days and more)</a></div>` : '';
 
 function pick(d, scroll = true) {
   document.querySelectorAll('.cd').forEach(c => c.classList.toggle('sel', +c.dataset.d === d));
-  const list = D.events[d] || [];
+  const list = dayEvents(d);
   $('panel').innerHTML = `<div class="st" style="padding-top:0;font-size:18px">📆 ${esc(D.label.split(' ')[0])} ${d}</div>` +
-    (list.map(evBox).join('') || '<div class="empty">No specific events listed for this day.</div>') + ongoingLink();
+    (list.map(evBox).join('') || '<div class="empty">No specific events listed for this day.</div>') 
   if (scroll) $('panel').scrollIntoView({ behavior: 'smooth' });
 }
 
