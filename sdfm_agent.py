@@ -527,6 +527,7 @@ def write_site_data(year, month, issue_url, articles, events, ongoing, sections=
     months = set(json.loads(idx.read_text())) if idx.exists() else set()
     months.add(key)
     idx.write_text(json.dumps(sorted(months)))
+    return events, ongoing  # merged with the saved month, so the digest covers the whole month
 
 
 def main():
@@ -554,17 +555,17 @@ def main():
             if x.get("page"):
                 x["page_url"] = reader_url(read_url, x["page"])
     article_md = format_articles(articles, read_url)
+    events, ongoing = write_site_data(year, month, read_url, articles, events, ongoing,
+                                      pdf_sections(year, month, articles), overview)
     event_md = free_markdown(events, ongoing, year, month)
 
     digest = (
         f"# San Diego Family Magazine, {label}\n\n"
         f"Issue: {issue_url or 'not found yet'}\n\n"
         f"## Worth reading\n{article_md}\n\n"
-        f"## Free events\n{event_md}\n\n"
+        f"## Free events (whole month)\n{event_md}\n\n"
         f"Full calendar: {CALENDAR}\n"
     )
-
-    write_site_data(year, month, read_url, articles, events, ongoing, pdf_sections(year, month, articles), overview)
 
     out = pathlib.Path("digests")
     out.mkdir(exist_ok=True)
