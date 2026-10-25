@@ -35,9 +35,9 @@ jobs:
           TITLE="SD Family digest $(date +'%B %Y')"
           FILE="digests/$(date +%Y-%m).md"
           if grep -q "not found yet" "$FILE"; then echo "Issue not posted yet; skipping"; exit 0; fi
-          EXISTING=$(gh issue list --state all --search "\"$TITLE\" in:title" --json number --jq '.[0].number')
-          if [ -n "$EXISTING" ]; then echo "Issue already exists; skipping"; exit 0; fi
           OWNER=$(echo "${{ github.repository_owner }}" | tr 'A-Z' 'a-z')
           SITE="https://$OWNER.github.io/${{ github.event.repository.name }}/"
           { echo "🌐 Browse this month's guide: $SITE"; echo; cat "$FILE"; } > body.md
+          EXISTING=$(gh issue list --state all --search "\"$TITLE\" in:title" --json number --jq '.[0].number')
+          if [ -n "$EXISTING" ]; then gh issue edit "$EXISTING" --body-file body.md; echo "Updated existing issue #$EXISTING"; exit 0; fi
           gh issue create --title "$TITLE" --body-file body.md --assignee "${{ github.repository_owner }}"
