@@ -1,0 +1,2443 @@
+{
+ "month": "2026-11",
+ "label": "November 2026",
+ "subtitle": "",
+ "issue_url": "https://issuu.com/sandiegofamilymagazine/docs/san_diego_family_november_2026",
+ "articles": [
+  {
+   "page": "11",
+   "title": "Irresistible Thanksgiving Desserts",
+   "blurb": "",
+   "url": "https://www.google.com/search?q=site%3Asandiegofamily.com+Irresistible+Thanksgiving+Desserts",
+   "kind": "search",
+   "page_url": "https://issuu.com/rd4?p=11&d=san_diego_family_november_2026&u=sandiegofamilymagazine",
+   "why": ""
+  },
+  {
+   "page": "14",
+   "title": "Cultivating Compassionate Children – Plus, ideas for spreading kindness",
+   "blurb": "",
+   "url": "https://www.google.com/search?q=site%3Asandiegofamily.com+Cultivating+Compassionate+Children+%E2%80%93+Plus%2C+ideas+for+spreading+kindness",
+   "kind": "search",
+   "page_url": "https://issuu.com/rd4?p=14&d=san_diego_family_november_2026&u=sandiegofamilymagazine",
+   "why": ""
+  },
+  {
+   "page": "16",
+   "title": "Friendsgiving Made Easy – Tips for a kid-friendly celebration",
+   "blurb": "",
+   "url": "https://www.sandiegofamily.com/parenting/big-kid",
+   "kind": "section",
+   "page_url": "https://issuu.com/rd4?p=16&d=san_diego_family_november_2026&u=sandiegofamilymagazine",
+   "why": ""
+  },
+  {
+   "page": "18",
+   "title": "Navigating a Full Plate – Kids, aging parents & life in the sandwich generation",
+   "blurb": "",
+   "url": "https://www.google.com/search?q=site%3Asandiegofamily.com+Navigating+a+Full+Plate+%E2%80%93+Kids%2C+aging+parents+%26+life+in+the+sandwich+generation",
+   "kind": "search",
+   "page_url": "https://issuu.com/rd4?p=18&d=san_diego_family_november_2026&u=sandiegofamilymagazine",
+   "why": ""
+  },
+  {
+   "page": "20",
+   "title": "Gather, Play, Repeat – 40 fun family night ideas",
+   "blurb": "",
+   "url": "https://www.google.com/search?q=site%3Asandiegofamily.com+Gather%2C+Play%2C+Repeat+%E2%80%93+40+fun+family+night+ideas",
+   "kind": "search",
+   "page_url": "https://issuu.com/rd4?p=20&d=san_diego_family_november_2026&u=sandiegofamilymagazine",
+   "why": ""
+  },
+  {
+   "page": "22",
+   "title": "Holiday Toys – Time to make your list and check it twice!",
+   "blurb": "",
+   "url": "https://www.google.com/search?q=site%3Asandiegofamily.com+Holiday+Toys+%E2%80%93+Time+to+make+your+list+and+check+it+twice%21",
+   "kind": "search",
+   "page_url": "https://issuu.com/rd4?p=22&d=san_diego_family_november_2026&u=sandiegofamilymagazine",
+   "why": ""
+  },
+  {
+   "page": "24",
+   "title": "November Calendar – Día de Muertos, Fleet Week, Thanksgiving Camps, plus fall and holiday fun!",
+   "blurb": "",
+   "url": "https://www.sandiegofamily.com/things-to-do/events-calendar",
+   "kind": "section",
+   "page_url": "https://issuu.com/rd4?p=24&d=san_diego_family_november_2026&u=sandiegofamilymagazine",
+   "why": ""
+  }
+ ],
+ "events": {
+  "1": [
+   {
+    "name": "Howl-O-Scream at SeaWorld",
+    "free": false,
+    "type": "other",
+    "icon": "🎃",
+    "time": "6 pm",
+    "loc": "SeaWorld San Diego",
+    "desc": "Select dates through Oct. 31. 6 pm–close. Recommended for adults only. $35.99. 500 SeaWorld Dr. www.seaworld.com",
+    "url": "https://www.seaworld.com"
+   },
+   {
+    "name": "Big Bear Lake Oktoberfest",
+    "free": false,
+    "type": "other",
+    "icon": "📅",
+    "time": "",
+    "loc": "Big Bear Lake Convention Center",
+    "desc": "Bands, beer, food and more. Weekends through Nov. 7. Sundays are Family Fun Days, kids under 12 free. Big Bear Convention Center, 42900 Big Bear Blvd. Tickets: www.bigbearevents.com",
+    "url": "https://www.bigbearevents.com"
+   },
+   {
+    "name": "The Count's Halloween Spooktacular",
+    "free": false,
+    "type": "other",
+    "icon": "🎃",
+    "time": "10 am–6 pm",
+    "loc": "Sesame Place San Diego",
+    "desc": "Silly, not-too-spooky fun. Select dates through Nov. 1, 10 am–6 pm. 2052 Entertainment Cir., Chula Vista. www.sesameplace.com",
+    "url": "https://www.sesameplace.com"
+   },
+   {
+    "name": "Brick-or-Treat",
+    "free": false,
+    "type": "other",
+    "icon": "🎃",
+    "time": "",
+    "loc": "LEGOLAND California Resort",
+    "desc": "Trick-or-treating, Brick or Treat Street, interactive light trail and more. Today & Sept. 26, then weekends through Nov. 1. Included with admission. LEGOLAND, One LEGOLAND Dr., Carlsbad. www.legoland.com",
+    "url": "https://www.legoland.com"
+   },
+   {
+    "name": "The Haunted Trail of Balboa Park",
+    "free": false,
+    "type": "other",
+    "icon": "🎃",
+    "time": "",
+    "loc": "San Diego, CA",
+    "desc": "Select dates through Nov. 1. $34.99. For ages 10+. Balboa Dr. & Juniper Rd. www.hauntedtrail.net",
+    "url": "https://www.hauntedtrail.net"
+   },
+   {
+    "name": "Fiesta de Reyes Día de los Muertos–La Experiencia",
+    "free": true,
+    "type": "free",
+    "icon": "🆓",
+    "time": "10 am–9 pm",
+    "loc": "San Diego, CA",
+    "desc": "Family-friendly experience with decorated skulls and skeletons, traditional and contemporary altars and thousands of marigold-inspired details. Through Nov. 2, 10 am–9 pm. www.fiestadereyes.com",
+    "url": "https://www.fiestadereyes.com"
+   },
+   {
+    "name": "SeaWorld Spooktacular",
+    "free": false,
+    "type": "other",
+    "icon": "🎃",
+    "time": "",
+    "loc": "SeaWorld San Diego",
+    "desc": "Baby Shark Halloween show, trick-or-treating, interactive adventures and seasonal entertainment. Fri.–Sun. through Nov. 1. Kids ages 3–9 receive free one-day admission with the purchase of adult ticket through Oct. 500 SeaWorld Dr. www.seaworld.com",
+    "url": "https://www.seaworld.com"
+   },
+   {
+    "name": "Wizarding Afternoon Tea Themed Tea",
+    "free": false,
+    "type": "other",
+    "icon": "☕",
+    "time": "3:30 pm",
+    "loc": "San Diego, CA",
+    "desc": "All themed teas are different, most include a “Did You Know?” intro, a game, quiz and a take home gift. Through Nov. 1, 12:30 & 3:30 pm. $64.95. The Britannia Tearooms, 2323 Midway Dr. Reservations: www.afternoonteasandiego.com",
+    "url": "https://www.afternoonteasandiego.com"
+   },
+   {
+    "name": "Mr. Jack O’ Lanterns Pumpkin Patch",
+    "free": false,
+    "type": "other",
+    "icon": "🎃",
+    "time": "",
+    "loc": "San Diego, CA",
+    "desc": "Pumpkins, seasonal photo opportunities and family-friendly fall activities. Through Nov. 1. 3901 Clairemont Dr. www.mrjackolanternspumpkins.com",
+    "url": "https://www.mrjackolanternspumpkins.com"
+   },
+   {
+    "name": "Farm Festival",
+    "free": false,
+    "type": "other",
+    "icon": "🎃",
+    "time": "10 am–4 pm",
+    "loc": "Oceanside, CA",
+    "desc": "Pumpkin patch, corn maze and more. Today, tomorrow, Oct. 10, 11, 24, 25, 31 & Nov. 1; 10 am–4 pm. $5 parking. Mellano Farmstand, 5714 N. River Rd., Oceanside. www.mellanofarmstand.com",
+    "url": "https://www.mellanofarmstand.com"
+   },
+   {
+    "name": "“Charlie and the Chocolate Factory.”",
+    "free": false,
+    "type": "other",
+    "icon": "📅",
+    "time": "",
+    "loc": "Casa del Prado Theatre, Balboa Park",
+    "desc": "Enjoy songs from the motion picture including \"The Candy Man,\" \"Oompa Loompa Song,\" and \"Pure Imagination.\" Fri.–Sun., through Nov. 8. $23–$28. Casa del Prado Theatre, Balboa Park. www.juniortheatre.com",
+    "url": "https://www.juniortheatre.com"
+   },
+   {
+    "name": "SeaWorld Día de los Muertos",
+    "free": false,
+    "type": "other",
+    "icon": "💀",
+    "time": "",
+    "loc": "SeaWorld San Diego",
+    "desc": "Immerse yourself in the sights, sounds and flavors of this cherished Mexican holiday. Today & tomorrow. Included with admission. 500 SeaWorld Dr. www.seaworld.com",
+    "url": "https://www.seaworld.com"
+   },
+   {
+    "name": "Escondido Renaissance Fair",
+    "free": false,
+    "type": "other",
+    "icon": "📅",
+    "time": "",
+    "loc": "Escondido CA",
+    "desc": "Jousting, live entertainment and more. Today, tomorrow & Nov. 7–8. $15–$35; under 5 free. Felicita County Park, 742 Clarence Ln. www.oldetymeproductions.com",
+    "url": "https://www.oldetymeproductions.com"
+   },
+   {
+    "name": "Carlsbad Village Street Faire",
+    "free": true,
+    "type": "free",
+    "icon": "🆓",
+    "time": "8 am–4 pm",
+    "loc": "Carlsbad, CA",
+    "desc": "Children’s rides, arts & crafts and more. 8 am–4 pm. Carlsbad Blvd. to Jefferson. www.kennedyfaires.com",
+    "url": "https://www.kennedyfaires.com"
+   },
+   {
+    "name": "Komen More Than Pink Walk",
+    "free": false,
+    "type": "other",
+    "icon": "📅",
+    "time": "8 am",
+    "loc": "Balboa Park",
+    "desc": "This event brings together survivors, supporters and advocates to raise funds and support breast cancer patients. 8 am. Balboa Park. Register: www.komensandiego.com",
+    "url": "https://www.komensandiego.com"
+   },
+   {
+    "name": "First FREE Sunday at Oceanside Museum of Art",
+    "free": true,
+    "type": "free",
+    "icon": "🆓",
+    "time": "2 pm",
+    "loc": "Oceanside Museum of Art",
+    "desc": "Enjoy a fun hands-on art-making experience led by artists and cultural partners from the community. 12–2 pm. 704 Pier View Way. www.oma-online.org",
+    "url": "https://www.oma-online.org"
+   },
+   {
+    "name": "Old Town San Diego Día de los Muertos",
+    "free": false,
+    "type": "other",
+    "icon": "💀",
+    "time": "",
+    "loc": "Old Town San Diego",
+    "desc": "An experience filled with culture, tradition and fun for the entire family. Today & tomorrow. 4010 Twiggs St. www.oldtownsandiego.org/ddlm",
+    "url": "https://www.oldtownsandiego.org/ddlm"
+   },
+   {
+    "name": "Día de los Muertos at SDMA",
+    "free": true,
+    "type": "free",
+    "icon": "🆓",
+    "time": "11 am–4 pm",
+    "loc": "The San Diego Museum of Art, Balboa Park",
+    "desc": "Featuring live performances, family-friendly art activities, a collaborative ofrenda and free Museum admission. 11 am–4 pm. The San Diego Museum of Art, Balboa Park. www.sdmart.org",
+    "url": "https://www.sdmart.org"
+   },
+   {
+    "name": "Día de los Muertos Festival",
+    "free": true,
+    "type": "free",
+    "icon": "🆓",
+    "time": "9 pm",
+    "loc": "California Center for the Arts, Escondido",
+    "desc": "Brings traditional and contemporary expressions of Día de los Muertos together through art, music, dance, food and remembrance. 4–9 pm. California Center for the Arts, Escondido, 340 N. Escondido Blvd. www.artcenter.org",
+    "url": "https://www.artcenter.org"
+   },
+   {
+    "name": "Barrio Logan Día de los Muertos",
+    "free": true,
+    "type": "free",
+    "icon": "🆓",
+    "time": "",
+    "loc": "San Diego, CA",
+    "desc": "Food, lowriders, entertainment, Catrina contest and more. Logan Ave., Logan Heights. www.facebook.com/reel/1598516978328521",
+    "url": "https://www.facebook.com/reel/1598516978328521"
+   },
+   {
+    "name": "Fall Back Festival",
+    "free": true,
+    "type": "free",
+    "icon": "🆓",
+    "time": "4 pm",
+    "loc": "Gaslamp Quarter",
+    "desc": "Experience games, entertainment, music and activities reminiscent of the Old West town that San Diego was in the 1800s. 12–4 pm. 410 Island Ave., Gaslamp Quarter. www.gaslampmuseum.org",
+    "url": "https://www.gaslampmuseum.org"
+   },
+   {
+    "name": "“The Enchanted Tail.”",
+    "free": true,
+    "type": "free",
+    "icon": "🆓",
+    "time": "3 pm",
+    "loc": "Balboa Park",
+    "desc": "For kids 3–12 and their families. 2–3 pm. Spreckels Organ Pavilion, Balboa Park. www.opera4kids.com",
+    "url": "https://www.opera4kids.com"
+   }
+  ],
+  "7": [
+   {
+    "name": "Big Bear Lake Oktoberfest",
+    "free": false,
+    "type": "other",
+    "icon": "📅",
+    "time": "",
+    "loc": "Big Bear Lake Convention Center",
+    "desc": "Bands, beer, food and more. Weekends through Nov. 7. Sundays are Family Fun Days, kids under 12 free. Big Bear Convention Center, 42900 Big Bear Blvd. Tickets: www.bigbearevents.com",
+    "url": "https://www.bigbearevents.com"
+   },
+   {
+    "name": "“Charlie and the Chocolate Factory.”",
+    "free": false,
+    "type": "other",
+    "icon": "📅",
+    "time": "",
+    "loc": "Casa del Prado Theatre, Balboa Park",
+    "desc": "Enjoy songs from the motion picture including \"The Candy Man,\" \"Oompa Loompa Song,\" and \"Pure Imagination.\" Fri.–Sun., through Nov. 8. $23–$28. Casa del Prado Theatre, Balboa Park. www.juniortheatre.com",
+    "url": "https://www.juniortheatre.com"
+   },
+   {
+    "name": "Escondido Renaissance Fair",
+    "free": false,
+    "type": "other",
+    "icon": "📅",
+    "time": "",
+    "loc": "Escondido CA",
+    "desc": "Jousting, live entertainment and more. Today, tomorrow & Nov. 7–8. $15–$35; under 5 free. Felicita County Park, 742 Clarence Ln. www.oldetymeproductions.com",
+    "url": "https://www.oldetymeproductions.com"
+   },
+   {
+    "name": "Humphreys Concerts by the Bay",
+    "free": false,
+    "type": "other",
+    "icon": "🎵",
+    "time": "",
+    "loc": "San Diego, CA",
+    "desc": "Enjoy sparkling views of Point Loma and San Diego Bay while experiencing top entertainment in an outdoor venue. Tonight, June 23 & 26. 2241 Shelter Island Dr. Full schedule & tickets: www.humphreysconcerts.com",
+    "url": "https://www.humphreysconcerts.com"
+   },
+   {
+    "name": "Tidepooling Adventures at Birch",
+    "free": false,
+    "type": "other",
+    "icon": "📅",
+    "time": "1:15 pm",
+    "loc": "Birch Aquarium at Scripps",
+    "desc": "Explore local tide pools and learn about its unique animals. Today, 1:15 pm at Scripps Beach & tomorrow, 2 pm at Kellogg Park. For ages 6+. $25. Register: https://aquarium.ucsd.edu",
+    "url": "https://aquarium.ucsd.edu"
+   },
+   {
+    "name": "Christmas on the Farm Arts & Crafts Fair",
+    "free": false,
+    "type": "other",
+    "icon": "📅",
+    "time": "9 am–4 pm",
+    "loc": "Bates Nut Farm",
+    "desc": "Live music, handmade crafts and more. Today & tomorrow, 9 am–4 pm. Bates Nut Farm, 15954 Woods Valley Rd. www.batesnutfarm.biz",
+    "url": "https://www.batesnutfarm.biz"
+   },
+   {
+    "name": "Escondido Tamale Festival",
+    "free": true,
+    "type": "free",
+    "icon": "🆓",
+    "time": "10 pm",
+    "loc": "Grape Day Park, downtown Escondido",
+    "desc": "Celebrate Hispanic culture with tamale contest, kids’ zone, music and more. Today, 5–10 pm & tomorrow, 11 am–6 pm. Grape Day Park, 321 N. Broadway. www.usamulticultural.org/escondido-tamale-festival",
+    "url": "https://www.usamulticultural.org/escondido-tamale-festival"
+   },
+   {
+    "name": "Antique & Craft Fair Vendors Day at the Farm",
+    "free": true,
+    "type": "free",
+    "icon": "🆓",
+    "time": "9 am–3 pm",
+    "loc": "Summers Past Farms",
+    "desc": "Crafts, collectables, antiques and a garden sale. Today & tomorrow, 9 am–3 pm. Summers Past Farms, 15602 Olde Hwy. 80, Flinn Springs. www.summerspastfarms.com",
+    "url": "https://www.summerspastfarms.com"
+   },
+   {
+    "name": "Novemberfest",
+    "free": false,
+    "type": "other",
+    "icon": "📅",
+    "time": "4 pm",
+    "loc": "Alta Vista Botanical Gardens",
+    "desc": "Features craft beers, wines and mead from local experts in the brewing community. Proceeds support the Alta Vista Botanical Gardens and the Amigos De Vista Lions Club. 12–4 pm. For ages 21+. Alta Vista Botanical Gardens, 1270 Vale Terrace Dr., Vista. www.altavistabotanicalgardens.org",
+    "url": "https://www.altavistabotanicalgardens.org"
+   },
+   {
+    "name": "Red, White & Blue Salute",
+    "free": true,
+    "type": "free",
+    "icon": "🆓",
+    "time": "",
+    "loc": "SeaWorld San Diego",
+    "desc": "Special Veterans Day entertainment and activities. Through the Waves of Honor program, active duty and former military personnel enjoy complimentary admission. Through Nov. 9. SeaWorld, 500 SeaWorld Dr. www.seaworld.com",
+    "url": "https://www.seaworld.com"
+   },
+   {
+    "name": "Great Big Family Play Day",
+    "free": false,
+    "type": "other",
+    "icon": "📅",
+    "time": "9:30 am–5:30 pm",
+    "loc": "Liberty Station",
+    "desc": "Live music, face painting, arts & crafts, rides and more. 9:30 am–5:30 pm. $7.18–$12.51. Ingram Plaza, Liberty Station. www.greatbigfamilyplayday.com/san-diego",
+    "url": "https://www.greatbigfamilyplayday.com/san-diego"
+   },
+   {
+    "name": "Ride the Point",
+    "free": false,
+    "type": "other",
+    "icon": "📅",
+    "time": "8 am",
+    "loc": "Liberty Station",
+    "desc": "Ride the hidden, unridden and forbidden Point Loma for pancreatic cancer research. 8 am. Starting at $25. Liberty Station, 2562 Lanning Rd. Register: www.ridethepoint.org",
+    "url": "https://www.ridethepoint.org"
+   },
+   {
+    "name": "Archaeology Day",
+    "free": true,
+    "type": "free",
+    "icon": "🆓",
+    "time": "9 am–3:30 pm",
+    "loc": "Borrego Springs",
+    "desc": "Exhibits, games and tours. 9 am–3:30 pm. Anza–Borrego Desert State Park Visitor Center, 200 Palm Canyon Dr., Borrego Springs. www.anzaborregoarchaeo.org/archday2026/",
+    "url": "https://www.anzaborregoarchaeo.org/archday2026/"
+   }
+  ],
+  "2": [
+   {
+    "name": "Fiesta de Reyes Día de los Muertos–La Experiencia",
+    "free": true,
+    "type": "free",
+    "icon": "🆓",
+    "time": "10 am–9 pm",
+    "loc": "San Diego, CA",
+    "desc": "Family-friendly experience with decorated skulls and skeletons, traditional and contemporary altars and thousands of marigold-inspired details. Through Nov. 2, 10 am–9 pm. www.fiestadereyes.com",
+    "url": "https://www.fiestadereyes.com"
+   },
+   {
+    "name": "Old Town San Diego Día de los Muertos",
+    "free": false,
+    "type": "other",
+    "icon": "💀",
+    "time": "",
+    "loc": "Old Town San Diego",
+    "desc": "An experience filled with culture, tradition and fun for the entire family. Today & tomorrow. 4010 Twiggs St. www.oldtownsandiego.org/ddlm",
+    "url": "https://www.oldtownsandiego.org/ddlm"
+   },
+   {
+    "name": "Candy Buy Back for North County Cosmetic & Implant Dentistry",
+    "free": false,
+    "type": "other",
+    "icon": "📅",
+    "time": "7:30 am–4:30 pm",
+    "loc": "Vista, CA",
+    "desc": "$1 for every pound of candy plus a toy from the prize box. Candy donated to military personnel stationed at Camp Pendleton. Through Nov. 4, 7:30 am–4:30 pm. 1934 Via Centre, Ste., A, Vista. www.ultimatesmiles.com",
+    "url": "https://www.ultimatesmiles.com"
+   },
+   {
+    "name": "Great Smiles Candy Buy Back",
+    "free": false,
+    "type": "other",
+    "icon": "📅",
+    "time": "",
+    "loc": "Solana Beach",
+    "desc": "Receive $1 per pound, up to 5 pounds. Candy donated to the local fire dept. Today, tomorrow and Nov. 5 at 6010 Hidden Valley Rd., Ste. 100, Carlsbad and Nov. 3–6 at 530 Lomas Santa Fe Dr., Ste. H, Solana Beach. www.greatsmiles.org",
+    "url": "https://www.greatsmiles.org"
+   },
+   {
+    "name": "Brain Balance Halloween Candy Buy Back",
+    "free": false,
+    "type": "other",
+    "icon": "📅",
+    "time": "11 am–7:30 pm",
+    "loc": "San Diego, CA",
+    "desc": "Bring in your extra Halloween candy and swap it for toys, activities or gift cards while supplies last. This event is also part of Brain Balance San Diego’s support for the Teal Pumpkin Project, helping create a more inclusive Halloween experience for individuals with food allergies, sensitivities, ",
+    "url": "https://www.BrainBalanceSanDiego.com"
+   }
+  ],
+  "6": [
+   {
+    "name": "“Charlie and the Chocolate Factory.”",
+    "free": false,
+    "type": "other",
+    "icon": "📅",
+    "time": "",
+    "loc": "Casa del Prado Theatre, Balboa Park",
+    "desc": "Enjoy songs from the motion picture including \"The Candy Man,\" \"Oompa Loompa Song,\" and \"Pure Imagination.\" Fri.–Sun., through Nov. 8. $23–$28. Casa del Prado Theatre, Balboa Park. www.juniortheatre.com",
+    "url": "https://www.juniortheatre.com"
+   },
+   {
+    "name": "KPBS Kids Event: Molly of Denali",
+    "free": false,
+    "type": "other",
+    "icon": "🏛️",
+    "time": "10 am",
+    "loc": "Children's Museum of Discovery",
+    "desc": "Story time, crafts and a costume character photo opportunity. 10 am–12 noon. The Children’s Museum of Discovery, 320 N. Broadway, Escondido. www.visitcmod.org",
+    "url": "https://www.visitcmod.org"
+   },
+   {
+    "name": "First Friday La Jolla Art Walk",
+    "free": true,
+    "type": "free",
+    "icon": "🆓",
+    "time": "7 pm",
+    "loc": "La Jolla, CA",
+    "desc": "Wander through galleries and pop-up artists. 4–7 pm. 1205 Prospect St. www.lajollabythesea.com",
+    "url": "https://www.lajollabythesea.com"
+   },
+   {
+    "name": "First Friday: Oceanside Art Walk",
+    "free": true,
+    "type": "free",
+    "icon": "🆓",
+    "time": "8 pm",
+    "loc": "Oceanside, CA",
+    "desc": "Celebrate the thriving arts and culture scene in the heart of downtown Oceanside. 5–8 pm. Artist Alley. www.visitoceanside.org",
+    "url": "https://www.visitoceanside.org"
+   }
+  ],
+  "8": [
+   {
+    "name": "“Charlie and the Chocolate Factory.”",
+    "free": false,
+    "type": "other",
+    "icon": "📅",
+    "time": "",
+    "loc": "Casa del Prado Theatre, Balboa Park",
+    "desc": "Enjoy songs from the motion picture including \"The Candy Man,\" \"Oompa Loompa Song,\" and \"Pure Imagination.\" Fri.–Sun., through Nov. 8. $23–$28. Casa del Prado Theatre, Balboa Park. www.juniortheatre.com",
+    "url": "https://www.juniortheatre.com"
+   },
+   {
+    "name": "Escondido Renaissance Fair",
+    "free": false,
+    "type": "other",
+    "icon": "📅",
+    "time": "",
+    "loc": "Escondido CA",
+    "desc": "Jousting, live entertainment and more. Today, tomorrow & Nov. 7–8. $15–$35; under 5 free. Felicita County Park, 742 Clarence Ln. www.oldetymeproductions.com",
+    "url": "https://www.oldetymeproductions.com"
+   },
+   {
+    "name": "Tidepooling Adventures at Birch",
+    "free": false,
+    "type": "other",
+    "icon": "📅",
+    "time": "1:15 pm",
+    "loc": "Birch Aquarium at Scripps",
+    "desc": "Explore local tide pools and learn about its unique animals. Today, 1:15 pm at Scripps Beach & tomorrow, 2 pm at Kellogg Park. For ages 6+. $25. Register: https://aquarium.ucsd.edu",
+    "url": "https://aquarium.ucsd.edu"
+   },
+   {
+    "name": "Christmas on the Farm Arts & Crafts Fair",
+    "free": false,
+    "type": "other",
+    "icon": "📅",
+    "time": "9 am–4 pm",
+    "loc": "Bates Nut Farm",
+    "desc": "Live music, handmade crafts and more. Today & tomorrow, 9 am–4 pm. Bates Nut Farm, 15954 Woods Valley Rd. www.batesnutfarm.biz",
+    "url": "https://www.batesnutfarm.biz"
+   },
+   {
+    "name": "Escondido Tamale Festival",
+    "free": true,
+    "type": "free",
+    "icon": "🆓",
+    "time": "10 pm",
+    "loc": "Grape Day Park, downtown Escondido",
+    "desc": "Celebrate Hispanic culture with tamale contest, kids’ zone, music and more. Today, 5–10 pm & tomorrow, 11 am–6 pm. Grape Day Park, 321 N. Broadway. www.usamulticultural.org/escondido-tamale-festival",
+    "url": "https://www.usamulticultural.org/escondido-tamale-festival"
+   },
+   {
+    "name": "Antique & Craft Fair Vendors Day at the Farm",
+    "free": true,
+    "type": "free",
+    "icon": "🆓",
+    "time": "9 am–3 pm",
+    "loc": "Summers Past Farms",
+    "desc": "Crafts, collectables, antiques and a garden sale. Today & tomorrow, 9 am–3 pm. Summers Past Farms, 15602 Olde Hwy. 80, Flinn Springs. www.summerspastfarms.com",
+    "url": "https://www.summerspastfarms.com"
+   },
+   {
+    "name": "Red, White & Blue Salute",
+    "free": true,
+    "type": "free",
+    "icon": "🆓",
+    "time": "",
+    "loc": "SeaWorld San Diego",
+    "desc": "Special Veterans Day entertainment and activities. Through the Waves of Honor program, active duty and former military personnel enjoy complimentary admission. Through Nov. 9. SeaWorld, 500 SeaWorld Dr. www.seaworld.com",
+    "url": "https://www.seaworld.com"
+   }
+  ],
+  "3": [
+   {
+    "name": "Candy Buy Back for North County Cosmetic & Implant Dentistry",
+    "free": false,
+    "type": "other",
+    "icon": "📅",
+    "time": "7:30 am–4:30 pm",
+    "loc": "Vista, CA",
+    "desc": "$1 for every pound of candy plus a toy from the prize box. Candy donated to military personnel stationed at Camp Pendleton. Through Nov. 4, 7:30 am–4:30 pm. 1934 Via Centre, Ste., A, Vista. www.ultimatesmiles.com",
+    "url": "https://www.ultimatesmiles.com"
+   },
+   {
+    "name": "Great Smiles Candy Buy Back",
+    "free": false,
+    "type": "other",
+    "icon": "📅",
+    "time": "",
+    "loc": "Solana Beach",
+    "desc": "Receive $1 per pound, up to 5 pounds. Candy donated to the local fire dept. Today, tomorrow and Nov. 5 at 6010 Hidden Valley Rd., Ste. 100, Carlsbad and Nov. 3–6 at 530 Lomas Santa Fe Dr., Ste. H, Solana Beach. www.greatsmiles.org",
+    "url": "https://www.greatsmiles.org"
+   },
+   {
+    "name": "Brain Balance Halloween Candy Buy Back",
+    "free": false,
+    "type": "other",
+    "icon": "📅",
+    "time": "11 am–7:30 pm",
+    "loc": "San Diego, CA",
+    "desc": "Bring in your extra Halloween candy and swap it for toys, activities or gift cards while supplies last. This event is also part of Brain Balance San Diego’s support for the Teal Pumpkin Project, helping create a more inclusive Halloween experience for individuals with food allergies, sensitivities, ",
+    "url": "https://www.BrainBalanceSanDiego.com"
+   },
+   {
+    "name": "Residents FREE Days at Balboa Park",
+    "free": true,
+    "type": "free",
+    "icon": "🆓",
+    "time": "",
+    "loc": "Balboa Park",
+    "desc": "Park museums offer free admission Tuesdays on a rotating basis throughout the month to residents of the City and County of San Diego, and to active military personnel and their dependents. Schedule: www.balboapark.org",
+    "url": "https://www.balboapark.org"
+   },
+   {
+    "name": "Ocean Science Scholars",
+    "free": false,
+    "type": "other",
+    "icon": "📅",
+    "time": "4 pm",
+    "loc": "Birch Aquarium at Scripps",
+    "desc": "Explore the aquarium’s vibrant habitats, participate in hands-on activities and leave with new scientific knowledge. Tuesday afternoons, 2–4 pm through Dec. 15. For ages 6–10. $30 Birch Aquarium at Scripps, 2300 Expedition Way, La Jolla. Advanced registration required: https://aquarium.ucsd.edu/lear",
+    "url": "https://aquarium.ucsd.edu/learn/school-youth-group-programs/ocean-science-scholars"
+   }
+  ],
+  "4": [
+   {
+    "name": "Candy Buy Back for North County Cosmetic & Implant Dentistry",
+    "free": false,
+    "type": "other",
+    "icon": "📅",
+    "time": "7:30 am–4:30 pm",
+    "loc": "Vista, CA",
+    "desc": "$1 for every pound of candy plus a toy from the prize box. Candy donated to military personnel stationed at Camp Pendleton. Through Nov. 4, 7:30 am–4:30 pm. 1934 Via Centre, Ste., A, Vista. www.ultimatesmiles.com",
+    "url": "https://www.ultimatesmiles.com"
+   },
+   {
+    "name": "Brain Balance Halloween Candy Buy Back",
+    "free": false,
+    "type": "other",
+    "icon": "📅",
+    "time": "11 am–7:30 pm",
+    "loc": "San Diego, CA",
+    "desc": "Bring in your extra Halloween candy and swap it for toys, activities or gift cards while supplies last. This event is also part of Brain Balance San Diego’s support for the Teal Pumpkin Project, helping create a more inclusive Halloween experience for individuals with food allergies, sensitivities, ",
+    "url": "https://www.BrainBalanceSanDiego.com"
+   }
+  ],
+  "5": [
+   {
+    "name": "Great Smiles Candy Buy Back",
+    "free": false,
+    "type": "other",
+    "icon": "📅",
+    "time": "",
+    "loc": "Solana Beach",
+    "desc": "Receive $1 per pound, up to 5 pounds. Candy donated to the local fire dept. Today, tomorrow and Nov. 5 at 6010 Hidden Valley Rd., Ste. 100, Carlsbad and Nov. 3–6 at 530 Lomas Santa Fe Dr., Ste. H, Solana Beach. www.greatsmiles.org",
+    "url": "https://www.greatsmiles.org"
+   },
+   {
+    "name": "UltraStar Cinemas Discount Thursdays",
+    "free": false,
+    "type": "other",
+    "icon": "📅",
+    "time": "",
+    "loc": "UltraStar Mission Valley Cinemas at Hazard Center",
+    "desc": "50% off all movie tickets and popcorn. 7510 Hazard Center Dr. Showtimes: www.ultrastarmovies.com",
+    "url": "https://www.ultrastarmovies.com"
+   },
+   {
+    "name": "Party at the Pop Jet at Del Mar Highlands",
+    "free": true,
+    "type": "free",
+    "icon": "🆓",
+    "time": "11 am",
+    "loc": "Del Mar Highlands Town Center",
+    "desc": "Family-friendly entertainment. 10–11 am. 12925 El Camino Real. www.delmarhighlandstowncenter.com",
+    "url": "https://www.delmarhighlandstowncenter.com"
+   }
+  ],
+  "10": [
+   {
+    "name": "Residents FREE Days at Balboa Park",
+    "free": true,
+    "type": "free",
+    "icon": "🆓",
+    "time": "",
+    "loc": "Balboa Park",
+    "desc": "Park museums offer free admission Tuesdays on a rotating basis throughout the month to residents of the City and County of San Diego, and to active military personnel and their dependents. Schedule: www.balboapark.org",
+    "url": "https://www.balboapark.org"
+   },
+   {
+    "name": "Ocean Science Scholars",
+    "free": false,
+    "type": "other",
+    "icon": "📅",
+    "time": "4 pm",
+    "loc": "Birch Aquarium at Scripps",
+    "desc": "Explore the aquarium’s vibrant habitats, participate in hands-on activities and leave with new scientific knowledge. Tuesday afternoons, 2–4 pm through Dec. 15. For ages 6–10. $30 Birch Aquarium at Scripps, 2300 Expedition Way, La Jolla. Advanced registration required: https://aquarium.ucsd.edu/lear",
+    "url": "https://aquarium.ucsd.edu/learn/school-youth-group-programs/ocean-science-scholars"
+   }
+  ],
+  "17": [
+   {
+    "name": "Residents FREE Days at Balboa Park",
+    "free": true,
+    "type": "free",
+    "icon": "🆓",
+    "time": "",
+    "loc": "Balboa Park",
+    "desc": "Park museums offer free admission Tuesdays on a rotating basis throughout the month to residents of the City and County of San Diego, and to active military personnel and their dependents. Schedule: www.balboapark.org",
+    "url": "https://www.balboapark.org"
+   },
+   {
+    "name": "Ocean Science Scholars",
+    "free": false,
+    "type": "other",
+    "icon": "📅",
+    "time": "4 pm",
+    "loc": "Birch Aquarium at Scripps",
+    "desc": "Explore the aquarium’s vibrant habitats, participate in hands-on activities and leave with new scientific knowledge. Tuesday afternoons, 2–4 pm through Dec. 15. For ages 6–10. $30 Birch Aquarium at Scripps, 2300 Expedition Way, La Jolla. Advanced registration required: https://aquarium.ucsd.edu/lear",
+    "url": "https://aquarium.ucsd.edu/learn/school-youth-group-programs/ocean-science-scholars"
+   }
+  ],
+  "24": [
+   {
+    "name": "Residents FREE Days at Balboa Park",
+    "free": true,
+    "type": "free",
+    "icon": "🆓",
+    "time": "",
+    "loc": "Balboa Park",
+    "desc": "Park museums offer free admission Tuesdays on a rotating basis throughout the month to residents of the City and County of San Diego, and to active military personnel and their dependents. Schedule: www.balboapark.org",
+    "url": "https://www.balboapark.org"
+   },
+   {
+    "name": "Ocean Science Scholars",
+    "free": false,
+    "type": "other",
+    "icon": "📅",
+    "time": "4 pm",
+    "loc": "Birch Aquarium at Scripps",
+    "desc": "Explore the aquarium’s vibrant habitats, participate in hands-on activities and leave with new scientific knowledge. Tuesday afternoons, 2–4 pm through Dec. 15. For ages 6–10. $30 Birch Aquarium at Scripps, 2300 Expedition Way, La Jolla. Advanced registration required: https://aquarium.ucsd.edu/lear",
+    "url": "https://aquarium.ucsd.edu/learn/school-youth-group-programs/ocean-science-scholars"
+   },
+   {
+    "name": "Thanksgiving Critter Camp",
+    "free": false,
+    "type": "other",
+    "icon": "📅",
+    "time": "9 am–3 pm",
+    "loc": "Helen Woodward Animal Center",
+    "desc": "Hands-on animal encounters, festive crafts, and more. For ages 4–13. Through Nov. 25, 9 am–3 pm. $103. Humane Education Campus, 6447 Helen Woodward Way, Rancho Santa Fe. Register: www.animalcenter.org",
+    "url": "https://www.animalcenter.org"
+   },
+   {
+    "name": "Thanksgiving Break Camp",
+    "free": false,
+    "type": "other",
+    "icon": "📅",
+    "time": "9 am–3 pm",
+    "loc": "Balboa Park",
+    "desc": "Three fun-filled days rotating through classes in drama, music, dance and art. For grades K-6. Through Nov. 25, 9 am–3 pm. $250. San Diego Junior Theatre, 1650 El Prado. www.juniortheatre.com",
+    "url": "https://www.juniortheatre.com"
+   },
+   {
+    "name": "Fall Camp: Nature at Night",
+    "free": false,
+    "type": "other",
+    "icon": "📅",
+    "time": "9 am–2:30 pm",
+    "loc": "Children's Museum of Discovery",
+    "desc": "Grab your flashlights and explore the fascinating nocturnal plants and animals that thrive after sunset. Through Nov. 25, 9 am–2:30 pm. For ages 4–8. $235. 9 am–2:30 pm. Children’s Museum of Discovery, 320 N. Broadway, Escondido. www.visitcmod.org",
+    "url": "https://www.visitcmod.org"
+   }
+  ],
+  "12": [
+   {
+    "name": "UltraStar Cinemas Discount Thursdays",
+    "free": false,
+    "type": "other",
+    "icon": "📅",
+    "time": "",
+    "loc": "UltraStar Mission Valley Cinemas at Hazard Center",
+    "desc": "50% off all movie tickets and popcorn. 7510 Hazard Center Dr. Showtimes: www.ultrastarmovies.com",
+    "url": "https://www.ultrastarmovies.com"
+   },
+   {
+    "name": "Residents FREE at the Gaslamp Museum",
+    "free": true,
+    "type": "free",
+    "icon": "🆓",
+    "time": "10 am–4 pm",
+    "loc": "Gaslamp Quarter",
+    "desc": "every 2nd Thursday. 10 am–4 pm. 410 Island Ave. www.gaslampmuseum.org",
+    "url": "https://www.gaslampmuseum.org"
+   },
+   {
+    "name": "“Outlander in Concert.”",
+    "free": false,
+    "type": "other",
+    "icon": "🎵",
+    "time": "7 pm",
+    "loc": "San Diego Civic Theatre",
+    "desc": "This symphonic experience guides audiences through love and loss, past and future, Scotland and beyond. 7 pm. Civic Theatre, 1100 Third Ave. www.broadwaysd.com",
+    "url": "https://www.broadwaysd.com"
+   }
+  ],
+  "19": [
+   {
+    "name": "UltraStar Cinemas Discount Thursdays",
+    "free": false,
+    "type": "other",
+    "icon": "📅",
+    "time": "",
+    "loc": "UltraStar Mission Valley Cinemas at Hazard Center",
+    "desc": "50% off all movie tickets and popcorn. 7510 Hazard Center Dr. Showtimes: www.ultrastarmovies.com",
+    "url": "https://www.ultrastarmovies.com"
+   },
+   {
+    "name": "Movie Nights at the Museum",
+    "free": false,
+    "type": "other",
+    "icon": "📅",
+    "time": "6:45 pm",
+    "loc": "Gaslamp Quarter, downtown San Diego",
+    "desc": "After-hours self-guided tour of the Davis-Horton House, followed by a screening of a different classic film in the courtyard. Every 3rd Thursday, 6:45 pm. $10. 410 Island Ave. www.gaslampmuseum.org",
+    "url": "https://www.gaslampmuseum.org"
+   }
+  ],
+  "26": [
+   {
+    "name": "UltraStar Cinemas Discount Thursdays",
+    "free": false,
+    "type": "other",
+    "icon": "📅",
+    "time": "",
+    "loc": "UltraStar Mission Valley Cinemas at Hazard Center",
+    "desc": "50% off all movie tickets and popcorn. 7510 Hazard Center Dr. Showtimes: www.ultrastarmovies.com",
+    "url": "https://www.ultrastarmovies.com"
+   },
+   {
+    "name": "The Rady Children’s Basketball Invitational",
+    "free": false,
+    "type": "other",
+    "icon": "📅",
+    "time": "",
+    "loc": "San Diego, CA",
+    "desc": "Featuring UCLA, Georgetown, Texas and Saint Mary's. For every ticket sold, $5 will be donated to Rady Children’s Hospital-San Diego. Today & tomorrow. Jenny Craig Pavilion, USD, 5998 Alcala Park Way. www.radychildrensinvitational.com",
+    "url": "https://www.radychildrensinvitational.com"
+   },
+   {
+    "name": "Thanksgiving Day Lunch Cruise",
+    "free": false,
+    "type": "other",
+    "icon": "📅",
+    "time": "3 pm",
+    "loc": "Downtown San Diego",
+    "desc": "Gourmet meal, waterfront views and more. 1–3 pm. Flagship San Diego, 990 N. Harbor Dr. Tickets: www.flagshipsd.com",
+    "url": "https://www.flagshipsd.com"
+   },
+   {
+    "name": "Thanksgiving at the Hotel Del",
+    "free": false,
+    "type": "other",
+    "icon": "📅",
+    "time": "8 pm",
+    "loc": "Hotel del Coronado",
+    "desc": "Gather with loved ones in the storied Crown and Coronet Rooms and enjoy a chef-curated buffet. 12:30–8 pm. Hotel Del Coronado, 1500 Orange Ave. Tickets: www.hoteldel.com",
+    "url": "https://www.hoteldel.com"
+   },
+   {
+    "name": "Thanksgiving Buffet Feast",
+    "free": false,
+    "type": "other",
+    "icon": "📅",
+    "time": "6 pm",
+    "loc": "San Diego, CA",
+    "desc": "Thanksgiving Day Buffet features holiday favorites, carving stations, decadent desserts and beautiful Mission Bay views. 12–6 pm. Catamaran Resort Hotel, 3999 Mission Blvd. www.catamaranresort.com",
+    "url": "https://www.catamaranresort.com"
+   },
+   {
+    "name": "O’Side Turkey Trot 5K Run/Walk & Kids Run",
+    "free": false,
+    "type": "other",
+    "icon": "📅",
+    "time": "",
+    "loc": "Oceanside, CA",
+    "desc": "Move your feet before you eat. Features live entertainment on the course, costume contests and more. 330 N. Coast Hwy. Register: www.osideturkeytrot.com",
+    "url": "https://www.osideturkeytrot.com"
+   },
+   {
+    "name": "Coronado Turkey Trot",
+    "free": false,
+    "type": "other",
+    "icon": "📅",
+    "time": "8 am",
+    "loc": "Coronado, CA",
+    "desc": "Proceeds benefit the Division of Endocrinology/Diabetes at Rady Children’s Hospital. 8 am. Tidelands Park, 2000 Mullinex Dr. Register: www.rchacoronadoturkeytrot.com",
+    "url": "https://www.rchacoronadoturkeytrot.com"
+   },
+   {
+    "name": "Father Joe’s Villages Thanksgiving Turkey Trot 5K",
+    "free": false,
+    "type": "other",
+    "icon": "📅",
+    "time": "7:15 am",
+    "loc": "Balboa Park",
+    "desc": "7:15 am. Balboa Park. Register: www.thanksgivingrun.org",
+    "url": "https://www.thanksgivingrun.org"
+   },
+   {
+    "name": "Encinitas Turkey Trot 10K, 5K, Walk/Fun Run",
+    "free": false,
+    "type": "other",
+    "icon": "📅",
+    "time": "7:30 am",
+    "loc": "Encinitas, CA",
+    "desc": "Start and finish the race under the world-famous “ENCINITAS” sign on Coast Highway 101. 10K, 7:30 am; 5K, 8 am. Register: www.encinitasturkeytrot.org",
+    "url": "https://www.encinitasturkeytrot.org"
+   },
+   {
+    "name": "North County 5K Turkey Trot",
+    "free": false,
+    "type": "other",
+    "icon": "📅",
+    "time": "7:30 am",
+    "loc": "San Diego, CA",
+    "desc": "7:30 am. 4S Ranch Sports Park, 16118 4S Ranch Pkwy. Register: www.northcountyturkeytrot.org",
+    "url": "https://www.northcountyturkeytrot.org"
+   }
+  ],
+  "9": [
+   {
+    "name": "Red, White & Blue Salute",
+    "free": true,
+    "type": "free",
+    "icon": "🆓",
+    "time": "",
+    "loc": "SeaWorld San Diego",
+    "desc": "Special Veterans Day entertainment and activities. Through the Waves of Honor program, active duty and former military personnel enjoy complimentary admission. Through Nov. 9. SeaWorld, 500 SeaWorld Dr. www.seaworld.com",
+    "url": "https://www.seaworld.com"
+   }
+  ],
+  "11": [
+   {
+    "name": "Veteran’s Day Parade",
+    "free": true,
+    "type": "free",
+    "icon": "🆓",
+    "time": "11:30 am",
+    "loc": "San Diego, CA",
+    "desc": "Marching bands, historic military units, vintage vehicles and patriotic performers. 10–11:30 am. Along Harbor Dr. www.midway.org/event/san-diego-veterans-day-parade",
+    "url": "https://www.midway.org/event/san-diego-veterans-day-parade"
+   },
+   {
+    "name": "City of San Marcos Veteran’s Day Ceremony",
+    "free": true,
+    "type": "free",
+    "icon": "🆓",
+    "time": "11 am",
+    "loc": "San Marcos, CA",
+    "desc": "11 am–12 noon. Helen Boucher Memorial Park, 1243 Borden Rd. www.sanmarcosca.gov",
+    "url": "https://www.sanmarcosca.gov"
+   },
+   {
+    "name": "National Parks Fee FREE Days",
+    "free": true,
+    "type": "free",
+    "icon": "🆓",
+    "time": "",
+    "loc": "San Diego, CA",
+    "desc": "All National Park Service sites that charge an entrance fee will offer free admission to everyone. https://home.nps.gov/planyourvisit/passes.htm#free_entrance_days",
+    "url": "https://home.nps.gov/planyourvisit/passes.htm#free_entrance_days"
+   },
+   {
+    "name": "Veterans Day Ceremony",
+    "free": false,
+    "type": "other",
+    "icon": "📅",
+    "time": "11 am",
+    "loc": "Solana Beach",
+    "desc": "The Camp Pendleton Young Marines as Color Guard, “Feathers from Heaven” Doves, the Santa Fe Christian School Band and a special guest speaker. 11 am. La Colonia Park, 715 Valley Ave., Solana Beach. www.cityofsolanabeach.ca.gov",
+    "url": "https://www.cityofsolanabeach.ca.gov"
+   }
+  ],
+  "13": [
+   {
+    "name": "“Bluey’s Big Play.”",
+    "free": false,
+    "type": "other",
+    "icon": "📅",
+    "time": "",
+    "loc": "Balboa Park",
+    "desc": "When Dad feels like a little bit of time out, Bluey and Bingo have other plans. Join them as they pull out all of the games and cleverness at their disposal to get Dad off that bean bag. Through Nov. 15. Balboa Theatre, 868 Fourth Ave. Tickets: www.sandiegotheatres.org",
+    "url": "https://www.sandiegotheatres.org"
+   },
+   {
+    "name": "TwitchCon San Diego",
+    "free": false,
+    "type": "other",
+    "icon": "📅",
+    "time": "",
+    "loc": "San Diego Convention Center",
+    "desc": "Brings together the vibrant Twitch community of creators, streamers, music lovers, gamers, developers, cosplayers and fans. Through Nov. 15. San Diego Convention Center, 111 W. Harbor Dr. www.twitchcon.com/san-diego-2026",
+    "url": "https://www.twitchcon.com/san-diego-2026"
+   },
+   {
+    "name": "San Diego Anime Con",
+    "free": false,
+    "type": "other",
+    "icon": "📅",
+    "time": "",
+    "loc": "San Diego, CA",
+    "desc": "Board games, anime panels, video games, escape room and more. Through Nov. 15. Doubletree by Hilton, Hazard Center, Mission Valley. Tickets: www.sandiegoanimecon.com",
+    "url": "https://www.sandiegoanimecon.com"
+   }
+  ],
+  "14": [
+   {
+    "name": "“Bluey’s Big Play.”",
+    "free": false,
+    "type": "other",
+    "icon": "📅",
+    "time": "",
+    "loc": "Balboa Park",
+    "desc": "When Dad feels like a little bit of time out, Bluey and Bingo have other plans. Join them as they pull out all of the games and cleverness at their disposal to get Dad off that bean bag. Through Nov. 15. Balboa Theatre, 868 Fourth Ave. Tickets: www.sandiegotheatres.org",
+    "url": "https://www.sandiegotheatres.org"
+   },
+   {
+    "name": "TwitchCon San Diego",
+    "free": false,
+    "type": "other",
+    "icon": "📅",
+    "time": "",
+    "loc": "San Diego Convention Center",
+    "desc": "Brings together the vibrant Twitch community of creators, streamers, music lovers, gamers, developers, cosplayers and fans. Through Nov. 15. San Diego Convention Center, 111 W. Harbor Dr. www.twitchcon.com/san-diego-2026",
+    "url": "https://www.twitchcon.com/san-diego-2026"
+   },
+   {
+    "name": "San Diego Anime Con",
+    "free": false,
+    "type": "other",
+    "icon": "📅",
+    "time": "",
+    "loc": "San Diego, CA",
+    "desc": "Board games, anime panels, video games, escape room and more. Through Nov. 15. Doubletree by Hilton, Hazard Center, Mission Valley. Tickets: www.sandiegoanimecon.com",
+    "url": "https://www.sandiegoanimecon.com"
+   },
+   {
+    "name": "Space Night",
+    "free": false,
+    "type": "other",
+    "icon": "📅",
+    "time": "7:30 pm",
+    "loc": "Children's Museum of Discovery",
+    "desc": "Embark on an out-of-this-world evening filled with hands-on exploration, interactive space-themed activities and stellar fun. 5–7:30 pm. $17. Children’s Museum of Discovery, 320 N. Broadway, Escondido. www.visitcmod.org",
+    "url": "https://www.visitcmod.org"
+   },
+   {
+    "name": "Train Song Festival",
+    "free": true,
+    "type": "free",
+    "icon": "🆓",
+    "time": "10 am–4 pm",
+    "loc": "Old Poway Park",
+    "desc": "Model railroad layouts, train robberies, train rides and more. 10 am–4 pm. Old Poway Park, 14134 Midland Rd., Poway. www.poway.org",
+    "url": "https://www.poway.org"
+   },
+   {
+    "name": "SDSU Aztec Football Home Game",
+    "free": false,
+    "type": "other",
+    "icon": "📅",
+    "time": "6:30 pm",
+    "loc": "Snapdragon Stadium",
+    "desc": "6:30 pm. Snapdragon Stadium, 2101 Stadium Way. Tickets: www.goaztecs.com",
+    "url": "https://www.goaztecs.com"
+   },
+   {
+    "name": "Overnight Adventure Program",
+    "free": false,
+    "type": "other",
+    "icon": "📅",
+    "time": "",
+    "loc": "USS Midway Museum",
+    "desc": "Kids and families get to explore the ship after hours, enjoy exclusive time on the flight deck under the stars, sleep in actual Navy racks and more. Starting at $110. USS Midway Museum, 910 N. Harbor Dr. www.midway.org",
+    "url": "https://www.midway.org"
+   },
+   {
+    "name": "Enchanted Garden Holiday",
+    "free": true,
+    "type": "free",
+    "icon": "🆓",
+    "time": "5 pm",
+    "loc": "Poway, CA",
+    "desc": "Santa & Mrs. Clause, games, craft vendors and more. 1–5 pm. 13631 Rostrada Rd., Poway. www.kpbs.org/events",
+    "url": "https://www.kpbs.org/events"
+   },
+   {
+    "name": "Mission Trails Holiday Marketplace",
+    "free": true,
+    "type": "free",
+    "icon": "🆓",
+    "time": "9 am–3 pm",
+    "loc": "Mission Trails Regional Park’s Visitor Center",
+    "desc": "Unique gifts from local makers and artists. ﻿All sales benefit the park. Today & tomorrow, 9 am–3 pm. MTRP Visitor Center, One Junipero Serra Trail. https://mtrp.org",
+    "url": "https://mtrp.org"
+   },
+   {
+    "name": "Kids in the Garden: Scavenger Hunt for Nature’s Treasures",
+    "free": false,
+    "type": "other",
+    "icon": "📅",
+    "time": "10 am",
+    "loc": "Alta Vista Botanical Gardens",
+    "desc": "Join our Walkabout through the Gardens to discover intriguing plants and garden features. 10 am–12 noon. $5. Alta Vista Botanical Gardens, 1270 Vale Terrace Dr., Vista. Pre-register: farmerjonesavbg@gmail.com. www.altavistabotanicalgardens.org",
+    "url": "https://www.altavistabotanicalgardens.org"
+   }
+  ],
+  "15": [
+   {
+    "name": "“Bluey’s Big Play.”",
+    "free": false,
+    "type": "other",
+    "icon": "📅",
+    "time": "",
+    "loc": "Balboa Park",
+    "desc": "When Dad feels like a little bit of time out, Bluey and Bingo have other plans. Join them as they pull out all of the games and cleverness at their disposal to get Dad off that bean bag. Through Nov. 15. Balboa Theatre, 868 Fourth Ave. Tickets: www.sandiegotheatres.org",
+    "url": "https://www.sandiegotheatres.org"
+   },
+   {
+    "name": "TwitchCon San Diego",
+    "free": false,
+    "type": "other",
+    "icon": "📅",
+    "time": "",
+    "loc": "San Diego Convention Center",
+    "desc": "Brings together the vibrant Twitch community of creators, streamers, music lovers, gamers, developers, cosplayers and fans. Through Nov. 15. San Diego Convention Center, 111 W. Harbor Dr. www.twitchcon.com/san-diego-2026",
+    "url": "https://www.twitchcon.com/san-diego-2026"
+   },
+   {
+    "name": "San Diego Anime Con",
+    "free": false,
+    "type": "other",
+    "icon": "📅",
+    "time": "",
+    "loc": "San Diego, CA",
+    "desc": "Board games, anime panels, video games, escape room and more. Through Nov. 15. Doubletree by Hilton, Hazard Center, Mission Valley. Tickets: www.sandiegoanimecon.com",
+    "url": "https://www.sandiegoanimecon.com"
+   },
+   {
+    "name": "Mission Trails Holiday Marketplace",
+    "free": true,
+    "type": "free",
+    "icon": "🆓",
+    "time": "9 am–3 pm",
+    "loc": "Mission Trails Regional Park’s Visitor Center",
+    "desc": "Unique gifts from local makers and artists. ﻿All sales benefit the park. Today & tomorrow, 9 am–3 pm. MTRP Visitor Center, One Junipero Serra Trail. https://mtrp.org",
+    "url": "https://mtrp.org"
+   },
+   {
+    "name": "La Mesa Park Appreciation Day",
+    "free": true,
+    "type": "free",
+    "icon": "🆓",
+    "time": "8 am",
+    "loc": "La Mesa",
+    "desc": "8 am–12 noon. Details: www.lamesavillageassociation.org",
+    "url": "https://www.lamesavillageassociation.org"
+   },
+   {
+    "name": "Tea with the Sugar Plum Fairy",
+    "free": false,
+    "type": "other",
+    "icon": "☕",
+    "time": "4:30 pm",
+    "loc": "Encinitas, CA",
+    "desc": "Dress up in your finest hats and enjoy a spread of tea and scrumptious sandwiches and desserts and take a picture with the characters in The Nutcracker. 1:30–4:30 pm. $35. Performing Arts Workshop, 1465 Encinitas Blvd., Encinitas. www.dancepaw.com",
+    "url": "https://www.dancepaw.com"
+   },
+   {
+    "name": "“Manual Cinema’s Leonardo! A Wonderful Show About a Terrible Monster.”",
+    "free": false,
+    "type": "other",
+    "icon": "📅",
+    "time": "4:30 pm",
+    "loc": "La Jolla, CA",
+    "desc": "Hundreds of illustrated paper puppets, two-dimensional props, furry monster puppets and songs to bring Mo Willems’ popular children’s books to life. 3–4:30 pm. $20–$35. The Baker-Baum Concert Hall, 7600 Fay Ave., La Jolla. www.theconrad.org",
+    "url": "https://www.theconrad.org"
+   }
+  ],
+  "20": [
+   {
+    "name": "Fun Animal Friday",
+    "free": false,
+    "type": "other",
+    "icon": "📅",
+    "time": "11:30 am",
+    "loc": "Children's Museum of Discovery",
+    "desc": "Meet exotic birds with Free Flight Bird Sanctuary. Story time, hands-on activity and an animal meet-and-greet. 10–11:30 am. $17. Children’s Museum of Discovery, 320 N. Broadway, Escondido. www.visitcmod.org",
+    "url": "https://www.visitcmod.org"
+   },
+   {
+    "name": "Santee Holiday Lighting",
+    "free": true,
+    "type": "free",
+    "icon": "🆓",
+    "time": "8:30 pm",
+    "loc": "Santee Trolley Square",
+    "desc": "Face painting, sledding and more. 5:30–8:30 pm; tree lighting 6:15 pm. Santee Trolley Square, 9884 Mission Gorge Rd. www.cityofsanteeca.gov",
+    "url": "https://www.cityofsanteeca.gov"
+   }
+  ],
+  "21": [
+   {
+    "name": "Tezukuri-ichi Holiday Market",
+    "free": false,
+    "type": "other",
+    "icon": "🏛️",
+    "time": "10 am–4 pm",
+    "loc": "Japanese Friendship Garden",
+    "desc": "10 am–4 pm. Included with museum admission. $14–$16. Japanese Friendship Garden, Balboa Park. www.niwa.org",
+    "url": "https://www.niwa.org"
+   },
+   {
+    "name": "Doggie Street Festival",
+    "free": true,
+    "type": "free",
+    "icon": "🆓",
+    "time": "10 am–3 pm",
+    "loc": "Liberty Station",
+    "desc": "Awesome pet products, services and more. 10 am–3 pm. NTC Park at Liberty Station, 2455 Cushing Rd. www.doggiestreetfestival.org",
+    "url": "https://www.doggiestreetfestival.org"
+   }
+  ],
+  "22": [
+   {
+    "name": "Encinitas Holiday Street Fair",
+    "free": false,
+    "type": "other",
+    "icon": "📅",
+    "time": "9 am–4 pm",
+    "loc": "Encinitas, CA",
+    "desc": "Children’s rides, live entertainment and more. 9 am–4 pm. S. Coast Hwy. 101. www.kennedyfaires.com",
+    "url": "https://www.kennedyfaires.com"
+   },
+   {
+    "name": "San Diego Clippers: Star Wars Night",
+    "free": false,
+    "type": "other",
+    "icon": "📅",
+    "time": "6 pm",
+    "loc": "Frontwave Arena",
+    "desc": "6 pm. Starting at $21. Frontwave Arena, 3475 Hero Dr., Oceanside. www.frontwavearena.com",
+    "url": "https://www.frontwavearena.com"
+   }
+  ],
+  "23": [
+   {
+    "name": "Thanksgiving Critter Camp",
+    "free": false,
+    "type": "other",
+    "icon": "📅",
+    "time": "9 am–3 pm",
+    "loc": "Helen Woodward Animal Center",
+    "desc": "Hands-on animal encounters, festive crafts, and more. For ages 4–13. Through Nov. 25, 9 am–3 pm. $103. Humane Education Campus, 6447 Helen Woodward Way, Rancho Santa Fe. Register: www.animalcenter.org",
+    "url": "https://www.animalcenter.org"
+   },
+   {
+    "name": "Thanksgiving Break Camp",
+    "free": false,
+    "type": "other",
+    "icon": "📅",
+    "time": "9 am–3 pm",
+    "loc": "Balboa Park",
+    "desc": "Three fun-filled days rotating through classes in drama, music, dance and art. For grades K-6. Through Nov. 25, 9 am–3 pm. $250. San Diego Junior Theatre, 1650 El Prado. www.juniortheatre.com",
+    "url": "https://www.juniortheatre.com"
+   },
+   {
+    "name": "Fall Camp: Nature at Night",
+    "free": false,
+    "type": "other",
+    "icon": "📅",
+    "time": "9 am–2:30 pm",
+    "loc": "Children's Museum of Discovery",
+    "desc": "Grab your flashlights and explore the fascinating nocturnal plants and animals that thrive after sunset. Through Nov. 25, 9 am–2:30 pm. For ages 4–8. $235. 9 am–2:30 pm. Children’s Museum of Discovery, 320 N. Broadway, Escondido. www.visitcmod.org",
+    "url": "https://www.visitcmod.org"
+   },
+   {
+    "name": "Family Craft Night",
+    "free": false,
+    "type": "other",
+    "icon": "📅",
+    "time": "8:30 am–5 pm",
+    "loc": "San Marcos, CA",
+    "desc": "All the ingredients you need to make a delicious pumpkin pie at home. 8:30 am–5 pm. $5. San Marcos Community Ctr., 3 Civic Center Dr. www.sanmarcosca.gov",
+    "url": "https://www.sanmarcosca.gov"
+   }
+  ],
+  "25": [
+   {
+    "name": "Thanksgiving Critter Camp",
+    "free": false,
+    "type": "other",
+    "icon": "📅",
+    "time": "9 am–3 pm",
+    "loc": "Helen Woodward Animal Center",
+    "desc": "Hands-on animal encounters, festive crafts, and more. For ages 4–13. Through Nov. 25, 9 am–3 pm. $103. Humane Education Campus, 6447 Helen Woodward Way, Rancho Santa Fe. Register: www.animalcenter.org",
+    "url": "https://www.animalcenter.org"
+   },
+   {
+    "name": "Thanksgiving Break Camp",
+    "free": false,
+    "type": "other",
+    "icon": "📅",
+    "time": "9 am–3 pm",
+    "loc": "Balboa Park",
+    "desc": "Three fun-filled days rotating through classes in drama, music, dance and art. For grades K-6. Through Nov. 25, 9 am–3 pm. $250. San Diego Junior Theatre, 1650 El Prado. www.juniortheatre.com",
+    "url": "https://www.juniortheatre.com"
+   },
+   {
+    "name": "Fall Camp: Nature at Night",
+    "free": false,
+    "type": "other",
+    "icon": "📅",
+    "time": "9 am–2:30 pm",
+    "loc": "Children's Museum of Discovery",
+    "desc": "Grab your flashlights and explore the fascinating nocturnal plants and animals that thrive after sunset. Through Nov. 25, 9 am–2:30 pm. For ages 4–8. $235. 9 am–2:30 pm. Children’s Museum of Discovery, 320 N. Broadway, Escondido. www.visitcmod.org",
+    "url": "https://www.visitcmod.org"
+   }
+  ],
+  "27": [
+   {
+    "name": "The Rady Children’s Basketball Invitational",
+    "free": false,
+    "type": "other",
+    "icon": "📅",
+    "time": "",
+    "loc": "San Diego, CA",
+    "desc": "Featuring UCLA, Georgetown, Texas and Saint Mary's. For every ticket sold, $5 will be donated to Rady Children’s Hospital-San Diego. Today & tomorrow. Jenny Craig Pavilion, USD, 5998 Alcala Park Way. www.radychildrensinvitational.com",
+    "url": "https://www.radychildrensinvitational.com"
+   },
+   {
+    "name": "Family Christmas Tree Farm",
+    "free": true,
+    "type": "free",
+    "icon": "🆓",
+    "time": "10 am–9 pm",
+    "loc": "El Cajon",
+    "desc": "Cut the perfect tree, enjoy hayrides, a petting zoo and more. Daily, 10 am–9 pm. 300 Pepper Dr., El Cajon. www.familychristmastreefarm.com",
+    "url": "https://www.familychristmastreefarm.com"
+   },
+   {
+    "name": "Jingle Jets",
+    "free": false,
+    "type": "other",
+    "icon": "📅",
+    "time": "9 pm",
+    "loc": "USS Midway Museum",
+    "desc": "Experience more than a million sparkling lights, festive entertainment and holiday cheer. Select nights, through Dec. 30, 5:30–9 pm. $20–$30; 3 & under free. USS Midway Museum, 910 N. Harbor Dr. www.midway.org",
+    "url": "https://www.midway.org"
+   },
+   {
+    "name": "Turkey Bash at Lions Tigers & Bears",
+    "free": false,
+    "type": "other",
+    "icon": "📅",
+    "time": "10 am",
+    "loc": "Lions, Tigers & Bears",
+    "desc": "Witness rescued big cats and bears savoring their Thanksgiving feast. Today & tomorrow, 10 am. $35–$60. 24402 Martin Way, Alpine. www.lionstigersandbears.org",
+    "url": "https://www.lionstigersandbears.org"
+   },
+   {
+    "name": "North Pole Limited",
+    "free": false,
+    "type": "other",
+    "icon": "📅",
+    "time": "7 pm",
+    "loc": "Pacific Southwest Railway Museum",
+    "desc": "Enjoy hot chocolate, cookies and Christmas music as you head to the North Pole to pick up Santa. Through Dec. 20. Fri.–Sat., 5 & 7 pm; Sun., 3 & 5 pm. Starting at $15. Pacific Southwest Railway Museum, 750 Depot St., Campo. www.psrm.org",
+    "url": "https://www.psrm.org"
+   },
+   {
+    "name": "Santa’s Coming! Craft Fair",
+    "free": true,
+    "type": "free",
+    "icon": "🆓",
+    "time": "9 am–4 pm",
+    "loc": "Bates Nut Farm",
+    "desc": "Live music, handmade crafts and more. Today & tomorrow, 9 am–4 pm. Bates Nut Farm, 15954 Woods Valley Rd. www.batesnutfarm.biz",
+    "url": "https://www.batesnutfarm.biz"
+   }
+  ],
+  "28": [
+   {
+    "name": "Family Christmas Tree Farm",
+    "free": true,
+    "type": "free",
+    "icon": "🆓",
+    "time": "10 am–9 pm",
+    "loc": "El Cajon",
+    "desc": "Cut the perfect tree, enjoy hayrides, a petting zoo and more. Daily, 10 am–9 pm. 300 Pepper Dr., El Cajon. www.familychristmastreefarm.com",
+    "url": "https://www.familychristmastreefarm.com"
+   },
+   {
+    "name": "Jingle Jets",
+    "free": false,
+    "type": "other",
+    "icon": "📅",
+    "time": "9 pm",
+    "loc": "USS Midway Museum",
+    "desc": "Experience more than a million sparkling lights, festive entertainment and holiday cheer. Select nights, through Dec. 30, 5:30–9 pm. $20–$30; 3 & under free. USS Midway Museum, 910 N. Harbor Dr. www.midway.org",
+    "url": "https://www.midway.org"
+   },
+   {
+    "name": "Turkey Bash at Lions Tigers & Bears",
+    "free": false,
+    "type": "other",
+    "icon": "📅",
+    "time": "10 am",
+    "loc": "Lions, Tigers & Bears",
+    "desc": "Witness rescued big cats and bears savoring their Thanksgiving feast. Today & tomorrow, 10 am. $35–$60. 24402 Martin Way, Alpine. www.lionstigersandbears.org",
+    "url": "https://www.lionstigersandbears.org"
+   },
+   {
+    "name": "North Pole Limited",
+    "free": false,
+    "type": "other",
+    "icon": "📅",
+    "time": "7 pm",
+    "loc": "Pacific Southwest Railway Museum",
+    "desc": "Enjoy hot chocolate, cookies and Christmas music as you head to the North Pole to pick up Santa. Through Dec. 20. Fri.–Sat., 5 & 7 pm; Sun., 3 & 5 pm. Starting at $15. Pacific Southwest Railway Museum, 750 Depot St., Campo. www.psrm.org",
+    "url": "https://www.psrm.org"
+   },
+   {
+    "name": "Santa’s Coming! Craft Fair",
+    "free": true,
+    "type": "free",
+    "icon": "🆓",
+    "time": "9 am–4 pm",
+    "loc": "Bates Nut Farm",
+    "desc": "Live music, handmade crafts and more. Today & tomorrow, 9 am–4 pm. Bates Nut Farm, 15954 Woods Valley Rd. www.batesnutfarm.biz",
+    "url": "https://www.batesnutfarm.biz"
+   },
+   {
+    "name": "Wild Holidays at the Safari Park",
+    "free": false,
+    "type": "other",
+    "icon": "🏛️",
+    "time": "",
+    "loc": "San Diego Zoo Safari Park",
+    "desc": "Go on an expedition of light and travel through places that glow, shine and twinkle with holiday cheer. Today, tomorrow, Dec. 18–23 & Dec. 26–Jan. 3. 15500 San Pasqual Valley Rd., Escondido. https://sdzsafaripark.org/wild-holidays",
+    "url": "https://sdzsafaripark.org/wild-holidays"
+   },
+   {
+    "name": "San Diego Made Holiday Market",
+    "free": false,
+    "type": "other",
+    "icon": "📅",
+    "time": "10 am–5 pm",
+    "loc": "Liberty Station",
+    "desc": "Celebrates the creative community and small businesses in San Diego. Today, 10 am–5 pm & tomorrow, 10 am–4 pm. $5; 10 & under free. Liberty Station’s NTC Park, 2455 Cushing Rd. www.sdmademarkets.com",
+    "url": "https://www.sdmademarkets.com"
+   },
+   {
+    "name": "La Jolla Symphony and Chorus Messiah Singalong",
+    "free": false,
+    "type": "other",
+    "icon": "📅",
+    "time": "2 pm",
+    "loc": "Encinitas, CA",
+    "desc": "A festive celebration of choral joy, community spirit and holiday cheer. 2 pm. $19–$24. San Dieguito United Methodist Church, 170 Calle Magdalena, Encinitas. www.ljsc.org/concerts",
+    "url": "https://www.ljsc.org/concerts"
+   },
+   {
+    "name": "Julian’s Country Christmas Tree Lighting & Christmas Market",
+    "free": true,
+    "type": "free",
+    "icon": "🆓",
+    "time": "7 pm",
+    "loc": "Julian CA",
+    "desc": "Santa, music and more. 12–7 pm; tree lighting at 6 pm. Julian Town Square. www.visitjulian.com",
+    "url": "https://www.visitjulian.com"
+   },
+   {
+    "name": "Holiday Hayride: A Christmas Celebration",
+    "free": false,
+    "type": "other",
+    "icon": "📅",
+    "time": "10 am–4 pm",
+    "loc": "Fort Cross",
+    "desc": "Hayride, candle dipping, crafts and more. 10 am–4 pm. $25. Fort Cross, 4425 Hwy. 78, Santa Ysabel. www.fortcross.com",
+    "url": "https://www.fortcross.com"
+   },
+   {
+    "name": "Boarded! A New Pirate Adventure",
+    "free": false,
+    "type": "other",
+    "icon": "📅",
+    "time": "",
+    "loc": "Downtown San Diego",
+    "desc": "Interactive show where participants learn pirate skills. $35–$85. Maritime Museum of San Diego, 1492 N. Harbor Dr. www.sdmaritime.org",
+    "url": "https://www.sdmaritime.org"
+   }
+  ],
+  "29": [
+   {
+    "name": "Family Christmas Tree Farm",
+    "free": true,
+    "type": "free",
+    "icon": "🆓",
+    "time": "10 am–9 pm",
+    "loc": "El Cajon",
+    "desc": "Cut the perfect tree, enjoy hayrides, a petting zoo and more. Daily, 10 am–9 pm. 300 Pepper Dr., El Cajon. www.familychristmastreefarm.com",
+    "url": "https://www.familychristmastreefarm.com"
+   },
+   {
+    "name": "Jingle Jets",
+    "free": false,
+    "type": "other",
+    "icon": "📅",
+    "time": "9 pm",
+    "loc": "USS Midway Museum",
+    "desc": "Experience more than a million sparkling lights, festive entertainment and holiday cheer. Select nights, through Dec. 30, 5:30–9 pm. $20–$30; 3 & under free. USS Midway Museum, 910 N. Harbor Dr. www.midway.org",
+    "url": "https://www.midway.org"
+   },
+   {
+    "name": "North Pole Limited",
+    "free": false,
+    "type": "other",
+    "icon": "📅",
+    "time": "7 pm",
+    "loc": "Pacific Southwest Railway Museum",
+    "desc": "Enjoy hot chocolate, cookies and Christmas music as you head to the North Pole to pick up Santa. Through Dec. 20. Fri.–Sat., 5 & 7 pm; Sun., 3 & 5 pm. Starting at $15. Pacific Southwest Railway Museum, 750 Depot St., Campo. www.psrm.org",
+    "url": "https://www.psrm.org"
+   },
+   {
+    "name": "San Diego Made Holiday Market",
+    "free": false,
+    "type": "other",
+    "icon": "📅",
+    "time": "10 am–5 pm",
+    "loc": "Liberty Station",
+    "desc": "Celebrates the creative community and small businesses in San Diego. Today, 10 am–5 pm & tomorrow, 10 am–4 pm. $5; 10 & under free. Liberty Station’s NTC Park, 2455 Cushing Rd. www.sdmademarkets.com",
+    "url": "https://www.sdmademarkets.com"
+   },
+   {
+    "name": "Dazzling Holiday Light Show & Snowfall",
+    "free": true,
+    "type": "free",
+    "icon": "🆓",
+    "time": "7 pm",
+    "loc": "Village Walk at EastLake",
+    "desc": "Features falling snow, choreographed music and dancing lights. Kids receive free magic glasses for viewing. Every Fri.–Sun. thru Dec. 20, 6 & 7 pm. Village Walk at EastLake, 884 Eastlake Pkwy., Chula Vista. www.shopvillagewalk.com",
+    "url": "https://www.shopvillagewalk.com"
+   },
+   {
+    "name": "East Village Tree Lighting & Holiday Market",
+    "free": true,
+    "type": "free",
+    "icon": "🆓",
+    "time": "8 pm",
+    "loc": "San Diego, CA",
+    "desc": "Festive evening of fun activities, Santa and more. 4–8 pm; tree lighting 6:45 pm. East Village San Diego. www.eastvillagesandiego.com",
+    "url": "https://www.eastvillagesandiego.com"
+   },
+   {
+    "name": "“The Carpenters Songbook: At Christmas.”",
+    "free": false,
+    "type": "other",
+    "icon": "🎵",
+    "time": "7 pm",
+    "loc": "Balboa Theatre",
+    "desc": "A touching tribute that invites audiences to sing-along, reminisce and fall in love all over again. 7 pm. Balboa Theatre, 868 Fourth Ave. Tickets: www.sandiegotheatres.org",
+    "url": "https://www.sandiegotheatres.org"
+   }
+  ],
+  "30": [
+   {
+    "name": "Family Christmas Tree Farm",
+    "free": true,
+    "type": "free",
+    "icon": "🆓",
+    "time": "10 am–9 pm",
+    "loc": "El Cajon",
+    "desc": "Cut the perfect tree, enjoy hayrides, a petting zoo and more. Daily, 10 am–9 pm. 300 Pepper Dr., El Cajon. www.familychristmastreefarm.com",
+    "url": "https://www.familychristmastreefarm.com"
+   },
+   {
+    "name": "Tree Lighting at Fairmont Grand Del Mar",
+    "free": false,
+    "type": "other",
+    "icon": "📅",
+    "time": "9 pm",
+    "loc": "Fairmont Grand Del Mar",
+    "desc": "Delight in culinary treasures, glice skating and festive libations. 5–9 pm; tree lighting, 6:30 pm. $25; 3 & under free. 5300 Grand Del Mar Ct. www.granddelmar.com",
+    "url": "https://www.granddelmar.com"
+   }
+  ]
+ },
+ "ongoing": [
+  {
+   "name": "Spreckels Organ Society Concerts",
+   "free": true,
+   "type": "free",
+   "icon": "🆓",
+   "time": "3 pm",
+   "loc": "Spreckels Organ Pavilion, Balboa Park",
+   "desc": "Sundays, 2–3 pm. Pavilion-Pan American Pl., Balboa Park. www.spreckelsorgan.org",
+   "url": "https://www.spreckelsorgan.org",
+   "days": [
+    1,
+    8,
+    15,
+    22,
+    29
+   ]
+  },
+  {
+   "name": "LEGO Galaxy",
+   "free": false,
+   "type": "other",
+   "icon": "🎢",
+   "time": "",
+   "loc": "LEGOLAND California Resort",
+   "desc": "All-new space-themed land with an indoor family coaster, two other cosmic rides, brand-new food and retail options, incredible LEGO space models, space-themed activities, and adventures for explorers of all ages. Open daily. One LEGOLAND Dr., Carlsbad. www.legoland.com",
+   "url": "https://www.legoland.com",
+   "days": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30
+   ]
+  },
+  {
+   "name": "Ringers at Seaport Village",
+   "free": false,
+   "type": "other",
+   "icon": "⛸️",
+   "time": "",
+   "loc": "Belmont Park",
+   "desc": "An open-air roller-skating experience along the Embarcadero. Open daily. 821 West Harbor Dr. Details: www.seaportvillage.com/explore/ringers-roller-rink",
+   "url": "https://www.seaportvillage.com/explore/ringers-roller-rink",
+   "days": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30
+   ]
+  },
+  {
+   "name": "The Axolotl’s Garden",
+   "free": false,
+   "type": "other",
+   "icon": "🏛️",
+   "time": "9 am",
+   "loc": "Birch Aquarium at Scripps",
+   "desc": "Explore two axolotl habitats and discover other unique Mexican species, including tequila splitfins, blind cave tetras and more, while uncovering each animal’s tale of survival and adaptation. Open daily at 9 am. $34.95–$39.95. Birch Aquarium at Scripps, 2300 Expedition Way, La Jolla. www.aquarium.u",
+   "url": "https://www.aquarium.ucsd.edu",
+   "days": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30
+   ]
+  },
+  {
+   "name": "Sunset Scripps Pier Walks",
+   "free": false,
+   "type": "other",
+   "icon": "📅",
+   "time": "",
+   "loc": "Birch Aquarium at Scripps",
+   "desc": "Walking tours of Scripps Pier featuring hands-on science stations including squid dissections, local shark research and more. Today, Nov. 14, 15, 21 & 22. $40. Birch Aquarium at Scripps. Advance registration required: www.aquarium.ucsd.edu",
+   "url": "https://www.aquarium.ucsd.edu",
+   "days": [
+    1,
+    14,
+    15,
+    21,
+    22
+   ]
+  },
+  {
+   "name": "San Diego Gulls",
+   "free": false,
+   "type": "other",
+   "icon": "📅",
+   "time": "",
+   "loc": "Pechanga Arena San Diego",
+   "desc": "Tonight, Nov. 11, 18, 20, 21 & 24. Pechanga Arena, 3500 Sports Arena Blvd. Tickets: www.sandiegogulls.com",
+   "url": "https://www.sandiegogulls.com",
+   "days": [
+    1,
+    11,
+    18,
+    20,
+    21,
+    24
+   ]
+  },
+  {
+   "name": "Fleet Week San Diego",
+   "free": true,
+   "type": "free",
+   "icon": "🆓",
+   "time": "",
+   "loc": "San Diego, CA",
+   "desc": "Ship tours, live entertainment, family-friendly activities and interactive experiences at multiple locations citywide. Through Nov. 15. Schedule: www.fleetweeksandiego.org",
+   "url": "https://www.fleetweeksandiego.org",
+   "days": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15
+   ]
+  },
+  {
+   "name": "San Diego Food and Wine Festival",
+   "free": false,
+   "type": "other",
+   "icon": "📅",
+   "time": "",
+   "loc": "San Diego, CA",
+   "desc": "Showcases cross-border cuisine, celebrated chefs, winemakers and more. Through Nov. 8. Embarcadero Marina Park N., 400 Kettner Blvd. www.sandiegowineclassic.com",
+   "url": "https://www.sandiegowineclassic.com",
+   "days": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+   ]
+  },
+  {
+   "name": "“GRIM.”",
+   "free": false,
+   "type": "other",
+   "icon": "📅",
+   "time": "",
+   "loc": "La Jolla Playhouse",
+   "desc": "An irreverent, hilarious and heartbreaking musical that celebrates life… and death. Select dates through Dec. 6. Mandell Weiss Theatre, 2910 La Jolla Village Dr. www.lajollaplayhouse.org",
+   "url": "https://www.lajollaplayhouse.org",
+   "days": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+   ]
+  },
+  {
+   "name": "“The Outsiders.”",
+   "free": false,
+   "type": "other",
+   "icon": "📅",
+   "time": "",
+   "loc": "San Diego Civic Theatre",
+   "desc": "Navigates the complexities of self-discovery as the Greasers dream about who they want to become in a world that may never accept them. Through Nov. 8. Civic Theatre, 1100 Third Ave. Tickets: www.broadwaysd.com",
+   "url": "https://www.broadwaysd.com",
+   "days": [
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+   ]
+  },
+  {
+   "name": "“Dr. Seuss’s How the Grinch Stole Christmas!”",
+   "free": false,
+   "type": "other",
+   "icon": "📅",
+   "time": "",
+   "loc": "The Old Globe Theatre",
+   "desc": "A wonderful, whimsical musical featuring the songs “Santa for a Day,” “You’re a Mean One, Mr. Grinch,” and “Welcome, Christmas (Fah Who Doraze).” Select dates through Dec. 31. The Old Globe, Balboa Park. Tickets: www.theoldglobe.org",
+   "url": "https://www.theoldglobe.org",
+   "days": [
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30
+   ]
+  },
+  {
+   "name": "Viejas Outlets Ice Skating Rink",
+   "free": false,
+   "type": "other",
+   "icon": "⛸️",
+   "time": "10 pm",
+   "loc": "Viejas Outlet Center",
+   "desc": "Southern California's largest outdoor ice skating rink. Through Jan. 10, 3–10 pm (closed Thanksgiving). $22–$24, includes skate rental. 5003 Willows Rd., Alpine. www.viejasoutletcenter.com",
+   "url": "https://www.viejasoutletcenter.com",
+   "days": [
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    27,
+    28,
+    29,
+    30
+   ]
+  },
+  {
+   "name": "Movies on the Beach",
+   "free": false,
+   "type": "other",
+   "icon": "📅",
+   "time": "7:30 pm",
+   "loc": "Hotel del Coronado",
+   "desc": "Tonight, Nov. 7, 13, 14, 20, 21, 27 & 28; 7:30 pm. $25.75. Del Beach, 1500 Orange Ave., Coronado. www.hoteldel.com",
+   "url": "https://www.hoteldel.com",
+   "days": [
+    6,
+    7,
+    13,
+    14,
+    20,
+    21,
+    27,
+    28
+   ]
+  },
+  {
+   "name": "Del Mar Racetrack’s Bing Crosby Season",
+   "free": false,
+   "type": "other",
+   "icon": "📅",
+   "time": "",
+   "loc": "Del Mar Racetrack",
+   "desc": "Fri.–Sun., through Nov. 29. Del Mar Fairgrounds, 2260 Jimmy Durante Blvd. Schedule: www.dmtc.com",
+   "url": "https://www.dmtc.com",
+   "days": [
+    6,
+    7,
+    8,
+    13,
+    14,
+    15,
+    20,
+    21,
+    22,
+    27,
+    28,
+    29
+   ]
+  },
+  {
+   "name": "Roar & Snore Safari",
+   "free": false,
+   "type": "other",
+   "icon": "🏛️",
+   "time": "",
+   "loc": "San Diego Zoo Safari Park",
+   "desc": "Experience a sleepover and observe the nighttime activities of wildlife and morning wildlife presentations. Today, tomorrow, Nov. 20, 21, 27 & 28. Starting at $205. Safari Park, 15500 San Pasqual Valley Rd., Escondido. www.sdzsafaripark.org",
+   "url": "https://www.sdzsafaripark.org",
+   "days": [
+    6,
+    7,
+    20,
+    21,
+    27,
+    28
+   ]
+  },
+  {
+   "name": "Christmas at Santa’s Village",
+   "free": false,
+   "type": "other",
+   "icon": "📅",
+   "time": "10 am–7 pm",
+   "loc": "Skyforest, CA",
+   "desc": "Train rides, Santa, ice skating and more. Through Jan. 10. $49–$59. 10 am–7 pm. SkyPark, 28950 California 18, Skyforest. www.visitskypark.com",
+   "url": "https://www.visitskypark.com",
+   "days": [
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30
+   ]
+  },
+  {
+   "name": "A Very Furry Christmas",
+   "free": false,
+   "type": "other",
+   "icon": "🎢",
+   "time": "",
+   "loc": "Sesame Place San Diego",
+   "desc": "A festive, family-friendly celebration with everyone’s favorite Sesame Street friends. Weekends through Jan. 3 & Nov. 23–27 & Dec. 21–31. Sesame Place, 2052 Entertainment Cir., Chula Vista. www.sesameplace.com",
+   "url": "https://www.sesameplace.com",
+   "days": [
+    7,
+    8,
+    14,
+    15,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29
+   ]
+  },
+  {
+   "name": "The Polar Express",
+   "free": false,
+   "type": "other",
+   "icon": "📅",
+   "time": "11:30 am",
+   "loc": "Southern California Railway Museum",
+   "desc": "A magical trip to meet Santa with hot chocolate and a cookie served by dancing chefs. Select dates through Dec. 31; 11:30 am, 1:30, 4, 6 & 8 pm. $49.25–$88.25. Southern California Railway Museum, 2201 S. “A” St., Perris. Tickets: www.socalrailway.org",
+   "url": "https://www.socalrailway.org",
+   "days": [
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30
+   ]
+  },
+  {
+   "name": "The Chronicles of Narnia, The Beginning Themed Tea",
+   "free": false,
+   "type": "other",
+   "icon": "☕",
+   "time": "4 pm",
+   "loc": "San Diego, CA",
+   "desc": "All themed teas are different, most include a \"Did You Know Intro\" a game, quiz and a take home gift. Through Nov. 22, 12:30–4 pm. $64.95. The Britannia Tearooms, 2323 Midway Dr. Reservations: www.afternoonteasandiego.com",
+   "url": "https://www.afternoonteasandiego.com",
+   "days": [
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22
+   ]
+  },
+  {
+   "name": "The Links at Petco Park",
+   "free": false,
+   "type": "other",
+   "icon": "📅",
+   "time": "",
+   "loc": "Petco Park",
+   "desc": "The signature nine-hole golf experience gives golfers the unique opportunity to take shots onto the playing field from themed tee boxes in various ballpark locations. Through Nov. 25. Petco Park. Details and tickets: www.padres.com/thelinks",
+   "url": "https://www.padres.com/thelinks",
+   "days": [
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25
+   ]
+  },
+  {
+   "name": "Peltzer Ice Rink",
+   "free": false,
+   "type": "other",
+   "icon": "⛸️",
+   "time": "",
+   "loc": "Temecula, CA",
+   "desc": "Open daily through Jan. 18. $14–$20; skate & helmet rental, $2–$4. 40275 Calle Contento, Temecula. www.peltzerfarms.com",
+   "url": "https://www.peltzerfarms.com",
+   "days": [
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30
+   ]
+  },
+  {
+   "name": "Rady Children’s Ice Rink",
+   "free": false,
+   "type": "other",
+   "icon": "⛸️",
+   "time": "10 am–10 pm",
+   "loc": "Liberty Station",
+   "desc": "Kick off holiday festivities and give back to San Diego families dealing with childhood cancer. Open daily through Jan. 3, 10 am–10 pm. $15–$25; includes skate rental and helmets. Legacy Plaza, ARTS DISTRICT Liberty Station, 2875 Dewey Rd. www.rchicerink.org",
+   "url": "https://www.rchicerink.org",
+   "days": [
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30
+   ]
+  },
+  {
+   "name": "“Lightscape.”",
+   "free": false,
+   "type": "other",
+   "icon": "📅",
+   "time": "",
+   "loc": "San Diego Botanic Garden",
+   "desc": "This mile-long, illuminated trail has been reimagined with 20+ vibrant new installations from artists from around the world, plus a few returning favorites that continue to enchant. Through Jan. 3. $20–$36; 2 & under free. San Diego Botanic Garden, 300 Quail Gardens Dr., Encinitas. www.sdbg.org",
+   "url": "https://www.sdbg.org",
+   "days": [
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30
+   ]
+  },
+  {
+   "name": "ice! Featuring “A Charlie Brown Christmas” at Gaylord Pacific",
+   "free": false,
+   "type": "other",
+   "icon": "📅",
+   "time": "9 am–8:45 pm",
+   "loc": "Gaylord Pacific",
+   "desc": "The immersive holiday attraction brings favorite scenes from the beloved TV special to life through magnificent sculptures hand-carved from more than two million pounds of ice. 9 am–8:45 pm through Jan. 3. $34–$44. 1000 H St., Chula Vista. www.gaylordpacific.com",
+   "url": "https://www.gaylordpacific.com",
+   "days": [
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30
+   ]
+  },
+  {
+   "name": "“Ebenezer Scrooge’s BIG San Diego Christmas Show.”",
+   "free": false,
+   "type": "other",
+   "icon": "📅",
+   "time": "",
+   "loc": "The Old Globe Theatre",
+   "desc": "Fast, funny and highly theatrical reimagining of one of the most beloved holiday stories ever told. Select dates through Dec. 27. Sheryl and Harvey White Theatre Conrad Prebys Theatre Center, Balboa Park. Tickets: www.theoldglobe.org",
+   "url": "https://www.theoldglobe.org",
+   "days": [
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30
+   ]
+  },
+  {
+   "name": "Skating by the Sea",
+   "free": false,
+   "type": "other",
+   "icon": "⛸️",
+   "time": "",
+   "loc": "Hotel del Coronado",
+   "desc": "Take a spin around Hotel del Coronado's famous beachfront ice rink featuring stunning views of the Pacific and benefitting Make-A-Wish San Diego. Daily through Jan 3. $42.40. 1500 Orange Ave. Tickets: www.hoteldel.com",
+   "url": "https://www.hoteldel.com",
+   "days": [
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30
+   ]
+  },
+  {
+   "name": "Lightshow Spectacular",
+   "free": true,
+   "type": "free",
+   "icon": "🆓",
+   "time": "9 pm",
+   "loc": "Hotel del Coronado",
+   "desc": "A dynamic light show orchestrated to a holiday soundtrack, a brilliant ethereal experience that captivates guests with a finale of snow flurries. Nightly every 30 minutes, 5–9 pm. Through Jan 3. Hotel del Coronado, 1500 Orange Ave. www.hoteldel.com",
+   "url": "https://www.hoteldel.com",
+   "days": [
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30
+   ]
+  },
+  {
+   "name": "Holidays at Gaylord Pacific",
+   "free": false,
+   "type": "other",
+   "icon": "📅",
+   "time": "",
+   "loc": "Gaylord Pacific",
+   "desc": "Snow Tubing with four-lane indoor snow tubing hill, covered in real snow and snowball build and blast. $19–$29. Daily through Jan. 3. Gaylord Pacific, 1000 H St., Chula Vista. www.gaylordpacific.com",
+   "url": "https://www.gaylordpacific.com",
+   "days": [
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30
+   ]
+  },
+  {
+   "name": "Camp Christmas",
+   "free": false,
+   "type": "other",
+   "icon": "📅",
+   "time": "9 pm",
+   "loc": "Pine Valley",
+   "desc": "Spectacular water show, hayrides, bounce house and more. Fri.–Sun. through Dec. 23. 5:30–9 pm. 8668 Pine Creek Rd., Pine Valley. Tickets: www.pinevalleycampchristmas.com",
+   "url": "https://www.pinevalleycampchristmas.com",
+   "days": [
+    20,
+    21,
+    22,
+    27,
+    28,
+    29
+   ]
+  },
+  {
+   "name": "Pinery Christmas Trees",
+   "free": true,
+   "type": "free",
+   "icon": "🆓",
+   "time": "10 am–9 pm",
+   "loc": "San Diego, CA",
+   "desc": "Open daily (except Thanksgiving); Mon.–Thurs., 10 am–9 pm & Fri.–Sun., 9 am–9 pm. 3 locations: 5354 Sweetwater Rd., Bonita; Del Mar Horsepark, 14550 1/2 El Camino Real; 13421 Highland Valley Rd., Rancho Bernardo. www.pinerychristmastrees.com",
+   "url": "https://www.pinerychristmastrees.com",
+   "days": [
+    21,
+    22,
+    23,
+    24,
+    25,
+    27,
+    28,
+    29,
+    30
+   ]
+  },
+  {
+   "name": "Christmas Bricktacular",
+   "free": false,
+   "type": "other",
+   "icon": "🎢",
+   "time": "",
+   "loc": "LEGOLAND California Resort",
+   "desc": "Meet the jolly LEGO Santa, enjoy seasonal activities and embark on bricktastic holiday adventures. Select dates through Jan. 3. Included with admission. One LEGOLAND Dr., Carlsbad. www.legoland.com",
+   "url": "https://www.legoland.com",
+   "days": [
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30
+   ]
+  },
+  {
+   "name": "“A Christmas Carol.”",
+   "free": false,
+   "type": "other",
+   "icon": "📅",
+   "time": "",
+   "loc": "Cygnet Theatre",
+   "desc": "Charles Dickens’ timeless tale of hope and redemption. Through Dec. 24. The Joan, 2880 Roosevelt Rd. Tickets: www.cygnettheatre.org",
+   "url": "https://www.cygnettheatre.org",
+   "days": [
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30
+   ]
+  },
+  {
+   "name": "Glice Skating at Grand Social",
+   "free": false,
+   "type": "other",
+   "icon": "⛸️",
+   "time": "",
+   "loc": "Fairmont Grand Del Mar",
+   "desc": "Select dates through Jan. 3. $25–$45, includes skate rental. Fairmont Grand Del Mar, 5300 Grand Del Mar Ct. www.granddelmar.com",
+   "url": "https://www.granddelmar.com",
+   "days": [
+    26,
+    27,
+    28,
+    29,
+    30
+   ]
+  }
+ ],
+ "overview": "San Diego Family — November 2026: Thanksgiving family activities, parenting tips, holiday toy picks and local ideas for San Diego families.\n\nInside: 11 irresistible Thanksgiving desserts, how to culti",
+ "camps": [],
+ "sections": []
+}
