@@ -5,11 +5,11 @@ San Diego Family Magazine monthly agent (100% free).
 What it does each run:
   1. Finds the current month's issue page on sandiegofamily.com
   2. Pulls the "Articles in the ... Issue" list (topics worth reading)
-  3. Pulls the Events Calendar and keeps entries that mention "free"
-  4. Summarizes everything into a Markdown digest (saved to digests/YYYY-MM.md)
+  3. Reads each day of the Events Calendar and marks the free events
+  4. Writes a Markdown digest (digests/YYYY-MM.md) and the site data (issues/YYYY-MM.json)
 
 Setup:
-  pip install requests beautifulsoup4
+  pip install -r requirements.txt
   Free AI summaries, pick one:
     - GitHub Actions: uses GitHub Models automatically (no key needed, see workflow file)
     - Your own computer: install Ollama from ollama.com, then: ollama pull llama3.2
@@ -98,19 +98,6 @@ def get_articles(issue_url):
     return items
 
 
-def get_free_events(year, month):
-    """Keep calendar lines that mention 'free'. Adjust selectors if the site layout changes."""
-    text = get_soup(CALENDAR).get_text("\n", strip=True)
-    lines = [l for l in text.split("\n") if len(l) > 15]
-    free = [l for l in lines if re.search(r"\bfree\b", l, re.I)]
-    seen, out = set(), []
-    for l in free:
-        if l not in seen:
-            seen.add(l)
-            out.append(l)
-    return out[:40]
-
-
 def summarize(prompt, fallback, max_tokens=None):
     """Free AI summary. Tries GitHub Models (inside GitHub Actions), then local Ollama,
     and finally falls back to the plain text so the script never breaks."""
@@ -184,7 +171,8 @@ def parse_day(year, month, day):
     url = f"{BASE}/things-to-do/events-calendar/day/{month:02d}-{day:02d}-{year}"
     try:
         soup = get_soup(url)
-    except Exception:
+    except Exception as e:
+        print(f"Could not load calendar day {url}: {e}", file=sys.stderr)
         return []
     out, seen = [], set()
     for a in soup.find_all("a", href=re.compile(r"/events-calendar/event/")):
@@ -398,7 +386,7 @@ def expand_days(text, start, year, month):
     wds = weekdays_in(text)
     thr = re.search(rf"through\s+(?:{dt.date(2000, month, 1):%b}\.|{dt.date(2000, month, 1):%B})\s+(\d{{1,2}})", text, re.I)
     ongoing = thr or re.search(r"through\s+(?:[A-Z][a-z]{2,8}\.?)\s+\d", text) or re.search(r"\b(open daily|daily)\b", text, re.I) or wds
-    if ongoing and not (wds and not thr and not re.search(r"through|daily|weekends?", text, re.I) and False):
+    if ongoing:
         end = min(int(thr.group(1)), last) if thr else last
         for d in range(start, end + 1):
             if (not wds or calendar.weekday(year, month, d) in wds) and calendar.weekday(year, month, d) not in closed:
@@ -416,9 +404,10 @@ def _event_from_lines(buf, day, year, month):
     first = re.sub(r"^FREE\s+", "", buf[0].strip())
     m = re.match(r"^(.{3,90}?\.[\u201d\"]?)\s", body)
     minor = {"at", "of", "the", "and", "in", "for", "a", "to", "on", "with", "de", "los", "la", "&", "by", "from"}
+    mon = dt.date(2000, month, 1)  # for this month's name, e.g. "Nov." / "November"
     heading_ok = (len(first.split()) <= 7 and "." not in first and first[:1].isupper() and not first.isupper()
                   and all(w[:1].isupper() or not w[:1].isalpha() or w.lower() in minor for w in first.split())
-                  and re.search(r"\b(?:am|pm|oct\.?|october|weekends?|daily|through|today)\b", text, re.I))
+                  and re.search(rf"\b(?:am|pm|{mon:%b}\.?|{mon:%B}|weekends?|daily|through|today)\b", text, re.I))
     # a short heading line followed by a long sentence (feature box) vs. a normal "Title. Description" entry
     if heading_ok and (not m or len(m.group(1)) > len(first) + 45):
         title = first
