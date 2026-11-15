@@ -139,8 +139,6 @@ function renderCalendar() {
   if (firstDay) pick(firstDay, false); else $('panel').innerHTML = (D.ongoing.length ? '<div class="empty">No events tied to a single date.</div>' : '<div class="empty">No events listed for this month yet.</div>') 
 }
 
-const ongoingLink = () => D.ongoing.length ? `<div style="padding:4px 16px 12px"><a href="#ongoing" onclick="document.getElementById('ongoing').scrollIntoView({behavior:'smooth'});return false">⬇ ${D.ongoing.length} ongoing events all month (pumpkin patches, free days and more)</a></div>` : '';
-
 function pick(d, scroll = true) {
   document.querySelectorAll('.cd').forEach(c => c.classList.toggle('sel', +c.dataset.d === d));
   const list = dayEvents(d);
@@ -152,7 +150,7 @@ function pick(d, scroll = true) {
 function renderCamps() {
   const types = ['all', ...new Set(D.camps.map(c => c.type))];
   const list = D.camps.filter(c => filter === 'all' || c.type === filter);
-  $('page-camps').innerHTML = `<div class="chips">${types.map(t => `<button class="chip ${t === filter ? 'active' : ''}" onclick="filter='${t}';renderCamps()">${t === 'all' ? 'All camps' : t}</button>`).join('')}</div>` +
+  $('page-camps').innerHTML = `<div class="chips">${types.map(t => `<button class="chip ${t === filter ? 'active' : ''}" data-t="${esc(t)}" onclick="filter=this.dataset.t;renderCamps()">${t === 'all' ? 'All camps' : esc(t)}</button>`).join('')}</div>` +
     list.map(c => `<div class="box"><div class="meta">${esc(c.type)}</div><h3>${esc(c.name)}</h3><p>👧 ${esc(c.ages)} &nbsp; 📅 ${esc(c.dates)} &nbsp; 📍 ${esc(c.loc)}</p><p>${esc(c.desc)}</p>
     ${c.url ? `<a class="lk" href="${esc(href(c.url))}" target="_blank" rel="noopener">🔗 ${esc(c.url)}</a>` : ''}</div>`).join('');
 }
